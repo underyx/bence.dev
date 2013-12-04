@@ -10,6 +10,9 @@ $( document ).ready(function() {
 
       $("button").removeClass("active");
       $(this).addClass("active");
+
+      _gaq.push(['_trackEvent', 'Playlists', 'Play', $(this).parent().prev().text()]);
     }
+    _gaq.push(['_trackEvent', 'Playlists', 'Play', $(this).parent().prev().text(), 'Disabled']);
   });
 });
