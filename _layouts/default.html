@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href='http://fonts.googleapis.com/css?family=Raleway:200,400,800' rel='stylesheet' type='text/css'>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>{{ page.title }}</title>
+    <meta name="viewport" content="width=device-width">
+
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <link rel="stylesheet" href="/assets/css/syntax.css">
+  </head>
+
+  <body class="{{ page.shortname }}">
+    <section class="site container">
+      <header>
+        <h1 class="title"><a href="/">{{ site.name }}</a></h1>
+        <i class="icon glyphicon glyphicon-{{ page.icon }}"></i>
+      </header>
+      <section class="main row">
+        <nav class="main-nav col-xs-3 col-sm-2 col-sm-offset-1">
+          <a href="/">Home</a><br>
+          <a href="/profiles">Profiles</a>
+        </nav>
+        <section class="content col-xs-9 col-sm-8">
+          {{ content }}
+        </section>
+      </section>
+      <footer class="row">
+        <div class="col-xs-6 col-sm-4 col-sm-offset-3">
+        <p>Bence Nagy (Underyx)<br>Budapest, Hungary</p>
+        </div>
+        <div class="col-xs-6 col-sm-4">
+        <p>underer@gmail.com<br>+36&nbsp;30&nbsp;493&nbsp;8089<br>Underyx on Freenode &amp; QuakeNet</p>
+        </div>
+      </footer>
+    </section>
+  </body>
+</html>
