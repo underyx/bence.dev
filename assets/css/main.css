@@ -157,15 +157,19 @@ body.profiles {
 }
 
 body.music {
-  background-color: rgb(90, 45, 0);
+  background-color: rgb(160, 74, 10);
 }
 
 .music header .icon {
-  text-shadow: 2px 2px 8px rgba(75, 37, 0, 0.7), 0 0 0 rgba(0, 0, 0, 0.7);
+  text-shadow: 2px 2px 8px rgba(160, 74, 10, 0.7), 0 0 0 rgba(0, 0, 0, 0.7);
 }
 
 .music .content header {
   text-align: left;
+}
+
+.music .content header h2 {
+  margin-top: 0;
 }
 
 .music .content table {
@@ -190,7 +194,7 @@ body.music {
 
 .music .content table th,
 .music .content table td {
-  padding: 4px 8px;
+  padding: 6px 8px;
 }
 
 .music .content table tr td:first-child {
