@@ -1,5 +1,6 @@
 body {
   background: url(../img/bg-overlay.png);
+  background-attachment: fixed;
   color: #DDD;
   text-align: center;
   font-family: Raleway, sans-serif;
