@@ -109,7 +109,6 @@ body.home {
 .home .content figure {
   text-align: center;
   margin-top: 20px;
-  margin-bottom: 10px;
 }
 
 .home .content figure img {
@@ -118,6 +117,7 @@ body.home {
 }
 
 .home .content figcaption {
+  margin-top: 10px;
   text-align: center;
   font-size: 14px;
   font-weight: 200;
