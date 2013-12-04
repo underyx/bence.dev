@@ -87,7 +87,7 @@ a:hover {
 }
 
 .site footer {
-  font-family: Arial, sans-serif;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 400;
   margin-top: 24px;
   font-size: 14px;
@@ -162,4 +162,72 @@ body.music {
 
 .music header .icon {
   text-shadow: 2px 2px 8px rgba(75, 37, 0, 0.7), 0 0 0 rgba(0, 0, 0, 0.7);
+}
+
+.music .content header {
+  text-align: left;
+}
+
+.music .content table {
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 8px -1px #111;
+  border-radius: 16px;
+  text-align: center;
+}
+
+.music .content table th {
+  line-height: 1.2em;
+  text-align: center;
+  vertical-align: top;
+  border-bottom: 1px rgba(0, 0, 0, 0.1) solid;
+}
+
+.music .content table th .description {
+  font-size: 12px;
+  font-weight: 200;
+}
+
+.music .content table th,
+.music .content table td {
+  padding: 4px 8px;
+}
+
+.music .content table tr td:first-child {
+  text-align: right;
+}
+
+.music .content table button {
+  color: #DDD;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.4);
+  border: none;
+  transition: color 0.2s, background-color 0.2s;
+  outline: none;
+}
+
+.music .content table button:hover {
+  color: #FFF;
+  background-color: rgba(25, 25, 25, 0.2);
+}
+
+.music .content table button:active,
+.music .content table button.active {
+  color: #DDD;
+  background-color: rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.4) inset;
+  padding: 1px 7px;
+}
+
+.music .content table button.active {
+  cursor: default;
+}
+
+.music .content .grooveshark,
+.music .content .spotify {
+  display: none;
 }

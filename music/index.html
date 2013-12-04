@@ -1,0 +1,44 @@
+---
+layout: default
+title: Underyx | Music
+shortname: music
+icon: music
+---
+
+<script src="/assets/js/music.js"></script>
+
+<header>
+<h2>I love music.</h2>
+<p>Also, I'm admittedly quite the hipster. Anyways, ever since January '13, I've been making monthly playlists of the songs I listened to a lot. And I'm pretty proud of them, too. You did well, songs!</p>
+</header>
+
+<section class="row">
+  <section class="col-md-7">
+    <table>
+      <th></th>
+      <th>A side<br><span class="description">More electronic</span></th>
+      <th>B side<br><span class="description">More acoustic</span></th>
+      {% for playlist in site.data.playlists %}
+      <tr>
+        <td>
+          {{ playlist.name }}
+        </td>
+        <td {% if playlist.ids.size == 1 %}colspan="2"{% endif %}>
+          <button data-grooveshark="{{ playlist.ids[0].grooveshark }}" data-spotify="{{ playlist.ids[0].spotify }}">Play <i class="glyphicon glyphicon-play"></i></button>
+        </td>
+        {% if playlist.ids.size == 2 %}
+        <td>
+            <button data-grooveshark="{{ playlist.ids[1].grooveshark }}" data-spotify="{{ playlist.ids[1].spotify }}">Play <i class="glyphicon glyphicon-play"></i></button>
+        </td>
+        {% endif %}
+      </tr>
+      {% endfor %}
+    </table>
+  </section>
+  <section class="col-md-5">
+      <object class="grooveshark" data="http://grooveshark.com/widget.swf" width="300" height="380" >
+        <param name="flashvars" value="p=1">
+      </object>
+      <iframe class="spotify" src="https://embed.spotify.com/?uri=spotify:user:underyx:playlist:4kDNrJU5ct81qzb99ZhAJp" width="300" height="380" frameborder="0"></iframe>
+  </section>
+</section>
