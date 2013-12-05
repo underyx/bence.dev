@@ -127,6 +127,10 @@ a:hover {
   padding-top: 12px;
 }
 
+.site footer div {
+  text-align: left;
+}
+
 .site footer div + div {
   text-align: right;
 }
