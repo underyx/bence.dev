@@ -12,9 +12,9 @@ $(document).ready(function() {
       $("button").removeClass("active");
       $(this).addClass("active");
 
-      _gaq.push(['_trackEvent', 'Playlists', 'Play (Grooveshark)', $(this).data("grooveshark")]);
+      _gaq.push(['_trackEvent', 'Playlists', 'Play (Grooveshark)', $(this).data("grooveshark").toString()]);
       setTimeout(function(){$(".grooveshark").css("opacity", "1");}, 200);
     }
-    _gaq.push(['_trackEvent', 'Playlists', 'Play', $(this).parent().prev().text(), 'Disabled']);
+    _gaq.push(['_trackEvent', 'Playlists', 'Play (Disabled)', $(this).data("grooveshark").toString()]);
   });
 });
