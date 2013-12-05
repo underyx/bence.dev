@@ -14,7 +14,8 @@ $(document).ready(function() {
 
       _gaq.push(['_trackEvent', 'Playlists', 'Play (Grooveshark)', $(this).data("grooveshark").toString()]);
       setTimeout(function(){$(".grooveshark").css("opacity", "1");}, 200);
-    }
+    } else {
     _gaq.push(['_trackEvent', 'Playlists', 'Play (Disabled)', $(this).data("grooveshark").toString()]);
+    }
   });
 });
