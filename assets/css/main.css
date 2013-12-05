@@ -272,7 +272,8 @@ body.music {
   text-align: center;
   padding-top: 64px;
   line-height: 2em;
-  position: absolute;
+  position: relative;
+  margin: auto;
   z-index: -1;
 }
 
@@ -283,6 +284,7 @@ body.music {
 
 .music .content .grooveshark,
 .music .content .spotify {
+  margin: auto;
   opacity: 0;
   display: none;
   transition: opacity 1s;

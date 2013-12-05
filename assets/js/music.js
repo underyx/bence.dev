@@ -1,6 +1,7 @@
 $(document).ready(function() {
   $(".music .content table button").bind("click", function() {
     if (!$(this).hasClass("active")) {
+      $(".music .content .placeholder").remove();
       $(".grooveshark > param").attr("value", "playlistID=" + $(this).data("grooveshark") + "&p=1");
       $(".grooveshark").css("display", "block");
 
