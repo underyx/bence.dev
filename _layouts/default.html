@@ -38,14 +38,23 @@
       <header>
         <h1 class="title"><a href="/">{{ site.name }}</a></h1>
         <i class="icon glyphicon glyphicon-{{ page.icon }}"></i>
+        <nav class="xs-nav visible-xs">
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/profiles">Profiles</a></li>
+            <li><a href="/music">Music</a></li>
+          </ul>
+        </nav>
       </header>
       <section class="main row">
-        <nav class="main-nav col-xs-3 col-sm-2 col-sm-offset-1">
-          <a href="/">Home</a><br>
-          <a href="/profiles">Profiles</a><br>
-          <a href="/music">Music</a>
+        <nav class="main-nav hidden-xs col-sm-2 col-sm-offset-1">
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/profiles">Profiles</a></li>
+            <li><a href="/music">Music</a></li>
+          </ul>
         </nav>
-        <section class="content col-xs-9 col-sm-8">
+        <section class="content col-sm-8">
           {{ content }}
         </section>
       </section>

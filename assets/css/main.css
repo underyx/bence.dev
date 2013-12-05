@@ -65,6 +65,33 @@ a:hover {
   color: #FFF;
 }
 
+.xs-nav {
+  color: white;
+  font-size: 20px;
+  text-align: center;
+  font-family: Raleway, sans-serif;
+  font-weight: 800;
+  text-transform: lowercase;
+  border-bottom: 1px rgba(255, 255, 255, 0.3) solid;
+}
+
+.xs-nav ul {
+  padding-left: 0;
+  list-style: none;
+}
+
+.xs-nav ul li {
+  display: inline;
+}
+
+.xs-nav ul li + li {
+  margin-left: 24px;
+}
+
+.main-nav a {
+  text-decoration: none;
+}
+
 .main-nav {
   color: white;
   font-size: 20px;
@@ -72,6 +99,11 @@ a:hover {
   font-family: Raleway, sans-serif;
   font-weight: 800;
   text-transform: lowercase;
+}
+
+.main-nav ul {
+  padding-left: 0;
+  list-style: none;
 }
 
 .main-nav a {
@@ -166,10 +198,6 @@ body.music {
 
 .music .content header {
   text-align: left;
-}
-
-.music .content header h2 {
-  margin-top: 0;
 }
 
 .music .content table {
