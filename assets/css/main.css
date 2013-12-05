@@ -174,9 +174,9 @@ body.music {
 
 .music .content table {
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: rgba(0, 0, 0, 0.2);
   box-shadow: 0 0 8px -1px #111;
-  border-radius: 16px;
+  border-radius: 4px;
   text-align: center;
 }
 
@@ -231,7 +231,31 @@ body.music {
   cursor: default;
 }
 
+.music .content .player {
+  margin-top: 32px;
+}
+
+.music .content .placeholder {
+  width: 300px;
+  height: 380px;
+  opacity: 0.5;
+  border: 4px white dashed;
+  font-size: 24px;
+  text-align: center;
+  padding-top: 64px;
+  line-height: 2em;
+  position: absolute;
+  z-index: -1;
+}
+
+.music .content .placeholder .clarification {
+  font-weight: 200;
+  font-size: 16px;
+}
+
 .music .content .grooveshark,
 .music .content .spotify {
+  opacity: 0;
   display: none;
+  transition: opacity 1s;
 }
