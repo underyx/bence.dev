@@ -71,7 +71,7 @@ a:hover {
   text-decoration: none;
 }
 
-.site header h1.title:before {90
+.site header h1.title:before {
   content: "Hi, it's me,";
   font-size: 18px;
   color: #BBB;
