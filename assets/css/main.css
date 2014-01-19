@@ -291,6 +291,26 @@ body.music {
   cursor: default;
 }
 
+@media (min-width: 581px) {
+  .music .content table .name .long {
+    display: inline;
+  }
+
+  .music .content table .name .short {
+    display: none;
+  }
+}
+
+@media (max-width: 580px) {
+  .music .content table .name .long {
+    display: none;
+  }
+
+  .music .content table .name .short {
+    display: inline;
+  }
+}
+
 .music .content .player {
   margin-top: 32px;
 }

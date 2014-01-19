@@ -20,8 +20,8 @@ icon: music
       <th>B side<br><span class="description">More acoustic</span></th>
       {% for playlist in site.data.playlists %}
       <tr>
-        <td>
-          {{ playlist.name }}
+        <td class="name">
+          <span class="long">{{ playlist.longname }}</span><span class="short">{{ playlist.shortname }}</span>
         </td>
         <td {% if playlist.ids.size == 1 %}colspan="2"{% endif %}>
           <button data-grooveshark="{{ playlist.ids[0].grooveshark }}" data-spotify="{{ playlist.ids[0].spotify }}">Play <i class="glyphicon glyphicon-play"></i></button>

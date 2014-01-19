@@ -1,28 +1,33 @@
-- name: January 2013
+- longname: January 2013
+  shortname: Jan '13
   description:
   ids:
   - grooveshark: 82023070
     spotify:
 
-- name: February 2013
+- longname: February 2013
+  shortname: Feb '13
   description:
   ids:
   - grooveshark: 83533690
     spotify:
 
-- name: March 2013
+- longname: March 2013
+  shortname: Mar '13
   description:
   ids:
   - grooveshark: 84536166
     spotify:
 
-- name: April 2013
+- longname: April 2013
+  shortname: Apr '13
   description:
   ids:
   - grooveshark: 85997714
     spotify:
 
-- name: May 2013
+- longname: May 2013
+  shortname: May '13
   description:
   ids:
   - grooveshark: 87112359
@@ -30,7 +35,8 @@
   - grooveshark: 87112735
     spotify:
 
-- name: June 2013
+- longname: June 2013
+  shortname: Jun '13
   description:
   ids:
   - grooveshark: 88264777
@@ -38,25 +44,29 @@
   - grooveshark: 88264945
     spotify:
 
-- name: July 2013
+- longname: July 2013
+  shortname: Jul '13
   description:
   ids:
   - grooveshark: 89066508
     spotify:
 
-- name: August 2013
+- longname: August 2013
+  shortname: Aug '13
   description:
   ids:
   - grooveshark: 89994452
     spotify:
 
-- name: September 2013
+- longname: September 2013
+  shortname: Sep '13
   description:
   ids:
   - grooveshark: 91028566
     spotify:
 
-- name: October 2013
+- longname: October 2013
+  shortname: Oct '13
   description:
   ids:
   - grooveshark: 92221616
@@ -64,7 +74,8 @@
   - grooveshark: 92221621
     spotify:
 
-- name: November 2013
+- longname: November 2013
+  shortname: Nov '13
   description:
   ids:
   - grooveshark: 93498995
