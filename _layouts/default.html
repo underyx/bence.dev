@@ -48,6 +48,11 @@
   </head>
 
   <body class="{{ page.shortname }}">
+
+    <script type="text/javascript">
+      var WRInitTime=(new Date()).getTime();
+    </script>
+
     <section class="site container">
       <header>
         <h1 class="title"><a href="/">{{ site.name }}</a></h1>
@@ -81,5 +86,13 @@
         </div>
       </footer>
     </section>
+
+    <script type='text/javascript'>
+      document.write(unescape("%3Cscript%20src='"+
+      (document.location.protocol=='https:'?
+      "https://clicktalecdn.sslcs.cdngc.net/www02/ptc/e70f7bd1-d151-489d-b993-0b9ae4ff3fcc.js":
+      "http://cdn.clicktale.net/www02/ptc/e70f7bd1-d151-489d-b993-0b9ae4ff3fcc.js")+"'%20type='text/javascript'%3E%3C/script%3E"));
+    </script>
+
   </body>
 </html>
