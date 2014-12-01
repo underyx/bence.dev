@@ -26,7 +26,7 @@ fun:
     - name: Steam
       url: https://steamcommunity.com/id/underyx
     - name: last.fm
-      url: https://last.fm/user/underyx
+      url: http://last.fm/user/underyx
     - name: trakt.tv
       url: https://trakt.tv/user/underyx
     - name: Spotify
