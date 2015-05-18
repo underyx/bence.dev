@@ -19,9 +19,15 @@ a:hover {
   color: #75BEFD;
 }
 
+pre, code {
+  border-color: #444;
+  background-color: #222;
+  color: #DDD;
+}
+
 .site {
   font-size: 120%;
-  text-align: justify;
+  text-align: left;
   margin: 3em auto 2em;
   line-height: 1.5em;
 }
@@ -340,4 +346,17 @@ body.music {
   opacity: 0;
   display: none;
   transition: opacity 1s;
+}
+
+body.blog {
+  background-color: rgb(11, 24, 22);
+}
+
+.blog header .icon {
+  text-shadow: 2px 2px 8px rgba(11, 24, 22, 0.7), 0 0 0 rgba(0, 0, 0, 0.7);
+}
+
+.blog ul {
+  list-style: none;
+  padding: 0;
 }
