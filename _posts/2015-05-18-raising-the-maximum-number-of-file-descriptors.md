@@ -19,6 +19,13 @@ worthwhile resource that describes how to solve this thing, so you better do
 this now, or at the very least, set up some monitoring for the number of used
 file descriptors for critical processes!
 
+If anyone's interested, as I understand it, this entire feature is mostly
+obsolete --- it seems like a nice safeguard against a certain type of memory
+leak (namely, accidentally opening too many files which each take up a bit of
+year memory), or for controlling resources available for each user, but it seems
+like it has practically no use nowadays, when file opens have practically no
+cost at all on most systems.
+
 For reference, our current stack, for which the steps described below worked is:
 
  - Instances hosted on [Amazon EC2](https://aws.amazon.com/ec2/) (not that this
