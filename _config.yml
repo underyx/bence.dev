@@ -1,3 +1,4 @@
-name: Underyx
+name: underyx
 markdown: redcarpet
-pygments: false
+highlighter: 'pygments'
+
