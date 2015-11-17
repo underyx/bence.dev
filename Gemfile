@@ -1,6 +1,8 @@
 source 'https://rubygems.org'
 
-gem 'github-pages'
+gem 'jekyll'
+gem 'redcarpet'
+gem 'pygments.rb'
 
 # Gems for testing
 group :test do

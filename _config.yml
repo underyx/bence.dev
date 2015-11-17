@@ -1,3 +1,4 @@
 name: underyx
 markdown: redcarpet
-highlighter: 'pygments'
+highlighter: pygments
+
