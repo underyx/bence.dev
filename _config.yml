@@ -1,3 +1,16 @@
 name: underyx
 markdown: redcarpet
 highlighter: pygments
+permalink: '/:categories/:year/:month/:day/:title'
+timezone: UTC
+defaults:
+  - scope:
+      path: ''
+      type: pages
+    values:
+      layout: default
+  - scope:
+      path: ''
+      type: posts
+    values:
+      layout: blog

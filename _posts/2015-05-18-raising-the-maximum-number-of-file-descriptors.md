@@ -1,5 +1,4 @@
 ---
-layout: blog
 title: Raising the Maximum Number of File Descriptors (Open Files) on Ubuntu 14.04 Trusty
 ---
 
