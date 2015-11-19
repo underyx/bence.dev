@@ -44,11 +44,11 @@ The canonical way to check the limits for your current session which everyone
 will tell you is the [`ulimit`](http://ss64.com/bash/ulimit.html) command:
 
 ```
-➜  ~  ulimit -n
+$ ulimit -n
 4096
-➜  ~  ulimit -Hn
+$ ulimit -Hn
 4096
-➜  ~  ulimit -Sn
+$ ulimit -Sn
 4096
 ```
 
@@ -70,7 +70,7 @@ before) you initialized your shell. So what you should do instead is fire up
 get the ID of the problematic process, and do a `cat /proc/{process_id}/limits`:
 
 ```
-➜  ~  cat /proc/1882/limits
+$ cat /proc/1882/limits
 Limit                     Soft Limit           Hard Limit           Units
 Max cpu time              unlimited            unlimited            seconds
 Max file size             unlimited            unlimited            bytes
@@ -96,7 +96,7 @@ holds a file for each open file the process has, so it's pretty easy to count
 how close we are to reach the limit:
 
 ```
-➜  ~  sudo ls /proc/1882/fd | wc -l
+$ sudo ls /proc/1882/fd | wc -l
 4096
 ```
 
@@ -117,13 +117,10 @@ The actual way to raise your descriptors consists of editing three files:
 
 - `/etc/security/limits.conf` needs to have these lines in it:
 
-  ```
-  *    soft nofile 64000
-  *    hard nofile 64000
-  root soft nofile 64000
-  root hard nofile 64000
-  ```
-
+        *    soft nofile 64000
+        *    hard nofile 64000
+        root soft nofile 64000
+        root hard nofile 64000
   The asterisk at the beginning of the first two lines means 'apply this rule to
   all users except root', and you can probably guess that the last two lines set
   the limit only for the root user. The number at the end is of course, the new
@@ -131,15 +128,12 @@ The actual way to raise your descriptors consists of editing three files:
 
 - `/etc/pam.d/common-session` needs to have this line in it:
 
-  ```
-  session required pam_limits.so
-  ```
+        session required pam_limits.so
+
 
 - `/etc/pam.d/common-session-noninteractive` also needs to have this line in it:
 
-  ```
-  session required pam_limits.so
-  ```
+        session required pam_limits.so
 
   I never got around to looking into what exactly this does, but I'd assume that
   these two files control whether the limits file you edited above is actually
@@ -149,18 +143,18 @@ So, you did it, great job! Just reboot the machine (yup, sadly, you need to) and
 your limits should reflect your changes:
 
 ```
-➜  ~  ulimit -n
+$ ulimit -n
 64000
-➜  ~  ulimit -Hn
+$ ulimit -Hn
 64000
-➜  ~  ulimit -Sn
+$ ulimit -Sn
 64000
 ```
 
 Whee! And to check your problematic process again:
 
 ```
-➜  ~  cat /proc/1860/limits
+$ cat /proc/1860/limits
 Limit                     Soft Limit           Hard Limit           Units
 Max cpu time              unlimited            unlimited            seconds
 Max file size             unlimited            unlimited            bytes
@@ -220,7 +214,7 @@ should automatically restart your problematic processes as well, with your newly
 set limit:
 
 ```
-➜  ~  cat /proc/1954/limits
+$ cat /proc/1954/limits
 Limit                     Soft Limit           Hard Limit           Units
 Max cpu time              unlimited            unlimited            seconds
 Max file size             unlimited            unlimited            bytes

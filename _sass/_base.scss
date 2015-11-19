@@ -1,0 +1,171 @@
+body {
+  background: url('/assets/img/bg-overlay.png');
+  background-attachment: fixed;
+  color: $text-color;
+  font-family: $sans-serif;
+}
+
+a, a:visited {
+  color: $link-color;
+  transition: color 0.2s;
+}
+
+a:hover {
+  color: darken($link-color, 10%);
+}
+
+pre, code {
+  border-color: #333;
+  background-color: #222;
+  color: $text-color;
+}
+
+.site {
+  font-size: 120%;
+  text-align: left;
+  margin: 3em auto 2em;
+  line-height: 1.5em;
+}
+
+.site header {
+  text-align: center;
+}
+
+.site header .icon {
+  position: fixed;
+  left: 40px;
+  top: 20px;
+  z-index: -1;
+  opacity: 0.8;
+  color: transparent;
+}
+
+@media (min-width: 1201px) {
+  .site header .icon {
+    font-size: 360px;
+  }
+}
+
+@media (min-width: 993px) and (max-width: 1200px) {
+  .site header .icon {
+    font-size: 280px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+  .site header .icon {
+    font-size: 200px;
+  }
+}
+
+@media (max-width: 765px) {
+  .site header .icon {
+    font-size: 320px;
+    left: 0;
+    opacity: 0.2;
+    width: 100%;
+    text-align: center;
+  }
+}
+
+.site header {
+  a {
+    text-decoration: none;
+  }
+
+  h1.title:before {
+    content: "Hi, it's me,";
+    font-size: 18px;
+    color: #BBB;
+    display: block;
+  }
+
+  h1.title {
+    font-size: 52px;
+
+    display: inline-block;
+    margin-bottom: 1em;
+  }
+
+  h1.title a {
+    color: #DDD;
+  }
+
+  h1.title a:hover {
+    color: #FFF;
+  }
+}
+
+.xs-nav {
+  color: white;
+  font-size: 20px;
+  text-align: center;
+  font-family: $sans-serif;
+  font-weight: $bold;
+  text-transform: lowercase;
+  border-bottom: 1px rgba(255, 255, 255, 0.3) solid;
+
+  ul {
+    padding-left: 0;
+    list-style: none;
+  }
+
+  ul li {
+    display: inline;
+  }
+
+  ul li + li {
+    margin-left: 24px;
+  }
+
+}
+
+
+.main-nav {
+  color: white;
+  font-size: 20px;
+  text-align: right;
+  font-family: $sans-serif;
+  font-weight: $bold;
+  text-transform: lowercase;
+
+  ul {
+    padding-left: 0;
+    list-style: none;
+  }
+
+  a {
+    text-decoration: none;
+  }
+}
+
+.site {
+  .content {
+    border-left: 1px rgba(255, 255, 255, 0.1) solid;
+  }
+
+  footer a {
+    text-decoration: none;
+  }
+
+  footer {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 400;
+    margin-top: 24px;
+    font-size: 14px;
+    border-top: 1px rgba(255, 255, 255, 0.1) solid;
+    padding-top: 12px;
+
+    a {
+      text-decoration: none;
+    }
+
+    div {
+      text-align: left;
+    }
+
+    div + div {
+      text-align: right;
+    }
+  }
+}

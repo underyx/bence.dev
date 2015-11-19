@@ -1,0 +1,13 @@
+body.blog {
+  background-color: rgb(11, 24, 22);
+}
+
+.blog {
+  header .icon {
+    text-shadow: 2px 2px 8px rgba(11, 24, 22, 0.7), 0 0 0 rgba(0, 0, 0, 0.7);
+  }
+
+  pre {
+    font-size: .8em;
+  }
+}
