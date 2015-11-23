@@ -2,7 +2,7 @@
 title: Adding an Unreleased Commit as a Dependency for Your Python Package
 ---
 
-I'm not afraid to admit it: I'm in love with Python. Even though it has this one really quirky bit that keeps annoying me -- its packaging tools. Granted, [it's been improving a lot in the recent years](http://pypaio.readthedocs.org/en/latest/history/), and there's a [ton of work in progress by the fine people at PyPA](http://pypaio.readthedocs.org/en/latest/roadmap/), but there's still just so many cases where it's inconsistent, or even just straight up silly (especially when you need to depend on private packages, and still want to be able to install your package with a simple `pip install`).
+I'm not ashamed to admit it: I'm in love with Python. Even though it has this one really quirky bit that keeps annoying me -- its packaging tools. Granted, [it's been improving a lot in the recent years](http://pypaio.readthedocs.org/en/latest/history/), and there's a [ton of work in progress by the fine people at PyPA](http://pypaio.readthedocs.org/en/latest/roadmap/), but there's still just so many cases where it's inconsistent, or even just straight up silly (especially when you need to depend on private packages, and still want to be able to install your package with a simple `pip install`).
 
 ## Dual Origins
 
