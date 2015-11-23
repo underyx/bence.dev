@@ -3,11 +3,14 @@ title: Underyx | Blog
 shortname: blog
 icon: blog
 ---
-<ul>
+<ul class="articles">
   {% for post in site.posts %}
     <li>
       {{ post.date | date_to_long_string }}: <a href="{{ post.url }}">{{ post.title }}</a>
       <small>{{ post.excerpt }}</small>
     </li>
+    {% if forloop.last == false %}
+    <hr>
+    {% endif %}
   {% endfor %}
 </ul>

@@ -3,6 +3,16 @@ body.blog {
 }
 
 .blog {
+  ul.articles {
+    list-style: none;
+    padding: 0;
+    line-height: 1.5;
+
+    hr {
+      border-color: rgba(255, 255, 255, 0.5);
+    }
+  }
+
   header .icon {
     text-shadow: 2px 2px 8px rgba(11, 24, 22, 0.7), 0 0 0 rgba(0, 0, 0, 0.7);
   }
