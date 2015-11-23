@@ -1,8 +1,7 @@
 name: underyx
-markdown: redcarpet
-highlighter: pygments
 permalink: '/:categories/:year/:month/:day/:title'
 timezone: UTC
+
 defaults:
   - scope:
       path: ''
@@ -14,6 +13,13 @@ defaults:
       type: posts
     values:
       layout: blog
+
 sass:
   style: compressed
+markdown: redcarpet
+highlighter: pygments
+redcarpet:
+  extensions:
+    - smart
+
 analytics_id: UA-46190907-1
