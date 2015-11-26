@@ -7,12 +7,7 @@ insert_final_newline = true
 charset = utf-8
 indent_style = 2
 indent_size = 2
+quote_type = single
 
 [*.html]
 quote_type = double
-
-[*.sass]
-quote_type = single
-
-[*.js]
-quote_type = single
