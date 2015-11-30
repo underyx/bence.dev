@@ -4,8 +4,8 @@
     <meta charset="utf-8">
     <title>{{ page.title }}</title>
 
-    <link rel="icon" href="/assets/img/favicon-32.png" sizes="32x32">
-    <link rel="apple-touch-icon-precomposed" href="/assets/img/favicon-152.png">
+    <link rel="icon" href="{% asset_path favicon-32.png %}" sizes="32x32">
+    <link rel="apple-touch-icon-precomposed" href="{% asset_path favicon-152.png %}">
 
     <link rel="canonical" href="https://underyx.me{{ page.url }}" />
 
@@ -13,11 +13,9 @@
 
     <link href="https://fonts.googleapis.com/css?family=Hind:400,700,300" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/assets/main.css">
-    {% for css_file in layout.css + page.css %}
-    <link rel="stylesheet" href="/assets/{{ css_file }}.css" media="screen" type="text/css">
-    {% endfor %}
 
+    {% css 'main.css' %}
+    {% contentblock stylesheets %}
   </head>
 
   <body class="{{ page.shortname | default:layout.shortname }}">
@@ -69,10 +67,6 @@
       ga('create', '{{ site.analytics_id }}', 'auto');
       ga('send', 'pageview');
     </script>
-
-    {% for js_file in layout.js + page.js %}
-    <script src='/assets/js/{{ js_file }}.js' type="text/javascript"></script>
-    {% endfor %}
-
+    {% contentblock scripts %}
   </body>
 </html>

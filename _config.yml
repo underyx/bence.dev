@@ -2,6 +2,9 @@ name: underyx
 permalink: '/:categories/:year/:month/:day/:title'
 timezone: UTC
 
+exclude:
+  - vendor/
+
 defaults:
   - scope:
       path: ''
@@ -14,8 +17,6 @@ defaults:
     values:
       layout: blog
 
-sass:
-  style: compressed
 markdown: redcarpet
 highlighter: pygments
 redcarpet:
@@ -23,3 +24,13 @@ redcarpet:
     - smart
 
 analytics_id: UA-46190907-1
+
+gems:
+  - jekyll-assets
+
+assets:
+  prefix: "/assets"
+  sources:
+    - "_assets/css"
+    - "_assets/js"
+    - "_assets/img"

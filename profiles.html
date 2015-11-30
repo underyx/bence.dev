@@ -2,11 +2,8 @@
 title: Profiles
 shortname: profiles
 icon: user
-js:
-  - profiles
+layout: default
 ---
-
-<script src="/assets/js/profiles.js"></script>
 
 <header>
 <p>I'm present online on an alarmingly high amount of websites.<br>I'll try and list at least some of those here.</p>
@@ -37,3 +34,7 @@ js:
       </ul>
     </div>
 </section>
+
+{% contentfor scripts %}
+{% js 'profiles.js' %}
+{% endcontentfor %}
