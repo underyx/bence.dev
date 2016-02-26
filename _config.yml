@@ -24,6 +24,7 @@ redcarpet:
     - smart
 
 analytics_id: UA-46190907-1
+emoji_rodeo_id: 86ce534ae35d5129675041562f7ef58de381734c500512af38f727849d2ed434
 
 gems:
   - jekyll-assets
