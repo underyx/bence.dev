@@ -6,11 +6,11 @@ end
 
 task :test => :build
 task :test do
-  require 'html/proofer'
-  HTML::Proofer.new("./_site", {
-    :verbose => true,
-    :check_html => true,
+  require 'html-proofer'
+  HTMLProofer.check_directory("_site", {
     :check_favicon => true,
-    :href_ignore => [/^.*linkedin\.com.*$/, /^\//]
+    :check_html => true,
+    :check_opengraph => true,
+		:assume_extension => true
   }).run
 end
