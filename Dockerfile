@@ -5,7 +5,7 @@ RUN mkdir /app
 WORKDIR /app
 
 COPY Gemfile Gemfile.lock /app/
-RUN apk add --no-cache --virtual=.run-deps libffi &&\
+RUN apk add --no-cache --virtual=.run-deps libcurl libffi &&\
     apk add --no-cache --virtual=.build-deps build-base libffi-dev &&\
     bundle install --system --no-cache &&\
     apk del .build-deps
