@@ -30,7 +30,7 @@ For reference, our current stack, for which the steps described below worked is:
  - Instances hosted on [Amazon EC2](https://aws.amazon.com/ec2/) (not that this
    one should matter)
  - Ubuntu 14.04 (Trusty) for the OS
- - [Supervisor](https://supervisord.org) for process management
+ - [Supervisor](http://supervisord.org) for process management
  - And lastly, the process hitting errors was
    [Elasticsearch](https://www.elastic.co/products/elasticsearch)
 
