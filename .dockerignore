@@ -1,0 +1,6 @@
+_site
+.asset-cache
+.bundle
+.git
+.sass-cache
+vendor
