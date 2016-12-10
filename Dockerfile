@@ -13,5 +13,5 @@ RUN apk add --no-cache --virtual=.run-deps libffi &&\
 COPY . /app/
 RUN jekyll build --destination /build
 
-CMD [ "jekyll", "serve", "--host", "0.0.0.0", "--destination", "/build" ]
+CMD [ "jekyll", "serve", "--host", "0.0.0.0", "--skip-initial-build", "--no-watch", "--destination", "/build" ]
 EXPOSE 4000
