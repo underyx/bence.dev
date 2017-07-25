@@ -9,7 +9,7 @@ on a PC that can reboot at random times
 (for instance due to Windows updates.)
 
 As Chrome seems to be changing up the command line options sometimes,
-I'll add that these intrustions were tested on July 25th, 2017.
+I'll add that these intructions were tested on July 25th, 2017.
 
 What you need to do is
 
@@ -18,7 +18,7 @@ What you need to do is
   - `--full-screen` makes Chrome launch in full screen mode.
   - `--kiosk=<url>` sets the default URL to open.
   - `--disable-session-crashed-bubble` disables the "Chrome didn't shut down properly" alert after the PC reboots
-3. Rename the shortcut from 'Google Chrome' to the name of your dashboard page,
+3. Rename the shortcut from "Google Chrome" to the name of your dashboard page,
    just to keep things clean
 4. Move this shortcut to `%APPDATA%\Microsoft\Windows\Start Menu\Startup`
    to make Windows launch it automatically upon startup.
