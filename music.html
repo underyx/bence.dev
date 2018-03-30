@@ -2,43 +2,35 @@
 title: Music
 shortname: music
 icon: music
-js:
-  - music
 ---
 
-<header>
 <h2>I love music.</h2>
-<p>Also, I'm admittedly quite the hipster. Anyways, ever since January '13, I've been making regular (first, monthly, then quarterly) playlists of the songs I listened to a lot. And I'm pretty proud of them, too. You did well, songs!</p>
-</header>
-<section class="row">
-  <section class="col-md-7">
-    <ul>
-    </ul>
-    <table>
-      <th></th>
-      <th>A side<br><span class="description">More electronic</span></th>
-      <th>B side<br><span class="description">More acoustic</span></th>
-      {% for playlist in site.data.playlists %}
-      <tr>
-        <td class="name">
-          <span class="long">{{ playlist.longname }}</span><span class="short">{{ playlist.shortname }}</span>
-        </td>
-        <td {% if playlist.ids.size == 1 %}colspan="2"{% endif %}>
-          <button data-grooveshark="{{ playlist.ids[0].grooveshark }}" data-spotify="{{ playlist.ids[0].spotify }}">Play <i class="glyphicon glyphicon-play"></i></button>
-        </td>
-        {% if playlist.ids.size == 2 %}
-        <td>
-            <button data-grooveshark="{{ playlist.ids[1].grooveshark }}" data-spotify="{{ playlist.ids[1].spotify }}">Play <i class="glyphicon glyphicon-play"></i></button>
-        </td>
-        {% endif %}
-      </tr>
-      {% endfor %}
-    </table>
-  </section>
-  <section class="player col-md-5">
-      <div class="placeholder">Player Goes Here<br><span class="clarification">(Click a play button on the left)</span></div>
-      <object class="grooveshark" data="http://grooveshark.com/widget.swf" width="300" height="380" >
-        <param name="flashvars" value="p=1">
-      </object>
-  </section>
+<p>
+  Also, I'm admittedly quite the hipster.
+  Anyway, ever since January '13,
+  I've been making regular playlists of the songs I listened to a lot.
+  And I'm pretty proud of them, too.
+  You did well, songs!
+</p>
+<a id="launch">Check them out! ►</a>
+
+{% contentfor post-content %}
+<svg class="swipe" height="100vh" width="100vw">
+  <defs>
+    <clipPath id="swipe">
+      <rect y="0" x="-400%" width="400%" height="100%" transform="skewX(-45)">
+        <animate attributeType="XML" attributeName="x" begin="indefinite" dur="2s" fill="freeze" values="-400%; 0%" calcMode="spline" keySplines="0.9 0 0.9 1"/>
+      </rect>
+    </clipPath>
+  </defs>
+</svg>
+<section class="player">
+  <h2>2018-03</h2>
+  <h3>lost track of time</h3>
+  <iframe src="https://open.spotify.com/embed/user/underyx/playlist/4AL4GXMflWxZ42UJLDQYJf" width="300" height="380" frameborder="0"
+    allowtransparency="true" allow="encrypted-media"></iframe>
 </section>
+{% asset 'playlists/2018-03.jpg' class='background-photo' %}
+{% asset 'music-overlay.svg' class='background-photo' %}
+{% asset 'music.js' %}
+{% endcontentfor %}

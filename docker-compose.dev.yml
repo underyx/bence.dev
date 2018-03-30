@@ -1,7 +1,6 @@
 version: '2'
 services:
   app:
-    build: .
-    command: [ "jekyll", "serve", "--host", "0.0.0.0", "--destination", "/build", "--incremental" ]
+    command: [ "jekyll", "serve", "--host", "0.0.0.0" ]
     volumes:
       - .:/app

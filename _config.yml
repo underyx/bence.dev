@@ -30,7 +30,3 @@ plugins:
 
 assets:
   prefix: "/assets"
-  sources:
-    - "_assets/css"
-    - "_assets/js"
-    - "_assets/img"

@@ -1,0 +1,11 @@
+<svg
+  version="1.1" baseProfile="full" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="600" height="600"
+>
+    <!-- opaque background to use when developing -->
+    <!-- <rect x="0" y="0" width="600" height="600" fill="#C57"/> -->
+
+    <polygon points="372,-60 -60,372 -60,408 408,-60" fill="#DDD"/>
+    <polygon points="96,660 660,96 660,132 132,660" fill="#DDD"/>
+    <polygon points="192,660 660,192 660,228 228,660" fill="#DDD"/>
+</svg>

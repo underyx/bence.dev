@@ -1,0 +1,34 @@
+<svg
+  version="1.1" baseProfile="full" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="600" height="600"
+>
+    <!-- opaque background to use when developing -->
+    <!-- <rect x="0" y="0" width="600" height="600" fill="#C57"/> -->
+
+    <line x1="62%" y1="-10%" x2="62%" y2="-10%" stroke="#DDD" stroke-width="1">
+      <animate attributeType="XML" attributeName="x2" begin="1.2s" dur="0.3s" fill="freeze" values="62%; -10%" calcMode="spline" keySplines="0.1 0.8 0.2 1"/>
+      <animate attributeType="XML" attributeName="y2" begin="1.2s" dur="0.3s" fill="freeze" values="-10%; 62%" calcMode="spline" keySplines="0.1 0.8 0.2 1"/>
+    </line>
+    <line x1="68%" y1="-10%" x2="68%" y2="-10%" stroke="#DDD" stroke-width="1">
+      <animate attributeType="XML" attributeName="x2" begin="1.2s" dur="0.3s" fill="freeze" values="68%; -10%" calcMode="spline" keySplines="0.1 0.8 0.2 1"/>
+      <animate attributeType="XML" attributeName="y2" begin="1.2s" dur="0.3s" fill="freeze" values="-10%; 68%" calcMode="spline" keySplines="0.1 0.8 0.2 1"/>
+    </line>
+
+    <line x1="16%" y1="110%" x2="16%" y2="110%" stroke="#DDD" stroke-width="1">
+      <animate attributeType="XML" attributeName="x2" begin="1.6s" dur="0.3s" fill="freeze" values="16%; 110%" calcMode="spline" keySplines="0.1 0.8 0.2 1"/>
+      <animate attributeType="XML" attributeName="y2" begin="1.6s" dur="0.3s" fill="freeze" values="110%; 16%;" calcMode="spline" keySplines="0.1 0.8 0.2 1"/>
+    </line>
+    <line x1="22%" y1="110%" x2="22%" y2="110%" stroke="#DDD" stroke-width="1">
+      <animate attributeType="XML" attributeName="x2" begin="1.6s" dur="0.3s" fill="freeze" values="22%; 110%" calcMode="spline" keySplines="0.1 0.8 0.2 1"/>
+      <animate attributeType="XML" attributeName="y2" begin="1.6s" dur="0.3s" fill="freeze" values="110%; 22%" calcMode="spline" keySplines="0.1 0.8 0.2 1"/>
+    </line>
+
+    <line x1="110%" y1="32%" x2="110%" y2="32%" stroke="#DDD" stroke-width="1">
+      <animate attributeType="XML" attributeName="x2" begin="2.0s" dur="0.3s" fill="freeze" values="110%; 32%" calcMode="spline" keySplines="0.1 0.8 0.2 1"/>
+      <animate attributeType="XML" attributeName="y2" begin="2.0s" dur="0.3s" fill="freeze" values="32%; 110%" calcMode="spline" keySplines="0.1 0.8 0.2 1"/>
+    </line>
+    <line x1="110%" y1="38%" x2="110%" y2="38%" stroke="#DDD" stroke-width="1">
+      <animate attributeType="XML" attributeName="x2" begin="2.0s" dur="0.3s" fill="freeze" values="110%; 38%" calcMode="spline" keySplines="0.1 0.8 0.2 1"/>
+      <animate attributeType="XML" attributeName="y2" begin="2.0s" dur="0.3s" fill="freeze" values="38%; 110%" calcMode="spline" keySplines="0.1 0.8 0.2 1"/>
+    </line>
+</svg>
