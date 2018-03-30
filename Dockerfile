@@ -1,7 +1,5 @@
 FROM ruby:2.5-alpine3.7
-MAINTAINER Bence Nagy <bence@underyx.me>
 
-RUN mkdir /app
 WORKDIR /app
 
 COPY Gemfile Gemfile.lock /app/
