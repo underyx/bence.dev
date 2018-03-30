@@ -1,4 +1,4 @@
-FROM ruby:2.3-alpine
+FROM ruby:2.5-alpine3.7
 MAINTAINER Bence Nagy <bence@underyx.me>
 
 RUN mkdir /app
