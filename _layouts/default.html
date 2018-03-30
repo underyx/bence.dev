@@ -4,8 +4,8 @@
     <meta charset="utf-8">
     <title>{{ page.title }}</title>
 
-    <link rel="icon" href="{% asset_path favicon-32.png %}" sizes="32x32">
-    <link rel="apple-touch-icon-precomposed" href="{% asset_path favicon-152.png %}">
+    <link rel="icon" href="{% asset favicon-32.png @path %}" sizes="32x32">
+    <link rel="apple-touch-icon-precomposed" href="{% asset favicon-152.png @path %}">
 
     <link rel="canonical" href="https://underyx.me{{ page.url }}" />
 
@@ -14,7 +14,7 @@
     <link href="https://fonts.googleapis.com/css?family=Hind:400,700,300" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha/css/bootstrap.min.css">
 
-    {% css 'main.css' %}
+    {% asset 'main.css' %}
     {% contentblock stylesheets %}
   </head>
 
