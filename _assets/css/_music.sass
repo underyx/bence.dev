@@ -21,19 +21,22 @@ body.music.launched
   background-size: auto, cover
   background-position: 0 0, center
 
-  transition: background-color 1s ease
+  transition: background-color 2s ease
   background-color: darken($music-background, 5)
 
   .site > header
-    transition: opacity 0.5s ease-in
+    transform: translateY(-10px)
+    transition: opacity 0.3s ease-in, transform 0.3s ease-in
     opacity: 0
 
   .main-nav, .content
-    transition: opacity 0.5s 0.25s ease-in
+    transform: translateY(-10px)
+    transition: opacity 0.3s 0.2s ease-in, transform 0.3s 0.2s ease-in
     opacity: 0
 
   .site > footer
-    transition: opacity 0.5s 0.5s ease-in
+    transform: translateY(-10px)
+    transition: opacity 0.3s 0.4s ease-in, transform 0.3s 0.4s ease-in
     opacity: 0
 
 .background-photo
