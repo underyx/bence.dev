@@ -18,9 +18,7 @@ icon: music
 <svg class="swipe" height="100%" width="100%">
   <defs>
     <clipPath id="swipe">
-      <rect y="0" x="-400%" width="400%" height="100%" transform="skewX(-45)">
-        <animate attributeType="XML" attributeName="x" begin="indefinite" dur="2s" fill="freeze" values="-400%; 0%" calcMode="spline" keySplines="0.9 0 0.9 1"/>
-      </rect>
+      <rect class="left" y="0" x="-400%" width="400%" height="100%" transform="skewX(-45)"/>
     </clipPath>
   </defs>
 </svg>
@@ -29,7 +27,21 @@ icon: music
   <h3>lost track of time</h3>
   <iframe id="player-embed" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
 </section>
-{% asset 'playlists/2018-03.jpg' class='background-photo' %}
-{% asset 'music-overlay.svg' class='background-photo' %}
-{% asset 'music.js' %}
+<script>
+  const playlists = {
+    {% for playlist in site.data.playlists %}
+    "{{ playlist[0] }}": {
+      "title": "{{ playlist[1].title }}",
+      "spotify_id": "{{ playlist[1].spotify_id }}",
+      "image_url": "{% asset 'playlists/{{ playlist[0] }}.jpg' @path %}"
+    }{% unless forloop.last %}, {% endunless %}
+    {% endfor %}
+  };
+</script>
+<div class="background">
+  <img id="background-over">
+  <img id="background-under">
+  {% asset "music-overlay.svg" id="background-overlay" %}
+</div>
+{% asset "music.js" %}
 {% endcontentfor %}
