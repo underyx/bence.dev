@@ -3,5 +3,6 @@ services:
   app:
     build:
       context: .
+    image: underyx/underyx.me
     ports:
       - 80
