@@ -1,15 +1,17 @@
-FROM ruby:2.5-alpine3.7
+FROM ruby:2.5-alpine as jekyll
 
 WORKDIR /app
 
-COPY Gemfile Gemfile.lock /app/
+COPY Gemfile Gemfile.lock ./
 RUN apk add --no-cache --virtual=.run-deps libcurl libffi &&\
     apk add --no-cache --virtual=.build-deps build-base libffi-dev &&\
     bundle install --system --no-cache &&\
     apk del .build-deps
 
-COPY . /app/
+COPY . ./
 RUN jekyll build --destination /build
 
-CMD [ "jekyll", "serve", "--host", "0.0.0.0", "--skip-initial-build", "--no-watch", "--destination", "/build" ]
-EXPOSE 4000
+FROM nginx:1.15-alpine
+
+COPY --from=jekyll /build /usr/share/nginx/html
+COPY nginx.vhost.conf /etc/nginx/conf.d/default.conf

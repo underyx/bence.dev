@@ -1,6 +1,11 @@
-version: '2'
+version: '3.7'
 services:
   app:
-    command: [ "jekyll", "serve", "--host", "0.0.0.0" ]
+    build:
+      context: .
+      target: jekyll
+    command: ["jekyll", "serve", "--skip-initial-build", "--host=0.0.0.0", "--destination=/build"]
+    ports:
+      - 8379:4000
     volumes:
       - .:/app
