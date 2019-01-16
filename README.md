@@ -11,7 +11,3 @@ To serve the current version
 To launch in developer mode (with auto-rebuilding and such)
 
     docker-compose -f docker-compose.yml -f docker-compose.dev.yml up
-
-## Tests
-
-    docker-compose run app rake test

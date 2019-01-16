@@ -1,17 +1,16 @@
-FROM ruby:2.5-alpine as jekyll
+FROM node:11 as gatsby
 
 WORKDIR /app
 
-COPY Gemfile Gemfile.lock ./
-RUN apk add --no-cache --virtual=.run-deps libcurl libffi &&\
-    apk add --no-cache --virtual=.build-deps build-base libffi-dev &&\
-    bundle install --system --no-cache &&\
-    apk del .build-deps
+COPY package.json package-lock.json  ./
+RUN apt-get update &&\
+    apt-get install libvips libfribidi0 libharfbuzz-dev -y --no-install-recommends &&\
+    npm ci
 
 COPY . ./
-RUN jekyll build --destination /build
+RUN npx gatsby build
 
 FROM nginx:1.15-alpine
 
-COPY --from=jekyll /build /usr/share/nginx/html
+COPY --from=gatsby /app/public /usr/share/nginx/html
 COPY nginx.vhost.conf /etc/nginx/conf.d/default.conf
