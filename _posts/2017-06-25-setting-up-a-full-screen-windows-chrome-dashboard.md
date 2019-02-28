@@ -22,6 +22,7 @@ What you need to do is
    just to keep things clean
 4. Move this shortcut to `%APPDATA%\Microsoft\Windows\Start Menu\Startup`
    to make Windows launch it automatically upon startup.
+   The `Startup` directory doesn't exist by default, so you might need to create it.
 5. Reboot and see if it works!
 
 That should be it!
