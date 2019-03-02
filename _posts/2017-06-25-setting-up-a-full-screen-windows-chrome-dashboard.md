@@ -9,7 +9,7 @@ on a PC that can reboot at random times
 (for instance due to Windows updates.)
 
 As Chrome seems to be changing up the command line options sometimes,
-I'll add that these intructions were tested on October 13rd, 2017.
+I'll add that these intructions were last tested on March 2nd, 2019.
 
 What you need to do is
 
@@ -20,7 +20,7 @@ What you need to do is
   - `--app=<url>` sets the default URL to open.
 3. Rename the shortcut from "Google Chrome" to the name of your dashboard page,
    just to keep things clean
-4. Move this shortcut to `%APPDATA%\Microsoft\Windows\Start Menu\Startup`
+4. Move this shortcut to `%APPDATA%\Microsoft\Windows\Start Menu\Programs\Startup`
    to make Windows launch it automatically upon startup.
    The `Startup` directory doesn't exist by default, so you might need to create it.
 5. Reboot and see if it works!
