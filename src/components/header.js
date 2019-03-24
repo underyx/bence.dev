@@ -9,8 +9,10 @@ const StyledHeader = styled.header`
 
 const HeaderText = styled.h1`
   display: inline-block;
+  margin-bottom: 0.8rem;
 
   :before {
+    margin-top: 0.8rem;
     content: "Hi, it's me,";
     font-weight: 400;
     font-size: 1rem;

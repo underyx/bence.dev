@@ -21,6 +21,10 @@ const IndexPage = () => (
       development, but I was fulfilling responsibilities in other fields, such
       as big data and operations.
     </p>
+    <p>
+      I keep getting lost in trying new things. But a couple interests that have
+      stayed with me for a longer time are rationality, video games, and design.
+    </p>
   </Layout>
 )
 
