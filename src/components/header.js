@@ -21,6 +21,10 @@ const HeaderText = styled.h1`
 const HeaderLink = styled(Link)`
   color: inherit;
   text-decoration: none;
+
+  &:visited {
+    color: inherit;
+  }
 `
 
 const Header = () => (
