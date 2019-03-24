@@ -4,7 +4,7 @@ import styled from 'styled-components'
 import { Link } from 'gatsby'
 
 const StyledHeader = styled.header`
-  margin-top: 1rem;
+  margin-top: 1.8rem;
 `
 
 const HeaderText = styled.h1`
@@ -12,7 +12,6 @@ const HeaderText = styled.h1`
   margin-bottom: 0.8rem;
 
   :before {
-    margin-top: 0.8rem;
     content: "Hi, it's me,";
     font-weight: 400;
     font-size: 1rem;
