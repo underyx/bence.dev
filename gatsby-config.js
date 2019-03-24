@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: "underyx",
+    title: 'underyx',
   },
   plugins: [
     'gatsby-plugin-sharp',
@@ -20,7 +20,13 @@ module.exports = {
     },
     {
       resolve: 'gatsby-plugin-google-analytics',
-      options: { trackingId: "UA-46190907-1" },
+      options: { trackingId: 'UA-46190907-1' },
+    },
+    {
+      resolve: `gatsby-plugin-typography`,
+      options: {
+        pathToConfigModule: `src/utils/typography`,
+      },
     },
     'gatsby-plugin-offline',
     'gatsby-transformer-sharp',
