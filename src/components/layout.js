@@ -4,6 +4,7 @@ import Helmet from 'react-helmet'
 import { StaticQuery, graphql } from 'gatsby'
 import styled from 'styled-components'
 
+import Divider from './divider'
 import Footer from './footer'
 import Header from './header'
 import './body.css'
@@ -37,7 +38,9 @@ const Layout = ({ children }) => (
           <html lang="en" />
         </Helmet>
         <Header />
+        <Divider />
         <article>{children}</article>
+        <Divider scale={0.8} />
         <Footer />
       </Main>
     )}

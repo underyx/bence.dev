@@ -1,11 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
 
-const FooterDivider = styled.hr`
-  margin: 0.8rem 0;
-  color: hsl(24, 30%, 35%);
-`
-
 const StyledFooter = styled.footer`
   display: flex;
   flex-direction: row;
@@ -20,7 +15,6 @@ const FooterContent = styled.div`
 
 const Footer = () => (
   <>
-    <FooterDivider />
     <StyledFooter>
       <FooterContent side="left">
         <div>Bence Nagy (underyx)</div>
