@@ -5,11 +5,11 @@ import { StaticQuery, graphql } from 'gatsby'
 import styled from 'styled-components'
 
 import Header from './header'
-import './layout.css'
+import './body.css'
 
 const Content = styled.main`
   margin: 0 auto;
-  max-width: 810px;
+  max-width: 610px;
   padding: 0 0.5rem 0.5rem;
 `
 
