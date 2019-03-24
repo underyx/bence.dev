@@ -5,7 +5,6 @@ import { Link } from 'gatsby'
 
 const StyledHeader = styled.header`
   margin-top: 1rem;
-  text-align: center;
 `
 
 const HeaderText = styled.h1`
@@ -13,6 +12,7 @@ const HeaderText = styled.h1`
 
   :before {
     content: "Hi, it's me,";
+    font-weight: 400;
     font-size: 1rem;
     display: block;
   }
