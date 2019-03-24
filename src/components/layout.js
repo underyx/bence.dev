@@ -4,13 +4,14 @@ import Helmet from 'react-helmet'
 import { StaticQuery, graphql } from 'gatsby'
 import styled from 'styled-components'
 
+import Footer from './footer'
 import Header from './header'
 import './body.css'
 
-const Content = styled.main`
+const Main = styled.main`
   margin: 0 auto;
-  max-width: 610px;
   padding: 0 0.5rem 0.5rem;
+  max-width: 610px;
 `
 
 const Layout = ({ children }) => (
@@ -25,7 +26,7 @@ const Layout = ({ children }) => (
       }
     `}
     render={data => (
-      <>
+      <Main>
         <Helmet
           title={data.site.siteMetadata.title}
           meta={[
@@ -36,8 +37,9 @@ const Layout = ({ children }) => (
           <html lang="en" />
         </Helmet>
         <Header />
-        <Content>{children}</Content>
-      </>
+        <article>{children}</article>
+        <Footer />
+      </Main>
     )}
   />
 )
