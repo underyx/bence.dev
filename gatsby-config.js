@@ -3,6 +3,13 @@ module.exports = {
     title: 'underyx',
   },
   plugins: [
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/content/articles`,
+        name: `articles`,
+      },
+    },
     'gatsby-plugin-sharp',
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-styled-components',
@@ -29,6 +36,7 @@ module.exports = {
       },
     },
     'gatsby-plugin-offline',
+    'gatsby-transformer-remark',
     'gatsby-transformer-sharp',
   ],
 }
