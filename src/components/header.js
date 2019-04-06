@@ -1,15 +1,18 @@
 import React from 'react'
 import styled from 'styled-components'
-
 import { Link } from 'gatsby'
 
+import NavBar from './navbar'
+
 const StyledHeader = styled.header`
+  display: flex;
   margin-top: 1.8rem;
 `
 
 const HeaderText = styled.h1`
+  flex: 0 1 auto;
   display: inline-block;
-  margin-bottom: 0.8rem;
+  margin-bottom: 0;
 
   :before {
     content: "Hi, it's me,";
@@ -33,6 +36,7 @@ const Header = () => (
     <HeaderText>
       <HeaderLink to="/">underyx</HeaderLink>
     </HeaderText>
+    <NavBar />
   </StyledHeader>
 )
 
