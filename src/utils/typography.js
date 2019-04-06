@@ -13,6 +13,10 @@ theme.overrideThemeStyles = ({ rhythm }, options) => ({
   'a:visited': {
     color: 'hsl(240, 30%, 15%)',
   },
+  'pre, code': {
+    'font-variant-ligatures': 'none',
+    'overflow-x': 'scroll',
+  },
 })
 
 const typography = new Typography(theme)

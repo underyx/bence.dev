@@ -3,7 +3,12 @@ import Layout from '../components/layout'
 
 const NotFoundPage = () => (
   <Layout>
-    <h2>Okay, you got me 😅</h2>
+    <h2>
+      Okay, you got me{' '}
+      <span role="img" aria-label="slightly embarrassed emoji">
+        😅
+      </span>
+    </h2>
     <p>I haven't created this page yet.</p>
     <p>
       But I did track that you wanted to check it, so that will probably guilt
