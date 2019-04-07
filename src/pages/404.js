@@ -10,7 +10,7 @@ const NotFoundPage = () => (
         😅
       </span>
     </h2>
-    <p>I haven't created this page yet.</p>
+    <p>I haven&rsquo;t created this page yet.</p>
     <p>
       The only pages I actually have right now are <Link to="/">home</Link> and{' '}
       <Link to="/articles">articles</Link>.

@@ -25,7 +25,7 @@ exports.createPages = ({ graphql, actions }) => {
       throw result.errors
     }
 
-    result.data.allMarkdownRemark.edges.forEach((article, _) => {
+    result.data.allMarkdownRemark.edges.forEach(article => {
       createPage({
         path: article.node.fields.path,
         component: articleTemplate,
@@ -36,7 +36,7 @@ exports.createPages = ({ graphql, actions }) => {
   })
 }
 
-exports.onCreateNode = ({ node, actions, getNode }) => {
+exports.onCreateNode = ({ node, actions }) => {
   if (node.internal.type === `MarkdownRemark`) {
     actions.createNodeField({
       name: 'path',
