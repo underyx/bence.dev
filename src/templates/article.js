@@ -7,8 +7,8 @@ import PublishInfo from '../components/articles/publishinfo'
 import Divider from '../components/divider'
 import Layout from '../components/layout'
 
-const ArticleTemplate = ({ article }) => {
-  const { frontmatter, html } = article.markdownRemark
+const ArticleTemplate = ({ data }) => {
+  const { frontmatter, html } = data.markdownRemark
 
   return (
     <Layout>
@@ -26,7 +26,7 @@ const ArticleTemplate = ({ article }) => {
 }
 
 ArticleTemplate.propTypes = {
-  article: PropTypes.object.isRequired,
+  data: PropTypes.object.isRequired,
 }
 
 export default ArticleTemplate

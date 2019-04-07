@@ -6,7 +6,7 @@ theme.scaleRatio = 2.4
 theme.headerColor = 'hsl(24, 30%, 35%)'
 theme.bodyColor = 'hsl(24, 30%, 25%)'
 
-theme.overrideThemeStyles = ({ rhythm }, options) => ({
+theme.overrideThemeStyles = () => ({
   a: {
     color: 'hsl(240, 30%, 35%)',
   },
