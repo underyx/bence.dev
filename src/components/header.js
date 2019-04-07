@@ -6,12 +6,14 @@ import NavBar from './navbar'
 
 const StyledHeader = styled.header`
   display: flex;
+  flex-wrap: wrap;
   margin-top: 1.8rem;
 `
 
 const HeaderText = styled.h1`
   flex: 0 1 auto;
   display: inline-block;
+  margin-right: 2rem;
   margin-bottom: 0;
 
   :before {
