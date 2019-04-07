@@ -17,6 +17,10 @@ theme.overrideThemeStyles = () => ({
     'font-variant-ligatures': 'none',
     'overflow-x': 'scroll',
   },
+  blockquote: {
+    'border-left': '3px solid',
+    'padding-left': '1rem',
+  },
 })
 
 const typography = new Typography(theme)
