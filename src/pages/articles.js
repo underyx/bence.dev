@@ -1,7 +1,26 @@
 import React from 'react'
-import { Link, StaticQuery, graphql } from 'gatsby'
+import { StaticQuery, graphql } from 'gatsby'
+import styled from 'styled-components'
 
+import Divider from '../components/divider'
 import Layout from '../components/layout'
+import ArticleCard from '../components/articles/articlecard'
+
+const StyledArticleList = styled.ul`
+  margin-left: 0;
+  list-style: none;
+`
+
+const ArticleList = ({ articles }) => (
+  <StyledArticleList>
+    {articles.map((article, index) => (
+      <>
+        <ArticleCard article={article} />
+        {index !== articles.length - 1 ? <Divider /> : null}
+      </>
+    ))}
+  </StyledArticleList>
+)
 
 const ArticlesPage = () => (
   <StaticQuery
@@ -13,7 +32,7 @@ const ArticlesPage = () => (
         ) {
           edges {
             node {
-              excerpt
+              excerpt(pruneLength: 280)
               fields {
                 path
               }
@@ -28,16 +47,7 @@ const ArticlesPage = () => (
     `}
     render={data => (
       <Layout>
-        <ul>
-          {data.allMarkdownRemark.edges.map(article => (
-            <li>
-              <Link to={article.node.fields.path}>
-                {article.node.frontmatter.title}{' '}
-                {article.node.frontmatter.publish_date}
-              </Link>
-            </li>
-          ))}
-        </ul>
+        <ArticleList articles={data.allMarkdownRemark.edges} />
       </Layout>
     )}
   />
