@@ -33,7 +33,9 @@ const Footer = () => (
         <div>
           <a href="tel:+420-725-511-793">+420&nbsp;725&nbsp;511&nbsp;793</a>
         </div>
-        <div>underyx on Freenode</div>
+        <div>
+          underyx on <a href="ircs://irc.freenode.net">Freenode</a>
+        </div>
       </FooterContent>
     </StyledFooter>
   </>
