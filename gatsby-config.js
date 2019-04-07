@@ -6,8 +6,15 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/content/articles`,
+        path: `./content/articles`,
         name: `articles`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `./content/data`,
+        name: `data`,
       },
     },
     'gatsby-plugin-sharp',
@@ -38,6 +45,7 @@ module.exports = {
     },
     'gatsby-plugin-offline',
     'gatsby-transformer-remark',
+    `gatsby-transformer-yaml`,
     'gatsby-transformer-sharp',
   ],
 }

@@ -1,0 +1,62 @@
+- category: Professional
+  links:
+    - name: GitHub
+      url: https://github.com/underyx
+      note: most of my open source code meant for public use
+    - name: GitLab
+      url: https://gitlab.com/underyx
+      note: most of my code that's meant for private use (still open source though)
+    - name: Keybase
+      url: https://keybase.io/underyx
+      note: a very very cryptographical page
+    - name: Stack Overflow
+      url: https://stackoverflow.com/users/568855/underyx
+      note: see all the things I didn't know back in the day
+
+- category: Personal
+  links:
+    - name: Twitter
+      url: https://twitter.com/underyx
+      note: mundane shower thoughts
+    - name: Hacker News
+      url: https://news.ycombinator.com/user?id=underyx
+      note: I sometimes yell at clouds here
+    - name: reddit
+      url: https://www.reddit.com/user/underyx
+      note: thousands of comments written here — it's alarming, really
+    - name: Facebook
+      url: https://www.facebook.com/underyx
+      note: obligatory
+    - name: Instagram
+      url: https://www.instagram.com/underyx
+      note: pretty colors and shapes
+    - name: YouTube
+      url: https://www.youtube.com/user/Underyx
+      note: very irregular and unnoteable uploads
+    - name: Pinterest
+      url: https://www.pinterest.com/underyx
+      note: active here like once a year, but it still has some pretty things saved
+    - name: Quora
+      url: https://www.quora.com/profile/Bence-Nagy
+      note: posted some questions before the site became annoying
+
+- category: Fun
+  links:
+    - name: Steam
+      url: https://steamcommunity.com/id/underyx
+      note: please don't make fun of the number of games I own
+    - name: last.fm
+      url: https://www.last.fm/user/underyx
+      note: on the way to reaching 10,000 artists listened
+    - name: trakt.tv
+      url: https://trakt.tv/users/underyx
+      note: cool charts about movies and TV shows watched
+    - name: Spotify
+      url: https://play.spotify.com/user/underyx
+      note: check my 'YYYY-MM' playlists, pretty proud of those
+    - name: twitch
+      url: https://www.twitch.tv/underyx
+      note: strangers watching me play makes the game more fun
+    - name: GoodReads
+      url: https://goodreads.com/underyx
+      note: putting this here just to guilt myself into reading more
