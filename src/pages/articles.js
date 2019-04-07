@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types'
 import React from 'react'
 import { StaticQuery, graphql } from 'gatsby'
 import styled from 'styled-components'
@@ -21,6 +22,10 @@ const ArticleList = ({ articles }) => (
     ))}
   </StyledArticleList>
 )
+
+ArticleList.propTypes = {
+  articles: PropTypes.array.isRequired,
+}
 
 const ArticlesPage = () => (
   <StaticQuery

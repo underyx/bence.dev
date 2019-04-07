@@ -1,4 +1,5 @@
 import { Link } from 'gatsby'
+import PropTypes from 'prop-types'
 import React from 'react'
 import styled from 'styled-components'
 import PublishInfo from './publishinfo'
@@ -24,5 +25,7 @@ const ArticleCard = ({ article }) => (
     </p>
   </section>
 )
+
+ArticleCard.propTypes = { article: PropTypes.object.isRequired }
 
 export default ArticleCard
