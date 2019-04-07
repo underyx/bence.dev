@@ -3,14 +3,17 @@ import styled from 'styled-components'
 import { Link } from 'gatsby'
 
 const StyledNavBar = styled.nav`
-  margin-left: 2rem;
   display: flex;
   flex: auto;
+  flex-wrap: wrap;
   align-items: flex-end;
-  justify-content: space-between;
+  font-weight: 600;
+  margin-top: 1rem;
+  max-width: 400px;
 `
 
 const NavBarLink = styled(Link)`
+  margin-right: 0.5ch;
   text-decoration: none;
   color: inherit;
 
