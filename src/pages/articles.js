@@ -6,7 +6,7 @@ import Divider from '../components/divider'
 import Layout from '../components/layout'
 import ArticleCard from '../components/articles/articlecard'
 
-const StyledArticleList = styled.ul`
+const StyledArticleList = styled.section`
   margin-left: 0;
   list-style: none;
 `
@@ -37,7 +37,8 @@ const ArticlesPage = () => (
                 path
               }
               frontmatter {
-                publish_date(formatString: "MMMM DD, YYYY")
+                publish_date(formatString: "MMMM D, YYYY")
+                revision_date(formatString: "MMMM D, YYYY")
                 title
               }
             }
