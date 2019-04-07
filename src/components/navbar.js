@@ -24,6 +24,10 @@ const NavBarLink = styled(Link)`
   &.active {
     text-decoration: underline;
   }
+
+  &:last-child {
+    margin-right: 0;
+  }
 `
 
 NavBarLink.defaultProps = {
