@@ -3,19 +3,9 @@ import styled from 'styled-components'
 import { graphql } from 'gatsby'
 
 import Commento from '../components/articles/commento'
+import PublishInfo from '../components/articles/publishinfo'
 import Divider from '../components/divider'
 import Layout from '../components/layout'
-
-const StyledPublishInfo = styled.p`
-  font-style: italic;
-`
-
-const PublishInfo = ({ publishDate, revisionDate }) => (
-  <StyledPublishInfo>
-    Published on {publishDate}
-    {revisionDate ? `, last revised on ${revisionDate}` : ''}
-  </StyledPublishInfo>
-)
 
 class ArticleTemplate extends React.Component {
   render() {
@@ -23,11 +13,11 @@ class ArticleTemplate extends React.Component {
 
     return (
       <Layout>
-        <h1>{frontmatter.title}</h1>
         <PublishInfo
           publishDate={frontmatter.publish_date}
           revisionDate={frontmatter.revision_date}
         />
+        <h1>{frontmatter.title}</h1>
         <div dangerouslySetInnerHTML={{ __html: html }} />
         <Divider />
         <h2>Discussion</h2>
