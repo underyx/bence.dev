@@ -16,13 +16,14 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
-        name: 'underyx-me',
-        short_name: 'underyx-me',
+        name: 'underyx.me',
+        short_name: 'underyx',
         start_url: '/',
-        background_color: '#cfd3ca',
-        theme_color: '#ebeed7',
-        display: 'minimal-ui',
+        background_color: '#fbfbb6',
+        theme_color: '#533c2d',
+        display: 'browser',
         icon: 'src/images/favicon.png',
+        crossOrigin: `use-credentials`,
       },
     },
     {
