@@ -2,6 +2,8 @@ import React from 'react'
 import styled from 'styled-components'
 import Helmet from 'react-helmet'
 
+import typography from '../../utils/typography'
+
 const StyledCommento = styled.div`
   &.commento-root img {
     margin-bottom: 0;
@@ -17,7 +19,7 @@ const StyledCommento = styled.div`
 
   &.commento-root .commento-card .commento-option-button,
   &.commento-root .commento-submit-button {
-    background: hsl(24, 30%, 35%);
+    background: ${typography.options.headerColor};
   }
 
   &.commento-root *,
@@ -25,7 +27,7 @@ const StyledCommento = styled.div`
   &.commento-root .commento-card .commento-name,
   &.commento-root .commento-card .commento-score,
   &.commento-root .commento-card .commento-timeago {
-    color: hsl(24, 30%, 25%);
+    color: ${typography.options.bodyColor};
     font-family: 'Lato', sans-serif;
   }
 
