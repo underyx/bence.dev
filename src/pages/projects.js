@@ -1,5 +1,6 @@
 import React from 'react'
 
+import { OutboundLink } from 'gatsby-plugin-google-analytics'
 import Layout from '../components/layout'
 
 const ProjectsPage = () => (
@@ -10,8 +11,10 @@ const ProjectsPage = () => (
     </p>
     <p>
       For the time being, please just check them out on{' '}
-      <a href="https://github.com/underyx">my GitHub</a> and{' '}
-      <a href="https://gitlab.com/underyx">my GitLab</a> profiles.
+      <OutboundLink href="https://github.com/underyx">my GitHub</OutboundLink>{' '}
+      and{' '}
+      <OutboundLink href="https://gitlab.com/underyx">my GitLab</OutboundLink>{' '}
+      profiles.
     </p>
   </Layout>
 )

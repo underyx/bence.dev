@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { Link } from 'gatsby'
+import { OutboundLink } from 'gatsby-plugin-google-analytics'
 import Layout from '../components/layout'
 
 const MusicPage = () => (
@@ -13,8 +13,10 @@ const MusicPage = () => (
     </p>
     <p>
       Until then I have to ask you to just check them out on{' '}
-      <a href="https://play.spotify.com/user/underyx">my Spotify profile</a> the
-      old, boring way.
+      <OutboundLink href="https://play.spotify.com/user/underyx">
+        my Spotify profile
+      </OutboundLink>{' '}
+      the old, boring way.
     </p>
     <p>
       And if you were expecting me to produce music myself, welp, sorry to
