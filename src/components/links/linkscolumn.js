@@ -1,13 +1,14 @@
 import PropTypes from 'prop-types'
 import React from 'react'
 import styled from 'styled-components'
+import { OutboundLink } from 'gatsby-plugin-google-analytics'
 
 const LinksList = styled.ul`
   list-style: none;
   margin-left: 0;
 `
 
-const Link = styled.a`
+const Link = styled(OutboundLink)`
   text-decoration: none;
 `
 
