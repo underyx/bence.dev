@@ -1,4 +1,5 @@
 import React from 'react'
+import { OutboundLink } from 'gatsby-plugin-google-analytics'
 
 import Layout from '../components/layout'
 
@@ -11,9 +12,9 @@ const IndexPage = () => (
     <p>
       I'm Bence Nagy. I usually go by 'underyx' online. I currently lead a team
       of truly amazing software engineers at{' '}
-      <a href="https://code.kiwi.com">Kiwi.com</a>. We're responsible for the{' '}
-      <em>software platform</em> of the company; our mission is to help our
-      engineers make better software, faster.
+      <OutboundLink href="https://code.kiwi.com">Kiwi.com</OutboundLink>. We're
+      responsible for the <em>software platform</em> of the company; our mission
+      is to help our engineers make better software, faster.
     </p>
     <p>
       I got to this point through some… yeah, <em>versatile</em> engineering

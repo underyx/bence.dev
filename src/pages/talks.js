@@ -1,5 +1,6 @@
 import React from 'react'
 
+import { OutboundLink } from 'gatsby-plugin-google-analytics'
 import Layout from '../components/layout'
 import Divider from '../components/divider'
 
@@ -16,11 +17,11 @@ const TalksPage = () => (
       already. Use the space bar to advance the slides, not the arrow keys.
     </p>
     <Divider />
-    <a href="https://underyx.gitlab.io/public-by-default/">
+    <OutboundLink href="https://underyx.gitlab.io/public-by-default/">
       <h3>
         Public By Default: How Overcommunicating is the Secret to a Happier Life
       </h3>
-    </a>
+    </OutboundLink>
     <blockquote>
       <p>
         The typical corporate culture is built on top of constructing the most
@@ -33,9 +34,9 @@ const TalksPage = () => (
       </p>
     </blockquote>
     <Divider />
-    <a href="https://underyx.gitlab.io/slack-devex/">
+    <OutboundLink href="https://underyx.gitlab.io/slack-devex/">
       <h3>Better Developer Experience via Building for Slack</h3>
-    </a>
+    </OutboundLink>
     <blockquote>
       <p>
         The Platform team at Kiwi.com has the mission to help our engineers

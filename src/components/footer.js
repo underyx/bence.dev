@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import { OutboundLink } from 'gatsby-plugin-google-analytics'
 
 const StyledFooter = styled.footer`
   display: flex;
@@ -19,22 +20,30 @@ const Footer = () => (
       <FooterContent side="left">
         <div>Bence Nagy (underyx)</div>
         <div>
-          Software Platform Lead @ <a href="https://code.kiwi.com/">Kiwi.com</a>
+          Software Platform Lead @{' '}
+          <OutboundLink href="https://code.kiwi.com/">Kiwi.com</OutboundLink>
         </div>
         <div>
-          <a href="https://goo.gl/maps/FGajx5oh2N42">Brno, Czechia</a>
+          <OutboundLink href="https://goo.gl/maps/FGajx5oh2N42">
+            Brno, Czechia
+          </OutboundLink>
         </div>
       </FooterContent>
 
       <FooterContent side="right">
         <div>
-          <a href="mailto:bence@underyx.me">bence@underyx.me</a>
+          <OutboundLink href="mailto:bence@underyx.me">
+            bence@underyx.me
+          </OutboundLink>
         </div>
         <div>
-          <a href="tel:+420-725-511-793">+420&nbsp;725&nbsp;511&nbsp;793</a>
+          <OutboundLink href="tel:+420-725-511-793">
+            +420&nbsp;725&nbsp;511&nbsp;793
+          </OutboundLink>
         </div>
         <div>
-          underyx on <a href="ircs://irc.freenode.net">Freenode</a>
+          underyx on{' '}
+          <OutboundLink href="ircs://irc.freenode.net">Freenode</OutboundLink>
         </div>
       </FooterContent>
     </StyledFooter>
