@@ -1,6 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: 'underyx',
+    siteUrl: 'https://underyx.me',
   },
   plugins: [
     {
@@ -44,6 +45,7 @@ module.exports = {
       },
     },
     'gatsby-plugin-offline',
+    'gatsby-plugin-sitemap',
     'gatsby-transformer-remark',
     `gatsby-transformer-yaml`,
     'gatsby-transformer-sharp',
