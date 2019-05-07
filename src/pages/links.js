@@ -7,8 +7,13 @@ import LinksColumn from '../components/links/linkscolumn'
 
 const StyledLinksPage = styled.section`
   display: flex;
+  flex-direction: row;
   flex-wrap: nowrap;
   justify-content: space-between;
+
+  @media (max-width: 500px) {
+    flex-direction: column;
+  }
 `
 
 const LinksPage = () => (
