@@ -35,17 +35,15 @@ const ArticlesPage = () => (
           sort: { fields: [frontmatter___publish_date], order: DESC }
           limit: 1000
         ) {
-          edges {
-            node {
-              excerpt(pruneLength: 280)
-              fields {
-                path
-              }
-              frontmatter {
-                publish_date(formatString: "MMMM D, YYYY")
-                revision_date(formatString: "MMMM D, YYYY")
-                title
-              }
+          nodes {
+            excerpt(pruneLength: 280)
+            fields {
+              path
+            }
+            frontmatter {
+              publish_date(formatString: "MMMM D, YYYY")
+              revision_date(formatString: "MMMM D, YYYY")
+              title
             }
           }
         }
@@ -53,7 +51,7 @@ const ArticlesPage = () => (
     `}
     render={data => (
       <Layout>
-        <ArticleList articles={data.allMarkdownRemark.edges} />
+        <ArticleList articles={data.allMarkdownRemark.nodes} />
       </Layout>
     )}
   />

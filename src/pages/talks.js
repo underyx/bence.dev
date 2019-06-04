@@ -1,58 +1,62 @@
+import { graphql, StaticQuery } from 'gatsby'
 import React from 'react'
 
-import { OutboundLink } from 'gatsby-plugin-google-analytics'
-import Layout from '../components/layout'
 import Divider from '../components/divider'
+import Layout from '../components/layout'
+import TalkCard from '../components/talks/talkcard'
 
 const TalksPage = () => (
-  <Layout>
-    <h2>Talks</h2>
-    <p>
-      Damn, this sucks. I don't really have this page yet. Sorry about that.
-    </p>
-    <p>
-      But at least I already started collecting my presentations from past
-      conferences and meetups; I found 14 of them that I'll publish here soon.
-      Until then, I added just the two that have their slides hosted on GitLab
-      already. Use the space bar to advance the slides, not the arrow keys.
-    </p>
-    <Divider />
-    <OutboundLink href="https://underyx.gitlab.io/public-by-default/">
-      <h3>
-        Public By Default: How Overcommunicating is the Secret to a Happier Life
-      </h3>
-    </OutboundLink>
-    <blockquote>
-      <p>
-        The typical corporate culture is built on top of constructing the most
-        'efficient' and 'synergetic' communication channels between silos. Sync
-        and catch-up meetings, games of telephone, misunderstandings leading to
-        resentful blaming… well, to heck with all that! I'll be making the case
-        for religious oversharing and acting like consenting adults instead,
-        which I believe to be the (public) secret to getting things done as a
-        company.
-      </p>
-    </blockquote>
-    <Divider />
-    <OutboundLink href="https://underyx.gitlab.io/slack-devex/">
-      <h3>Better Developer Experience via Building for Slack</h3>
-    </OutboundLink>
-    <blockquote>
-      <p>
-        The Platform team at Kiwi.com has the mission to help our engineers
-        create ‘better software, faster,’ and building custom tooling on top of
-        Slack provides lots of opportunities for quick developer productivity
-        wins. Better yet, turns out we’re doing a fairly nice job at building
-        them! What could be better then, than to come tell the world about all
-        we learned so far?
-      </p>
-      <p>
-        I’ll talk about how you can identify what tools you can create, which
-        ones you should actually create, and how to actually design that app so
-        that it elegantly solves your problem and gets adopted by your team.
-      </p>
-    </blockquote>
-  </Layout>
+  <StaticQuery
+    query={graphql`
+      {
+        allTalksYaml(
+          sort: { fields: date, order: DESC }
+          filter: { is_wip: { ne: true } }
+        ) {
+          nodes {
+            slug
+            date(formatString: "MMMM D, YYYY")
+            title
+            subtitle
+            description
+            slides_url
+            video_url
+            is_private
+            events {
+              name
+              city
+              venue
+              date
+              url
+            }
+          }
+        }
+      }
+    `}
+    render={data => (
+      <Layout>
+        <h2>Talks</h2>
+        <p>
+          Oh neat, so you wanna see me talking! Well, you&rsquo;re in luck.
+          I&rsquo;ve put together {data.allTalksYaml.nodes.length} talks so far,{' '}
+          {data.allTalksYaml.nodes.filter(talk => talk.slides_url).length} of
+          them have slides uploaded, and{' '}
+          {data.allTalksYaml.nodes.filter(talk => talk.video_url).length} even
+          have video recordings online.
+        </p>
+        <section>
+          {data.allTalksYaml.nodes.map((talk, index) => (
+            <>
+              <TalkCard talk={talk} />
+              {index !== data.allTalksYaml.nodes.length - 1 ? (
+                <Divider />
+              ) : null}
+            </>
+          ))}
+        </section>
+      </Layout>
+    )}
+  />
 )
 
 export default TalksPage

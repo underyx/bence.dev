@@ -10,7 +10,7 @@ const StyledPublishInfo = styled.div`
 const PublishInfo = ({ publishDate, revisionDate }) => (
   <StyledPublishInfo>
     Published on {publishDate}
-    {revisionDate ? `, last revised on ${revisionDate}` : ''}
+    {revisionDate && `, last revised on ${revisionDate}`}
   </StyledPublishInfo>
 )
 

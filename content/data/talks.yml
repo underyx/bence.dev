@@ -1,0 +1,246 @@
+- slug: chaos-engineering
+  title: Chaos Engineering
+  subtitle: Kill Your Own Servers for the Greater Good
+  slides_url: https://underyx.gitlab.io/chaos-engineering/
+  description: |
+    On the cutting edge of technology,
+    engineers have this new mania
+    about this so-called "Chaos Engineering"
+    — which is essentially ops people willfully breaking their own infrastructure.
+    Crazy, right? Why would anyone do this? Just to show off?
+    To fight off boredom? Is it just some manifestation of masochist tendencies?
+    Well, it's actually none of the above,
+    so I'll try to explain the whys and hows of this fascinating concept in my talk.
+  events:
+    - name: Python Belgrade
+      date: 2019-03-29
+      city: Belgrade, Serbia
+      venue: Impact Hub Belgrade
+      url: https://www.meetup.com/PythonBelgrade/events/259794855/
+
+- slug: chaos-monkey-design
+  title: Get a Monkey to Break Your Design
+  subtitle: A surprising parallel between design and engineering
+  description: |
+    I found a thought interesting
+    on how the engineering practice of
+    "automatically kill random servers so you're always ready to deal with that"
+    can actually translate to design somewhat;
+    you can amplify systemic problems
+    to ensure you're constantly ready to deal with them
+    and don't just forget that they can happen.
+  is_private: true
+  events:
+    - name: Kiwi.com Design Bi-Weekly Show
+      date: 2019-02-08
+      city: Brno, Czechia
+      venue: Kiwi.com Campus Office
+
+- slug: coala
+  title: coala
+  subtitle: Linting and fixing code for all languages
+  description: An introduction of the coala open source project.
+  events:
+    - name: Pyvo Brno
+      date: 2016-11-24
+      city: Brno, Czechia
+      venue: Kiwi.com Wine Cellar
+      url: https://pyvo.cz/brno-pyvo/2016-11/
+
+- slug: git-workshop
+  title: Git Can Be Quite Nice
+  description: |
+    An introduction of fancy workflows with git,
+    such as interactive rebasing and bisection.
+  is_private: true
+  events:
+    - name: Git Workshop
+      date: 2016-08-23
+      city: Brno, Czechia
+      venue: Kiwi.com Wine Cellar
+
+- slug: gitlab-outages
+  title: GitLab Data Loss
+  description: |
+    Post-mortem summary of our largest GitLab operations incident.
+  is_private: true
+  events:
+    - name: "Kiwi.com Outages Meetup #1"
+      date: 2018-04-03
+      city: Brno, Czechia
+      venue: Kiwi.com Campus Office
+
+- slug: hexpuzzle
+  title: Solving a Math Puzzle When You're Bad at Math
+  description: |
+    When greeted by a math problem
+    whose solution consists of an equation too large to fit on my screen,
+    the path of least resistance (and most fun)
+    turned out to not be sitting down for an afternoon to try and comprehend it,
+    but instead just throwing enough computing power
+    and some controlled randomness at the puzzle
+    to have my laptop guess the solution for me.
+    (Yep, all that is just a convoluted way of saying 'a genetic algorithm'.)
+  events:
+    - name: budapest.py
+      date: 2015-06-26
+      city: Budapest, Hungary
+      venue: K9
+      url: https://www.meetup.com/budapest-py/events/222822762/
+    - name: Pyvo
+      date: 2016-05-27
+      city: Brno, Czechia
+      venue: Kiwi.com Wine Cellar
+      url: https://pyvo.cz/brno-pyvo/2016-05/
+
+- slug: innersourcing
+  title: Innersourcing
+  subtitle: A way to have more fun and get more stuff done
+  is_private: true
+  events:
+    - name: Kiwi.com All Devs Meetup
+      date: 2016-11-30
+      city: Brno, Czechia
+      venue: Kiwi.com Campus Office
+
+- slug: oss-slack-tools
+  title: Releases and how we tamed them with Crane
+  description: |
+    (Editorial note for underyx.me: This description made much more sense in context of the preceding talk :D)
+
+    2:30 PM. You have just finished the latest episode of Adventure Time
+    and life is great because you're sure production is working just as you'd expect.
+    Five minutes later you see a Slack notification,
+    someone is deploying one of your commits from last week.
+    You start playing an episode of My Little Pony,
+    cause no one really bothers you,
+    except for one guy replying with "Cool."
+
+    We at Kiwi.com have situations like this, too!
+    Come and check my presentation on
+    how we were able to get the mess around production releases into order,
+    making them stable, predictable, trackable,
+    and in general… just an uneventful fact of life.
+  events:
+    - name: Kiwi.com Open Source Meetup
+      date: 2018-11-20
+      city: Bratislava, Slovakia
+      venue: The Blind Pig
+      url: https://www.facebook.com/events/2164356610498527/
+
+- slug: phish-in-a-barrel
+  title: Phish in a Barrel
+  subtitle: The Surprising Effectiveness of Just Asking People to Let You In
+  description: |
+    Phishing is certainly not the most glamorous concept in security,
+    but it's the closest thing the real world has to xkcd's $5 wrench
+    (as per the classic https://xkcd.com/538)
+    — even amongst the most tech-savvy targets.
+    I'll be explaining how we breached our own security at Kiwi.com
+    with the constraints of an outside attacker,
+    and how you can easily do the same
+    (I mean, to your own company, don't get any funny ideas!)
+    To end on a positive note,
+    I'll also introduce how we managed to phish-proof our employees,
+    so that we could cross this one out from our list of worries.
+  events:
+    - name: "Silicon Valley Cyber Security: Talkin' Security"
+      date: 2019-04-22
+      city: the San Francisco Bay Area, CA, United States
+      venue: Mindrome
+      url: https://www.meetup.com/siliconvalleysecurity/events/259399649/
+
+- slug: public-by-default
+  title: Public by Default
+  subtitle: How Overcommunicating is the Secret to a Happier Life
+  slides_url: https://underyx.gitlab.io/public-by-default/
+  video_url: https://slideslive.com/38914991/public-by-default-how-overcommunicating-is-the-secret-to-a-happier-life
+  description: |
+    The typical corporate culture is built on top of constructing the most
+    'efficient' and 'synergetic' communication channels between silos. Sync
+    and catch-up meetings, games of telephone, misunderstandings leading to
+    resentful blaming… well, to heck with all that! I'll be making the case
+    for religious oversharing and acting like consenting adults instead,
+    which I believe to be the (public) secret to getting things done as a
+    company.
+  events:
+    - name: Slack x Kiwi.com Meetup Brno
+      date: 2019-02-25
+      city: Brno, Czechia
+      venue: Impact Hub Brno
+      url: https://www.eventbrite.com/e/kiwicom-slack-meetup-brno-tickets-55643929491
+    - name: Slack x Kiwi.com Meetup Prague
+      date: 2019-02-26
+      city: Prague, Czechia
+      venue: Impact Hub Prague
+      url: https://www.eventbrite.com/e/kiwicom-slack-meetup-prague-tickets-55695014287
+    - name: Central European Tech Week 2019 — Leadership Meetup Bratislava
+      date: 2019-04-11
+      city: Bratislava, Czechia
+      venue: Progressbar
+      url: https://www.eventbrite.com/e/engineering-leadership-meetup-bratislava-kiwicom-techweek-tickets-59887228312
+
+- slug: slack-devex
+  title: Better Developer Experience via Building for Slack
+  slides_url: https://underyx.gitlab.io/slack-devex/
+  video_url: https://www.youtube.com/watch?v=PTW6lm9IBH4
+  description: |
+    The Platform team at Kiwi.com has the mission to help our engineers
+    create ‘better software, faster,’ and building custom tooling on top of
+    Slack provides lots of opportunities for quick developer productivity
+    wins. Better yet, turns out we’re doing a fairly nice job at building
+    them! What could be better then, than to come tell the world about all
+    we learned so far?
+
+    I’ll talk about how you can identify what tools you can create, which
+    ones you should actually create, and how to actually design that app so
+    that it elegantly solves your problem and gets adopted by your team.
+  events:
+    - name: Slack x Kiwi.com Meetup Prague
+      date: 2018-10-24
+      city: Prague, Czechia
+      venue: Impact Hub Prague
+      url: https://www.facebook.com/events/impact-hub-praha/slack-kiwicom-meetup-prague/280575352553717/
+    - name: Slack Tech Meetup - with Kiwi.com & ROI Hunter
+      date: 2019-05-21
+      city: Brno, Czechia
+      venue: Edunesto
+      url: https://www.eventbrite.com/e/slack-meetup-with-kiwicom-roi-hunter-brno-2-tickets-61415999909#
+
+- slug: sonarqube
+  title: SonarQube
+  subtitle: A (not new) (and not shiny) tool for managing code quality
+  is_private: true
+  events:
+    - name: Kiwi.com All Devs Meetup
+      date: 2017-11-14
+      city: Brno, Czechia
+      venue: Kiwi.com Campus Office
+
+- slug: sqlalchemy
+  title: SQLAlchemy
+  subtitle: First impressions in the booking team
+  is_private: true
+  events:
+    - name: Kiwi.com All Devs Meetup
+      date: 2017-03-30
+      city: Brno, Czechia
+      venue: Kiwi.com Campus Office
+
+- slug: testing-workshop
+  title: Testing Workshop
+  subtitle: A tragedy in four acts
+  is_private: true
+  events:
+    - name: Kiwi.com Testing Workshop
+      date: 2017-05-29
+      city: Brno, Czechia
+      venue: Kiwi.com Campus Office
+
+- slug: what-the-brain-does
+  title: What Your Brain Does When Reading Code
+  is_wip: true
+
+- slug: engineers-guide-to-humans
+  title: The Engineers' Guide to Humans
+  is_wip: true

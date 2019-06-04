@@ -11,17 +11,15 @@ const TitleLink = styled(Link)`
 const ArticleCard = ({ article }) => (
   <section>
     <PublishInfo
-      publishDate={article.node.frontmatter.publish_date}
-      revisionDate={article.node.frontmatter.revision_date}
+      publishDate={article.frontmatter.publish_date}
+      revisionDate={article.frontmatter.revision_date}
     />
-    <TitleLink to={article.node.fields.path}>
-      <h2>{article.node.frontmatter.title}</h2>
+    <TitleLink to={article.fields.path}>
+      <h2>{article.frontmatter.title}</h2>
     </TitleLink>
     <p>
-      {article.node.excerpt}{' '}
-      <Link to={article.node.fields.path}>
-        go read the rest of this thing ›
-      </Link>
+      {article.excerpt}{' '}
+      <Link to={article.fields.path}>go read the rest of this thing ›</Link>
     </p>
   </section>
 )

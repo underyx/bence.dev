@@ -11,11 +11,9 @@ exports.createPages = ({ graphql, actions }) => {
         sort: { fields: [frontmatter___publish_date], order: DESC }
         limit: 1000
       ) {
-        edges {
-          node {
-            fields {
-              path
-            }
+        nodes {
+          fields {
+            path
           }
         }
       }
@@ -25,9 +23,9 @@ exports.createPages = ({ graphql, actions }) => {
       throw result.errors
     }
 
-    result.data.allMarkdownRemark.edges.forEach(article => {
+    result.data.allMarkdownRemark.nodes.forEach(article => {
       createPage({
-        path: article.node.fields.path,
+        path: article.fields.path,
         component: articleTemplate,
       })
     })
@@ -44,4 +42,44 @@ exports.onCreateNode = ({ node, actions }) => {
       value: `/articles/${node.frontmatter.slug}`,
     })
   }
+  if (node.internal.type === `TalksYaml`) {
+    // eslint-disable-next-line no-param-reassign
+    node.date =
+      node.events && node.events.sort(event => event.date).reverse()[0].date
+  }
+}
+
+exports.sourceNodes = ({ actions }) => {
+  const typeDefs = `
+    type LinksYaml implements Node {
+      category: String!
+      links: [Link!]!
+    }
+
+    type Link {
+      name: String!
+      url: String!
+      note: String!
+    }
+
+    type TalksYaml implements Node {
+      slug: String!
+      title: String!
+      subtitle: String
+      description: String
+      date: Date
+      is_private: Boolean
+      is_wip: Boolean
+      events: [Event!]
+    }
+
+    type Event {
+      name: String!
+      date: Date!
+      city: String
+      venue: String
+      url: String
+    }
+  `
+  actions.createTypes(typeDefs)
 }
