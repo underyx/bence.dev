@@ -1,4 +1,4 @@
-FROM node:11 as gatsby
+FROM node:12 as gatsby
 
 WORKDIR /app
 
@@ -10,7 +10,7 @@ RUN apt-get update &&\
 COPY . ./
 RUN npx gatsby build
 
-FROM nginx:1.15-alpine
+FROM nginx:1.16-alpine
 
 COPY --from=gatsby /app/public /usr/share/nginx/html
 COPY static/* /usr/share/nginx/html/
