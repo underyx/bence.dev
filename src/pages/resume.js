@@ -1,21 +1,52 @@
 import React from 'react'
 import { OutboundLink } from 'gatsby-plugin-google-analytics'
+import styled from 'styled-components'
 
 import Labels from '../components/resume/labels'
+import ProfilePic from '../components/resume/profilepic'
 import Layout from '../components/layout'
+
+const ResumeHeader = styled.section`
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+`
+
+const ResumeTitle = styled.div`
+  margin-right: 20px;
+`
+
+const ProfilePicFrame = styled.div`
+  margin: 0 auto 20px;
+  flex-grow: 1;
+  min-width: 110px;
+  max-width: 250px;
+`
 
 const ResumePage = () => (
   <Layout>
-    <h2>Bence Nagy&rsquo;s Résumé</h2>
-    <p>
-      Versatile engineering at tech startups.
-      <br />
-      Focus on Python, DevOps, and cultivating culture.
-    </p>
+    <ResumeHeader>
+      <ResumeTitle>
+        <h2>Bence Nagy&rsquo;s Résumé</h2>
+        <p>
+          Versatile engineering at tech startups.
+          <br />
+          Focus on Python, DevOps, and cultivating culture.
+        </p>
+      </ResumeTitle>
+      <ProfilePicFrame>
+        <ProfilePic />
+      </ProfilePicFrame>
+    </ResumeHeader>
+
     <h3>Work at Kiwi.com (2015-)</h3>
     <p>
       One of the first 5% of engineers at Kiwi.com, scaled our team and tech as
-      monthly turnover grew by 12x.
+      monthly turnover grew by 12x and we had{' '}
+      <OutboundLink href="https://www.generalatlantic.com/media-article/general-atlantic-announces-strategic-partnership-with-travel-platform-kiwi-com/">
+        a successful exit
+      </OutboundLink>
+      .
     </p>
     <h4>Roles</h4>
     <ul>
@@ -25,8 +56,8 @@ const ResumePage = () => (
     <h4>Successes</h4>
     <ul>
       <li>
-        Kept the search engine running for half a year as one of the two people
-        in the on-call rotation.
+        Kept the search engine running as one of the two people in the on-call
+        rotation.
         <Labels
           primary={['Python', 'PostgreSQL', 'AWS', 'Redis', 'Elasticsearch']}
           secondary={['Bottle']}

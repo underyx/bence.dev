@@ -18,6 +18,13 @@ module.exports = {
         name: `data`,
       },
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `./content/images`,
+        name: `images`,
+      },
+    },
     'gatsby-plugin-sharp',
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-styled-components',
@@ -30,7 +37,7 @@ module.exports = {
         background_color: '#fbfbb6',
         theme_color: '#533c2d',
         display: 'browser',
-        icon: 'src/images/favicon.png',
+        icon: 'content/images/favicon.png',
         crossOrigin: `use-credentials`,
       },
     },
