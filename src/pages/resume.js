@@ -57,25 +57,23 @@ const ResumePage = () => (
     <h4>Successes</h4>
     <ul>
       <li>
-        Kept the search engine running as one of the two people in the on-call
-        rotation.
+        Designed and developed our deployment automation tool,{' '}
+        <OutboundLink href="https://github.com/kiwicom/crane">
+          Crane
+        </OutboundLink>
+        , used for tens of thousands of releases.
         <Labels
-          primary={['Python', 'PostgreSQL', 'AWS', 'Redis', 'Elasticsearch']}
-          secondary={['Bottle']}
+          primary={['Python', 'Rancher']}
+          secondary={['click', 'Docker', 'GitLab CI']}
         />
       </li>
       <li>
-        Sole developer of the foundations of our data analysis platform, still
-        serving 40+ members of BI and Analytics
+        Developed the foundations of our data analysis platform, and the first
+        dozen data pipelines, still serving 40+ members of BI and Analytics
         <Labels
           primary={['Python', 'PostgreSQL', 'Apache Airflow']}
           secondary={['Tableau', 'Metabase']}
         />
-      </li>
-      <li>
-        Sole developer of the foundations of an internal HR and ticketing
-        application, used for 3+ years and counting
-        <Labels primary={['Python', 'Django']} secondary={['PostgreSQL']} />
       </li>
       <li>
         Rearchitected the largest monolith for better reliability and
@@ -101,11 +99,6 @@ const ResumePage = () => (
         <Labels primary={['Python', 'Bottle', 'Gevent']} />
       </li>
       <li>
-        Implemented product features on search &amp; booking engines directly
-        increasing sales.
-        <Labels primary={['Python', 'PostgreSQL']} secondary={['Bottle']} />
-      </li>
-      <li>
         Led without authority to adopt engineering best practices company-wide.
         This includes static analysis, test automation, a public by default
         culture, CI/CD, containers, microservices, innersourcing, asynchronous
@@ -124,22 +117,29 @@ const ResumePage = () => (
         />
       </li>
       <li>
-        Designed and developed our deployment automation tool,{' '}
-        <OutboundLink href="https://github.com/kiwicom/crane">
-          Crane
-        </OutboundLink>
-        .
-        <Labels
-          primary={['Python', 'Rancher']}
-          secondary={['click', 'Docker', 'GitLab CI']}
-        />
-      </li>
-      <li>
         Led development of our microservice directory,{' '}
         <OutboundLink href="https://github.com/kiwicom/the-zoo">
           The Zoo
         </OutboundLink>
         .
+        <Labels primary={['Python', 'Django']} secondary={['PostgreSQL']} />
+      </li>
+      <li>
+        Kept the search engine running as one of the two people in the on-call
+        rotation.
+        <Labels
+          primary={['Python', 'PostgreSQL', 'AWS', 'Redis', 'Elasticsearch']}
+          secondary={['Bottle']}
+        />
+      </li>
+      <li>
+        Implemented product features on search &amp; booking engines directly
+        increasing sales.
+        <Labels primary={['Python', 'PostgreSQL']} secondary={['Bottle']} />
+      </li>
+      <li>
+        Laid the groundwork of an internal HR and ticketing application, used
+        for 3+ years and counting
         <Labels primary={['Python', 'Django']} secondary={['PostgreSQL']} />
       </li>
       <li>
@@ -194,29 +194,36 @@ const ResumePage = () => (
     </p>
     <h3>Work at Allmyles (2013-2015)</h3>
     <p>
-      Built the company's technical foundations, at times as the only employee.
+      Built the company&rsquo;s technical foundations, at times as the only
+      employee.
     </p>
     <h4>Role</h4>
     <p>Software Engineer (2015-2018)</p>
     <h4>Successes</h4>
     <ul>
       <li>
-        Migrated the whole infrastructure from the dying HP Cloud to AWS.
+        Migrated the whole infrastructure from the sunsetting HP Cloud to AWS.
         <Labels primary={['AWS']} secondary={['Unix']} />
       </li>
       <li>
-        Implemented the main API product of the company from the ground up
+        Implemented the main API product of the company from the ground up.
         <Labels primary={['Python', 'PostreSQL', 'Redis']} />
       </li>
       <li>
-        Started a user facing dashboard web app from the ground up
+        As another blank slate, started a user facing dashboard web app.
         <Labels primary={['Python', 'Django']} secondary={['PostgreSQL']} />
       </li>
       <li>
         Defined the whole infrastructure as code, maintained numerous services
         <Labels
           primary={['Ansible']}
-          secondary={['Elasticsearch', 'Logstash', 'Kibana', 'go.cd']}
+          secondary={[
+            'Elasticsearch',
+            'Logstash',
+            'Kibana',
+            'go.cd',
+            'icinga2',
+          ]}
         />
       </li>
       <li>
