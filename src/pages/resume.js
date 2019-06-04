@@ -175,7 +175,7 @@ const ResumePage = () => (
         <br />
         <strong>I shut it down</strong> as all the scraping and automated data
         cleaning wasn&rsquo;t sustainable, and it didn&rsquo;t entice people to
-        manually correct the announc.
+        manually correct its posts.
       </li>
       <li>
         Many more that were valuable lessons but aren&rsquo;t grand enough to
