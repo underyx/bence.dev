@@ -145,6 +145,21 @@ const ResumePage = () => (
         Led the Software Platform Squad to build many more things on all of the
         above.
       </li>
+      <li>
+        Picked up experience with various other short-term projects, see tags
+        below
+        <Labels
+          primary={[
+            'GCP',
+            'Terraform',
+            'Kubernetes',
+            'React',
+            'Gatsby',
+            'Ansible',
+            'Twine',
+          ]}
+        />
+      </li>
     </ul>
     <h4>Failures</h4>
     <ul>
