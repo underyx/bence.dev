@@ -42,7 +42,7 @@ const LinksPage = () => (
         </p>
         <StyledLinksPage>
           {data.allLinksYaml.nodes.map(column => (
-            <LinksColumn column={column.node} />
+            <LinksColumn column={column} />
           ))}
         </StyledLinksPage>
       </Layout>
