@@ -177,7 +177,9 @@ const ResumePage = () => (
       can&rsquo;t just outright take credit for it.
     </p>
     <h3>Work at Allmyles (2013-2015)</h3>
-    <p>The only technical employee at the company. </p>
+    <p>
+      Built the company's technical foundations, at times as the only employee.
+    </p>
     <h4>Role</h4>
     <p>Software Engineer (2015-2018)</p>
     <h4>Successes</h4>
