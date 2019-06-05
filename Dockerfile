@@ -10,7 +10,7 @@ RUN apt-get update &&\
 COPY . ./
 RUN npx gatsby build
 
-FROM nginx:1.16-alpine
+FROM nginx:1.17-alpine
 
 COPY --from=gatsby /app/public /usr/share/nginx/html
 COPY static/* /usr/share/nginx/html/
