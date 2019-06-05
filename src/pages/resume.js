@@ -232,6 +232,55 @@ const ResumePage = () => (
         <Labels primary={['PHP']} />
       </li>
     </ul>
+    <h3>Open Source Projects</h3>
+    <p>…cause sometimes I just need to work on something out of passion.</p>
+    <ul>
+      <li>
+        <OutboundLink href="https://github.com/underyx/flask-redis/">
+          <strong>Flask-Redis</strong>
+        </OutboundLink>{' '}
+        is my most popular one, with over a thousand GitHub repos using it. It's
+        a simple tool, sure, but I&rsquo;m proud of how neat and tidy it is.
+      </li>
+      <li>
+        I'm a now-inactive maintainer of{' '}
+        <OutboundLink href="https://github.com/coala/coala/">
+          <strong>coala</strong>
+        </OutboundLink>
+        , the largest project I&rsquo;ve been involved with. This involved much
+        more community-related work, such as leading development sprints at
+        PyCon.
+      </li>
+      <li>
+        I have more cool little little utility libraries, such as{' '}
+        <OutboundLink href="https://github.com/underyx/aiohttp-sentry/">
+          <strong>aiohttp-sentry</strong>
+        </OutboundLink>
+        ,{' '}
+        <OutboundLink href="https://github.com/underyx/structlog-pretty/">
+          <strong>structlog-pretty</strong>
+        </OutboundLink>
+        , and several others.
+      </li>
+      <li>
+        Finally, I like to keep things open source even if they are meant only
+        for my own personal use. See for instance{' '}
+        <OutboundLink href="https://github.com/underyx/underyx.me/">
+          <strong>underyx.me</strong>
+        </OutboundLink>{' '}
+        (this website!),{' '}
+        <OutboundLink href="https://gitlab.com/underyx/ops/">
+          <strong>ops</strong>
+        </OutboundLink>
+        , which has the Kubernetes manifests and Ansible playbooks for my
+        personal server (which hosts this website, amongst many others!), or
+        even{' '}
+        <OutboundLink href="https://github.com/underyx/conference-notes/">
+          <strong>conference-notes</strong>
+        </OutboundLink>
+        , which is just personal notes from conferences I attended.
+      </li>
+    </ul>
     <h3>Education</h3>
     <p>Entirely self-taught since 2012.</p>
     <TalksWidget />
