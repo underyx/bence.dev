@@ -227,7 +227,7 @@ const ResumePage = () => (
       somewhat of a personal accomplishment of sorts, even if I obviously
       can&rsquo;t just outright take credit for it.
     </p>
-    <h3>Work at Allmyles (2013-2015)</h3>
+    <h3>Work at Allmyles (2014-2015)</h3>
     <p>
       Built the company&rsquo;s technical foundations, at times as the only
       employee.
