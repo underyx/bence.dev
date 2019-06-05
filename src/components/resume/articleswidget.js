@@ -22,8 +22,8 @@ const ArticlesWidget = () => (
       <>
         <h3>Articles</h3>
         <p>
-          There's also a bunch of articles I&rsquo;ve written. To be more
-          specific, there's{' '}
+          There&rsquo;s also a bunch of articles I&rsquo;ve written. To be more
+          specific, there&rsquo;s{' '}
           {data.allMarkdownRemark.totalCount + data.allMediumPost.totalCount} –{' '}
           {data.allMediumPost.totalCount} of which were published by
           code.kiwi.com as well. Check those out on my{' '}

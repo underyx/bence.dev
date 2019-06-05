@@ -3,12 +3,12 @@ import theme from 'typography-theme-noriega'
 
 theme.scaleRatio = 2.4
 
-theme.headerColor = 'hsl(24, 10%, 35%)'
-theme.bodyColor = 'hsl(24, 10%, 25%)'
+theme.headerColor = 'hsl(220, 50%, 20%)'
+theme.bodyColor = 'hsl(220, 50%, 10%)'
 
 theme.overrideThemeStyles = () => ({
   a: {
-    color: 'hsl(240, 10%, 25%)',
+    color: 'hsl(240, 10%, 30%)',
   },
   'a:visited': {
     color: 'hsl(240, 10%, 45%)',

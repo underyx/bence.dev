@@ -239,11 +239,12 @@ const ResumePage = () => (
         <OutboundLink href="https://github.com/underyx/flask-redis/">
           <strong>Flask-Redis</strong>
         </OutboundLink>{' '}
-        is my most popular one, with over a thousand GitHub repos using it. It's
-        a simple tool, sure, but I&rsquo;m proud of how neat and tidy it is.
+        is my most popular one, with over a thousand GitHub repos using it.
+        It&rsquo;s a simple tool, sure, but I&rsquo;m proud of how neat and tidy
+        it is.
       </li>
       <li>
-        I'm a now-inactive maintainer of{' '}
+        I&rsquo;m a now-inactive maintainer of{' '}
         <OutboundLink href="https://github.com/coala/coala/">
           <strong>coala</strong>
         </OutboundLink>
