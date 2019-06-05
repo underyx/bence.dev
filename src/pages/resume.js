@@ -5,6 +5,7 @@ import styled from 'styled-components'
 import Labels from '../components/resume/labels'
 import ProfilePic from '../components/resume/profilepic'
 import TalksWidget from '../components/resume/talkswidget'
+import ArticlesWidget from '../components/resume/articleswidget'
 import Layout from '../components/layout'
 
 const ResumeHeader = styled.section`
@@ -234,17 +235,12 @@ const ResumePage = () => (
     <h3>Education</h3>
     <p>Entirely self-taught since 2012.</p>
     <TalksWidget />
+    <ArticlesWidget />
     <h3>Languages</h3>
     <ul>
       <li>English: fluent</li>
       <li>Hungarian: native</li>
       <li>Japanese: reading-only, novice</li>
-    </ul>
-    <h3>Future</h3>
-    <ul>
-      <li>Golang</li>
-      <li>Machine Learning</li>
-      <li>Unity</li>
     </ul>
   </Layout>
 )
