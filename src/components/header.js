@@ -8,6 +8,10 @@ const StyledHeader = styled.header`
   display: flex;
   flex-wrap: wrap;
   margin-top: 1.8rem;
+
+  @media print {
+    display: none;
+  }
 `
 
 const HeaderText = styled.h1`

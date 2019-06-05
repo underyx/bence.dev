@@ -8,6 +8,30 @@ import TalksWidget from '../components/resume/talkswidget'
 import ArticlesWidget from '../components/resume/articleswidget'
 import Layout from '../components/layout'
 
+const ResumeLayout = styled(Layout)`
+  @media print {
+    li {
+      page-break-inside: avoid;
+    }
+
+    h2 {
+      font-size: 24px;
+    }
+
+    h3 {
+      font-size: 20px;
+    }
+
+    h4 {
+      font-size: 18px;
+    }
+
+    p {
+      font-size: 16px;
+    }
+  }
+`
+
 const ResumeHeader = styled.section`
   display: flex;
   justify-content: space-between;
@@ -16,6 +40,16 @@ const ResumeHeader = styled.section`
 
 const ResumeTitle = styled.div`
   margin-right: 20px;
+
+  @media print {
+    & h2::after {
+      display: block;
+      font-size: 18px;
+      line-height: 1.8;
+      font-weight: 400;
+      content: '(See original at underyx.me/resume)';
+    }
+  }
 `
 
 const ProfilePicFrame = styled.div`
@@ -26,7 +60,7 @@ const ProfilePicFrame = styled.div`
 `
 
 const ResumePage = () => (
-  <Layout>
+  <ResumeLayout>
     <ResumeHeader>
       <ResumeTitle>
         <h2>Bence Nagy&rsquo;s Résumé</h2>
@@ -292,7 +326,7 @@ const ResumePage = () => (
       <li>Hungarian: native</li>
       <li>Japanese: reading-only, novice</li>
     </ul>
-  </Layout>
+  </ResumeLayout>
 )
 
 export default ResumePage
