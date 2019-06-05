@@ -25,6 +25,12 @@ module.exports = {
         name: `images`,
       },
     },
+    {
+      resolve: `gatsby-source-medium`,
+      options: {
+        username: `@underyx`,
+      },
+    },
     'gatsby-plugin-sharp',
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-styled-components',

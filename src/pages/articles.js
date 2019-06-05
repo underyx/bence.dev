@@ -47,13 +47,43 @@ const ArticlesPage = () => (
             }
           }
         }
+        allMediumPost(
+          filter: {
+            type: { eq: "Post" }
+            homeCollectionId: { eq: "7b8476a2a014" }
+          }
+          sort: { fields: firstPublishedAt, order: DESC }
+        ) {
+          nodes {
+            uniqueSlug
+            content {
+              metaDescription
+            }
+            firstPublishedAt(formatString: "MMMM D, YYYY")
+            title
+          }
+        }
       }
     `}
-    render={data => (
-      <Layout>
-        <ArticleList articles={data.allMarkdownRemark.nodes} />
-      </Layout>
-    )}
+    render={data => {
+      const externalPosts = data.allMediumPost.nodes.map(post => ({
+        excerpt: post.content.metaDescription,
+        fields: { url: `https://code.kiwi.com/${post.uniqueSlug}` },
+        frontmatter: {
+          title: post.title,
+          publish_date: post.firstPublishedAt,
+          publication: 'code.kiwi.com',
+        },
+      }))
+      const mergedArticles = externalPosts
+        .concat(data.allMarkdownRemark.nodes)
+        .sort(post => post.frontmatter.publish_date)
+      return (
+        <Layout>
+          <ArticleList articles={mergedArticles} />
+        </Layout>
+      )
+    }}
   />
 )
 
