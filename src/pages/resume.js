@@ -349,6 +349,7 @@ const ResumePage = () => (
         I use the Colemak keyboard layout, on an ErgoDox keyboard I built for
         myself.
       </li>
+      <li>I challenge anyone reading this to try beating me at Tetris.</li>
       <li>
         Many parts of this CV are dynamic. For instance, the part about how I
         have &ldquo;N articles&rdquo;, that number is directly the count from
