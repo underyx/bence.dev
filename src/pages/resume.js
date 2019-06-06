@@ -104,7 +104,12 @@ const ResumePage = () => (
       </li>
       <li>
         Developed the foundations of our data analysis platform, and the first
-        dozen data pipelines, still serving 40+ members of BI and Analytics
+        dozen data pipelines, still serving 40+ members of BI and Analytics. In
+        the process{' '}
+        <OutboundLink href="https://github.com/apache/airflow/commits?author=underyx">
+          I had to implement some features in Apache Airflow
+        </OutboundLink>{' '}
+        itself.
         <Labels
           primary={['Python', 'PostgreSQL', 'Apache Airflow']}
           secondary={['Tableau', 'Metabase']}
@@ -187,10 +192,6 @@ const ResumePage = () => (
         <Labels primary={['Python', 'Django']} secondary={['PostgreSQL']} />
       </li>
       <li>
-        Led the Software Platform Squad to build many more things on all of the
-        above.
-      </li>
-      <li>
         Picked up experience with various other short-term projects, see tags
         below
         <Labels
@@ -198,11 +199,12 @@ const ResumePage = () => (
             'GCP',
             'Terraform',
             'Kubernetes',
+            'serverless',
             'React',
             'Gatsby',
             'Ansible',
-            'Twine',
           ]}
+          secondary={['Twine']}
         />
       </li>
     </ul>
