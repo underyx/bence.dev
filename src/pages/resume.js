@@ -144,6 +144,15 @@ const ResumePage = () => (
         />
       </li>
       <li>
+        Created Kiwi.com&rsquo;s location autocompletion API, end-to-end from
+        loading data, to API design, and even deployment automation. It&rsquo;s
+        now happily handling 100+ req/s.
+        <Labels
+          primary={['Python', 'aiohttp', 'PostgreSQL', 'Elasticsearch']}
+          secondary={['CircleCI', 'Elastic Beanstalk']}
+        />
+      </li>
+      <li>
         Wrote our first reference templates for new Python apps, libraries,
         Docker images, GitLab CI pipelines.
         <Labels
@@ -325,6 +334,24 @@ const ResumePage = () => (
       <li>English: fluent</li>
       <li>Hungarian: native</li>
       <li>Japanese: reading-only, novice</li>
+    </ul>
+    <h3>Random Facts</h3>
+    <ul>
+      <li>
+        I have an entry in the Common Vulnerabilities and Exposures database:
+        <OutboundLink href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-18645">
+          <pre>CVE-2018-18645</pre>
+        </OutboundLink>
+      </li>
+      <li>
+        I use the Colemak keyboard layout, on an ErgoDox keyboard I built for
+        myself.
+      </li>
+      <li>
+        Many parts of this CV are dynamic. For instance, the part about how I
+        have &ldquo;N articles&rdquo;, that number is directly the count from
+        Medium.com&rsquo;s API plus the number of Markdown files for this site.
+      </li>
     </ul>
   </ResumeLayout>
 )
