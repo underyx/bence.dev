@@ -244,7 +244,7 @@ const ResumePage = () => (
       employee.
     </p>
     <h4>Role</h4>
-    <p>Software Engineer (2015-2018)</p>
+    <p>Software Engineer (2014-2015)</p>
     <h4>Successes</h4>
     <ul>
       <li>
