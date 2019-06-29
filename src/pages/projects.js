@@ -7,7 +7,8 @@ const ProjectsPage = () => (
   <Layout>
     <h2>Projects</h2>
     <p>
-      I'm gonna put together a proper list of all the cool things I worked on.
+      I&rsquo;m gonna put together a proper list of all the cool things I worked
+      on.
     </p>
     <p>
       For the time being, please just check them out on{' '}
