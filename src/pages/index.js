@@ -26,6 +26,11 @@ const IndexPage = () => (
       I keep getting lost in trying new things. But a couple interests that have
       stayed with me for a longer time are rationality, video games, and design.
     </p>
+    <p>
+      And finally, I have a request for you, dear reader: please contact me with
+      whatever problem you're facing right now. Even if you think I cannot help
+      with it. The harder, the better. Seriously. Thanks!
+    </p>
   </Layout>
 )
 
