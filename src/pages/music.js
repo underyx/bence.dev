@@ -7,9 +7,9 @@ const MusicPage = () => (
   <Layout>
     <h2>Music</h2>
     <p>
-      Just you wait, I'll make some super fancy page to show off my playlists
-      here. I've been putting them together regularly ever since 2013, and,
-      well, I'm pretty proud of them.
+      Just you wait, I&rsquo;ll make some super fancy page to show off my
+      playlists here. I&rsquo;ve been putting them together regularly ever since
+      2013, and, well, I&rsquo;m pretty proud of them.
     </p>
     <p>
       Until then I have to ask you to just check them out on{' '}
