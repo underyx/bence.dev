@@ -1,6 +1,8 @@
+import lodash from 'lodash'
 import PropTypes from 'prop-types'
 import React from 'react'
 import { StaticQuery, graphql } from 'gatsby'
+import stripHtml from 'string-strip-html'
 import styled from 'styled-components'
 
 import Divider from '../components/divider'
@@ -31,56 +33,54 @@ const ArticlesPage = () => (
   <StaticQuery
     query={graphql`
       {
-        allMarkdownRemark(
-          sort: { fields: [frontmatter___publish_date], order: DESC }
-          limit: 1000
-        ) {
+        allMarkdownRemark {
           nodes {
             excerpt(pruneLength: 280)
             fields {
               path
             }
             frontmatter {
+              sortDate: publish_date
               publish_date(formatString: "MMMM D, YYYY")
               revision_date(formatString: "MMMM D, YYYY")
               title
             }
           }
         }
-        allMediumPost(
-          filter: {
-            type: { eq: "Post" }
-            homeCollectionId: { eq: "7b8476a2a014" }
-          }
-          sort: { fields: firstPublishedAt, order: DESC }
-        ) {
+        allFeedMedium( filter: { link: { glob: "https://code.kiwi.com/*" } } ) {
           nodes {
-            uniqueSlug
-            content {
-              metaDescription
-            }
-            firstPublishedAt(formatString: "MMMM D, YYYY")
+            sortDate: isoDate
+            isoDate(formatString: "MMMM D, YYYY")
+            link
             title
+            content {
+              encoded
+            }
           }
         }
       }
     `}
     render={data => {
-      const externalPosts = data.allMediumPost.nodes.map(post => ({
-        excerpt: post.content.metaDescription,
-        fields: { url: `https://code.kiwi.com/${post.uniqueSlug}` },
-        frontmatter: {
-          title: post.title,
-          publish_date: post.firstPublishedAt,
-          publication: 'code.kiwi.com',
-        },
-      }))
-      const mergedArticles = externalPosts
-        .concat(data.allMarkdownRemark.nodes)
-        .sort(post => post.frontmatter.publish_date)
+
+      const externalPosts = data.allFeedMedium.nodes.map(post => {
+        const plainTextContent = stripHtml(post.content.encoded, { stripTogetherWithTheirContents: ['figure', 'h3'] })
+
+        return {
+          excerpt: lodash.truncate(plainTextContent, { length: 280, separator: ' ', omission: '…' }),
+          fields: { url: post.link },
+          frontmatter: {
+            sortDate: post.sortDate,
+            title: post.title,
+            publish_date: post.isoDate,
+            publication: 'code.kiwi.com',
+          },
+        }
+      })
+      const mergedArticles = externalPosts.concat(data.allMarkdownRemark.nodes)
+      const sortedArticles = lodash.sortBy(mergedArticles, post => post.frontmatter.sortDate).reverse()
       return (
         <Layout>
-          <ArticleList articles={mergedArticles} />
+          <ArticleList articles={sortedArticles} />
         </Layout>
       )
     }}

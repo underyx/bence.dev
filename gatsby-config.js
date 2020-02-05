@@ -26,10 +26,11 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-source-medium`,
+      resolve: 'gatsby-source-rss-feed',
       options: {
-        username: `@underyx`,
-      },
+        url: `https://medium.com/feed/@underyx`,
+        name: `Medium`,
+      }
     },
     'gatsby-plugin-sharp',
     'gatsby-plugin-react-helmet',

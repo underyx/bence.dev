@@ -8,12 +8,7 @@ const ArticlesWidget = () => (
         allMarkdownRemark {
           totalCount
         }
-        allMediumPost(
-          filter: {
-            type: { eq: "Post" }
-            homeCollectionId: { eq: "7b8476a2a014" }
-          }
-        ) {
+        allFeedMedium(filter: {link: {glob: "https://code.kiwi.com/*"}}) {
           totalCount
         }
       }
@@ -24,8 +19,8 @@ const ArticlesWidget = () => (
         <p>
           There&rsquo;s also a bunch of articles I&rsquo;ve written. To be more
           specific, there&rsquo;s{' '}
-          {data.allMarkdownRemark.totalCount + data.allMediumPost.totalCount} –{' '}
-          {data.allMediumPost.totalCount} of which were published by
+          {data.allMarkdownRemark.totalCount + data.allFeedMedium.totalCount} –{' '}
+          {data.allFeedMedium.totalCount} of which were published by
           code.kiwi.com as well. Check those out on my{' '}
           <Link to="/articles">Articles</Link> page.
         </p>
