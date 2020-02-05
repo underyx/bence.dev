@@ -67,7 +67,7 @@ exports.sourceNodes = ({ actions }) => {
       title: String!
       subtitle: String
       description: String
-      date: Date
+      date: Date @dateformat
       is_private: Boolean
       is_wip: Boolean
       events: [Event!]
@@ -75,7 +75,7 @@ exports.sourceNodes = ({ actions }) => {
 
     type Event {
       name: String!
-      date: Date!
+      date: Date! @dateformat
       city: String
       venue: String
       url: String
