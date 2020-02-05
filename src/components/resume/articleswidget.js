@@ -8,7 +8,7 @@ const ArticlesWidget = () => (
         allMarkdownRemark {
           totalCount
         }
-        allFeedMedium(filter: {link: {glob: "https://code.kiwi.com/*"}}) {
+        allFeedMedium(filter: { link: { glob: "https://code.kiwi.com/*" } }) {
           totalCount
         }
       }

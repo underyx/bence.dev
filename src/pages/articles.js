@@ -47,7 +47,7 @@ const ArticlesPage = () => (
             }
           }
         }
-        allFeedMedium( filter: { link: { glob: "https://code.kiwi.com/*" } } ) {
+        allFeedMedium(filter: { link: { glob: "https://code.kiwi.com/*" } }) {
           nodes {
             sortDate: isoDate
             isoDate(formatString: "MMMM D, YYYY")
@@ -61,12 +61,17 @@ const ArticlesPage = () => (
       }
     `}
     render={data => {
-
       const externalPosts = data.allFeedMedium.nodes.map(post => {
-        const plainTextContent = stripHtml(post.content.encoded, { stripTogetherWithTheirContents: ['figure', 'h3'] })
+        const plainTextContent = stripHtml(post.content.encoded, {
+          stripTogetherWithTheirContents: ['figure', 'h3'],
+        })
 
         return {
-          excerpt: lodash.truncate(plainTextContent, { length: 280, separator: ' ', omission: '…' }),
+          excerpt: lodash.truncate(plainTextContent, {
+            length: 280,
+            separator: ' ',
+            omission: '…',
+          }),
           fields: { url: post.link },
           frontmatter: {
             sortDate: post.sortDate,
@@ -77,7 +82,9 @@ const ArticlesPage = () => (
         }
       })
       const mergedArticles = externalPosts.concat(data.allMarkdownRemark.nodes)
-      const sortedArticles = lodash.sortBy(mergedArticles, post => post.frontmatter.sortDate).reverse()
+      const sortedArticles = lodash
+        .sortBy(mergedArticles, post => post.frontmatter.sortDate)
+        .reverse()
       return (
         <Layout>
           <ArticleList articles={sortedArticles} />
