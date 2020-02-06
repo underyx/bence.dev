@@ -4,7 +4,7 @@ import { OutboundLink } from 'gatsby-plugin-google-analytics'
 import Layout from '../components/layout'
 
 const ProjectsPage = () => (
-  <Layout>
+  <Layout title='projects'>
     <h2>Projects</h2>
     <p>
       I&rsquo;m gonna put together a proper list of all the cool things I worked

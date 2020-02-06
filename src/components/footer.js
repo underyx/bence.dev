@@ -20,12 +20,12 @@ const Footer = () => (
       <FooterContent side="left">
         <div>Bence Nagy (underyx)</div>
         <div>
-          Software Platform Lead @{' '}
-          <OutboundLink href="https://code.kiwi.com/">Kiwi.com</OutboundLink>
+          Founder &amp; CEO @{' '}
+          <OutboundLink href="https://under.ee/">Under</OutboundLink>
         </div>
         <div>
-          <OutboundLink href="https://goo.gl/maps/FGajx5oh2N42">
-            Brno, Czechia
+          <OutboundLink href="https://nomadlist.com/@underyx">
+            Nomad, Worldwide
           </OutboundLink>
         </div>
       </FooterContent>
@@ -37,8 +37,8 @@ const Footer = () => (
           </OutboundLink>
         </div>
         <div>
-          <OutboundLink href="tel:+420-725-511-793">
-            +420&nbsp;725&nbsp;511&nbsp;793
+          <OutboundLink href="tel:+44-7426-418674">
+            +44&nbsp;7426&nbsp;418674
           </OutboundLink>
         </div>
         <div>

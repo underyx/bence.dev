@@ -11,7 +11,7 @@ const ArticleTemplate = ({ data }) => {
   const { frontmatter, html } = data.markdownRemark
 
   return (
-    <Layout>
+    <Layout title={frontmatter.title}>
       <PublishInfo
         publishDate={frontmatter.publish_date}
         revisionDate={frontmatter.revision_date}

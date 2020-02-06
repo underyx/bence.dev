@@ -15,7 +15,7 @@ const Main = styled.main`
   max-width: 610px;
 `
 
-const Layout = ({ children }) => (
+const Layout = ({ children, title }) => (
   <StaticQuery
     query={graphql`
       query SiteTitleQuery {
@@ -29,13 +29,14 @@ const Layout = ({ children }) => (
     render={data => (
       <Main>
         <Helmet
-          title={data.site.siteMetadata.title}
+          title={`${title} of ${data.site.siteMetadata.title}`}
           meta={[
             { name: 'description', content: "underyx's personal website" },
             { name: 'keywords', content: 'bence nagy, underyx' },
           ]}
         >
           <html lang="en" />
+          <meta charSet="utf-8" />
         </Helmet>
         <Header />
         <Divider />

@@ -33,7 +33,7 @@ const LinksPage = () => (
       }
     `}
     render={data => (
-      <Layout>
+      <Layout title='title'>
         <h2>Links</h2>
         <p>
           I live a rather public and interlinked life online. This wall of links

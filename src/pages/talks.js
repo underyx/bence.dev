@@ -34,7 +34,7 @@ const TalksPage = () => (
       }
     `}
     render={data => (
-      <Layout>
+      <Layout title='talks'>
         <h2>Talks</h2>
         <p>
           Oh neat, so you wanna see me talking! Well, you&rsquo;re in luck.

@@ -86,7 +86,7 @@ const ArticlesPage = () => (
         .sortBy(mergedArticles, post => post.frontmatter.sortDate)
         .reverse()
       return (
-        <Layout>
+        <Layout title='articles'>
           <ArticleList articles={sortedArticles} />
         </Layout>
       )

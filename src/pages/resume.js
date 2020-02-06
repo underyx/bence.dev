@@ -60,7 +60,7 @@ const ProfilePicFrame = styled.div`
 `
 
 const ResumePage = () => (
-  <ResumeLayout>
+  <ResumeLayout title='résumé'>
     <ResumeHeader>
       <ResumeTitle>
         <h2>Bence Nagy&rsquo;s Résumé</h2>
@@ -75,7 +75,34 @@ const ResumePage = () => (
       </ProfilePicFrame>
     </ResumeHeader>
 
-    <h3>Work at Kiwi.com (2015-)</h3>
+    <h3>Work at Under (2020-)</h3>
+    <p>
+      Founded a software agency. See all the details on{' '}
+      <OutboundLink href="https://under.ee">the agency&rsquo;s website</OutboundLink>!
+    </p>
+    <h4>Role</h4>
+    <p>Founder &amp; CEO (2020-)</p>
+
+    <h3>Work at Astroscreen (2019)</h3>
+    <p>
+      Led the software efforts of an information warfare startup
+      with unicorn-y ambitions for 5 months.
+    </p>
+    <h4>Role</h4>
+    <p>Software Lead (2019)</p>
+    <h4>Successes</h4>
+    <ul>
+      <li>
+        Developed a distributed data processing platform auto-scaling to more spot instances
+        according to shifting memory requirements.
+        <Labels primary={['Dask', 'AWS', 'Kubernetes', 'NumPy']} />
+      </li>
+      <li>
+        Unfortunately, most details of our work are too sensitive to just blurt our right here.
+      </li>
+    </ul>
+
+    <h3>Work at Kiwi.com (2015-2019)</h3>
     <p>
       One of the first 5% of engineers at Kiwi.com, scaled our team and tech as
       monthly turnover grew by 12x and we had{' '}
@@ -86,7 +113,7 @@ const ResumePage = () => (
     </p>
     <h4>Roles</h4>
     <ul>
-      <li>Software Platform Lead (2018-)</li>
+      <li>Software Platform Lead (2018-2019)</li>
       <li>Senior Software Engineer (2015-2018)</li>
     </ul>
     <h4>Successes</h4>
