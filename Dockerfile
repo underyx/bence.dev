@@ -1,4 +1,4 @@
-FROM node:12 as gatsby
+FROM node:13-slim as gatsby
 
 WORKDIR /app
 
