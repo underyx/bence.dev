@@ -14,7 +14,7 @@ const IndexPage = () => (
       I usually go by &lsquo;underyx&rsquo; online.
       I currently travel the world as a digital nomad,
       as the CEO of <OutboundLink href="https://under.ee">Under</OutboundLink>.{' '}
-      I&rsquo;m available as a Developer Experience &amp; Culture consultant for your business
+      I&rsquo;m available as a Developer Experience &amp; Culture Coach for your business
       &mdash; to help your engineers create <em>better software, faster</em>.
     </p>
     <p>
