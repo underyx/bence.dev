@@ -367,9 +367,9 @@ const ResumePage = () => (
     <h3>Random Facts</h3>
     <ul>
       <li>
-        I have an entry in the Common Vulnerabilities and Exposures database:
+        I have an entry in the Common Vulnerabilities and Exposures database:{' '}
         <OutboundLink href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-18645">
-          <pre>CVE-2018-18645</pre>
+          <code>CVE-2018-18645</code>
         </OutboundLink>
       </li>
       <li>
