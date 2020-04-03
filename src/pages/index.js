@@ -12,7 +12,7 @@ const IndexPage = () => (
     <p>
       I&rsquo;m Bence Nagy.
       I usually go by &lsquo;underyx&rsquo; online.
-      I currently travel the world as a digital nomad,
+      I am currently on lockdown in Budapest,
       as the CEO of <OutboundLink href="https://under.ee">Under</OutboundLink>.{' '}
       I&rsquo;m available as a Developer Experience &amp; Culture consultant for your business
       &mdash; to help your engineers create <em>better software, faster</em>.
