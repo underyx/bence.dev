@@ -49,6 +49,12 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-plugin-fullstory`,
+      options: {
+        fs_org: '112R81',
+      },
+    },
+    {
       resolve: 'gatsby-plugin-google-analytics',
       options: { trackingId: 'UA-46190907-1' },
     },
