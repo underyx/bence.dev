@@ -24,7 +24,7 @@ const NavBarLink = styled(Link)`
   }
 
   :not(&:last-child) {
-    margin-right: 0.5ch;
+    margin-right: 1ch;
   }
 `;
 
