@@ -6,13 +6,13 @@ import Layout from '../components/layout';
 import LinksColumn from '../components/links/linkscolumn';
 
 const StyledLinksPage = styled.section`
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: space-between;
+  display: grid;
+  grid-gap: 1rem;
+  margin-bottom: 2rem;
 
-  @media (max-width: 500px) {
-    flex-direction: column;
+  @media (min-width: 600px) {
+    grid-auto-flow: column;
+    grid-template-columns: repeat(${(props) => props.columns}, 1fr);
   }
 `;
 
@@ -40,9 +40,9 @@ const LinksPage = () => (
           should help you learn pretty much anything about me. (But don&rsquo;t
           ask me why you would care to.)
         </p>
-        <StyledLinksPage>
-          {data.allLinksYaml.nodes.map((column) => (
-            <LinksColumn column={column} />
+        <StyledLinksPage columns={data.allLinksYaml.nodes.length}>
+          {data.allLinksYaml.nodes.map((column, index) => (
+            <LinksColumn column={column} index={index} />
           ))}
         </StyledLinksPage>
       </Layout>

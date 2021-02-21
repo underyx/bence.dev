@@ -3,11 +3,6 @@ import React from 'react';
 import styled from 'styled-components';
 import { OutboundLink } from 'gatsby-plugin-google-analytics';
 
-const LinksList = styled.ul`
-  list-style: none;
-  margin-left: 0;
-`;
-
 const Link = styled(OutboundLink)`
   text-decoration: none;
 `;
@@ -16,30 +11,25 @@ const LinkNote = styled.div`
   font-size: 0.7rem;
 `;
 
-const StyledColumn = styled.section`
-  flex: 1 1 0;
-  margin-right: 2rem;
-  &:last-child {
-    margin-right: 0;
+const GridCell = styled.div`
+  margin: 0;
+  @media (min-width: 600px) {
+    grid-column: ${({ index }) => `${index + 1} / ${index + 2}`};
   }
 `;
 
-const LinksColumn = ({ column }) => (
-  <StyledColumn>
-    <h3>{column.category}</h3>
-    <LinksList>
-      {column.links.map((link) => (
-        <li>
-          <Link href={link.url}>{link.name}</Link>
-          <LinkNote>{link.note}</LinkNote>
-        </li>
-      ))}
-    </LinksList>
-  </StyledColumn>
+const LinksColumn = ({ column, index }) => (
+  <>
+    <GridCell index={index} as="h3">
+      {column.category}
+    </GridCell>
+    {column.links.map((link) => (
+      <GridCell index={index} as="p">
+        <Link href={link.url}>{link.name}</Link>
+        <LinkNote>{link.note}</LinkNote>
+      </GridCell>
+    ))}
+  </>
 );
-
-LinksColumn.propTypes = {
-  column: PropTypes.object.isRequired,
-};
 
 export default LinksColumn;
