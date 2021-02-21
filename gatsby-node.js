@@ -1,9 +1,9 @@
-const path = require(`path`)
+const path = require(`path`);
 
-exports.createPages = ({ graphql, actions }) => {
-  const { createPage } = actions
+const createPages = ({ graphql, actions }) => {
+  const { createPage } = actions;
 
-  const articleTemplate = path.resolve(`./src/templates/article.js`)
+  const articleTemplate = path.resolve(`./src/templates/article.js`);
 
   return graphql(`
     {
@@ -18,38 +18,37 @@ exports.createPages = ({ graphql, actions }) => {
         }
       }
     }
-  `).then(result => {
+  `).then((result) => {
     if (result.errors) {
-      throw result.errors
+      throw result.errors;
     }
 
-    result.data.allMarkdownRemark.nodes.forEach(article => {
+    result.data.allMarkdownRemark.nodes.forEach((article) => {
       createPage({
         path: article.fields.path,
         component: articleTemplate,
-      })
-    })
+      });
+    });
 
-    return null
-  })
-}
-
-exports.onCreateNode = ({ node, actions }) => {
+    return null;
+  });
+};
+const onCreateNode = ({ node, actions }) => {
   if (node.internal.type === `MarkdownRemark`) {
     actions.createNodeField({
       name: 'path',
       node,
       value: `/articles/${node.frontmatter.slug}`,
-    })
+    });
   }
   if (node.internal.type === `TalksYaml`) {
     // eslint-disable-next-line no-param-reassign
     node.date =
-      node.events && node.events.sort(event => event.date).reverse()[0].date
+      node.events && node.events.sort((event) => event.date).reverse()[0].date;
   }
-}
+};
 
-exports.sourceNodes = ({ actions }) => {
+const sourceNodes = ({ actions }) => {
   const typeDefs = `
     type LinksYaml implements Node {
       category: String!
@@ -80,6 +79,8 @@ exports.sourceNodes = ({ actions }) => {
       venue: String
       url: String
     }
-  `
-  actions.createTypes(typeDefs)
-}
+  `;
+  actions.createTypes(typeDefs);
+};
+
+module.exports = { createPages, onCreateNode, sourceNodes };

@@ -2,7 +2,7 @@ import lodash from 'lodash';
 import PropTypes from 'prop-types';
 import React from 'react';
 import { StaticQuery, graphql } from 'gatsby';
-import stripHtml from 'string-strip-html';
+import { stripHtml } from 'string-strip-html';
 import styled from 'styled-components';
 
 import Divider from '../components/divider';
