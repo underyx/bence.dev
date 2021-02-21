@@ -10,6 +10,10 @@ const Wrapper = styled.header`
   grid-gap: 2rem;
   margin-top: 2rem;
 
+  @media (max-width: 500px) {
+    grid-template-columns: 1fr;
+    grid-gap: 1rem;
+  }
   @media print {
     display: none;
   }

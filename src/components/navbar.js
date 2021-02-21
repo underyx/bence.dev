@@ -5,8 +5,8 @@ import { Link } from 'gatsby';
 const Wrapper = styled.nav`
   display: flex;
   flex: auto;
-  flex-wrap: wrap;
-  align-items: flex-end;
+  flex-wrap: wrap-reverse;
+  align-items: flex-start;
   font-weight: 600;
   font-size: 0.9rem;
 `;
