@@ -43,7 +43,7 @@ module.exports = {
         start_url: '/',
         background_color: '#CFFCFC',
         theme_color: '#0D1526',
-        display: 'browser',
+        display: 'standalone',
         icon: 'content/images/favicon.png',
         crossOrigin: `use-credentials`,
       },
