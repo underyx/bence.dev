@@ -11,6 +11,12 @@ const LinkNote = styled.div`
   font-size: 0.7rem;
 `;
 
+const GridHeader = styled.h3`
+  margin: 0;
+  @media (min-width: 600px) {
+    grid-column: ${({ index }) => `${index + 1} / ${index + 2}`};
+  }
+`;
 const GridCell = styled.div`
   margin: 0;
   @media (min-width: 600px) {
@@ -20,11 +26,9 @@ const GridCell = styled.div`
 
 const LinksColumn = ({ column, index }) => (
   <>
-    <GridCell index={index} as="h3">
-      {column.category}
-    </GridCell>
+    <GridHeader index={index}>{column.category}</GridHeader>
     {column.links.map((link) => (
-      <GridCell index={index} as="p">
+      <GridCell index={index}>
         <Link href={link.url}>{link.name}</Link>
         <LinkNote>{link.note}</LinkNote>
       </GridCell>
