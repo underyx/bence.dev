@@ -15,6 +15,9 @@
     - name: Stack Overflow
       url: https://stackoverflow.com/users/568855/underyx
       note: see all the things I didn't know back in the day
+    - name: HumanIPO
+      url: https://humanipo.app/id/bence.nagy
+      note: you can literally buy shares of my life
 
 - category: Personal
   links:
@@ -63,3 +66,6 @@
     - name: Goodreads
       url: https://goodreads.com/underyx
       note: putting this here just to guilt myself into reading more
+    - name: readng
+      url: https://beta.readng.co/user/bence
+      note: but this one is a promising alternative to Goodreads
