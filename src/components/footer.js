@@ -11,6 +11,7 @@ const FooterContent = styled.div`
   flex: auto;
   display: inline-block;
   font-size: 0.8rem;
+  line-height: 2;
   text-align: ${(props) => props.side};
 `;
 
