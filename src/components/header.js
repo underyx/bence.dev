@@ -4,10 +4,11 @@ import { Link } from 'gatsby';
 
 import NavBar from './navbar';
 
-const StyledHeader = styled.header`
-  display: flex;
-  flex-wrap: wrap;
-  margin-top: 1.8rem;
+const Wrapper = styled.header`
+  display: grid;
+  grid-template-columns: min-content auto;
+  grid-gap: 2rem;
+  margin-top: 2rem;
 
   @media print {
     display: none;
@@ -15,9 +16,7 @@ const StyledHeader = styled.header`
 `;
 
 const HeaderText = styled.h1`
-  flex: 0 1 auto;
   display: inline-block;
-  margin-right: 2rem;
   margin-bottom: 0;
 
   :before {
@@ -38,12 +37,12 @@ const HeaderLink = styled(Link)`
 `;
 
 const Header = () => (
-  <StyledHeader>
+  <Wrapper>
     <HeaderText>
       <HeaderLink to="/">underyx</HeaderLink>
     </HeaderText>
     <NavBar />
-  </StyledHeader>
+  </Wrapper>
 );
 
 export default Header;

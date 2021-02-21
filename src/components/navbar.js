@@ -2,18 +2,16 @@ import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'gatsby';
 
-const StyledNavBar = styled.nav`
+const Wrapper = styled.nav`
   display: flex;
   flex: auto;
   flex-wrap: wrap;
   align-items: flex-end;
   font-weight: 600;
-  margin-top: 1rem;
-  max-width: 400px;
+  font-size: 0.9rem;
 `;
 
 const NavBarLink = styled(Link)`
-  margin-right: 0.5ch;
   text-decoration: none;
   color: inherit;
 
@@ -25,8 +23,8 @@ const NavBarLink = styled(Link)`
     text-decoration: underline;
   }
 
-  &:last-child {
-    margin-right: 0;
+  :not(&:last-child) {
+    margin-right: 0.5ch;
   }
 `;
 
@@ -35,7 +33,7 @@ NavBarLink.defaultProps = {
 };
 
 const NavBar = () => (
-  <StyledNavBar>
+  <Wrapper>
     <NavBarLink to="/">home</NavBarLink>
     <NavBarLink to="/resume">résumé</NavBarLink>
     <NavBarLink to="/links">links</NavBarLink>
@@ -43,7 +41,7 @@ const NavBar = () => (
     <NavBarLink to="/talks">talks</NavBarLink>
     <NavBarLink to="/projects">projects</NavBarLink>
     <NavBarLink to="/music">music</NavBarLink>
-  </StyledNavBar>
+  </Wrapper>
 );
 
 export default NavBar;
