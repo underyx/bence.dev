@@ -30,7 +30,7 @@ module.exports = {
       options: {
         url: `https://medium.com/feed/@underyx`,
         name: `Medium`,
-      }
+      },
     },
     'gatsby-plugin-sharp',
     'gatsby-plugin-react-helmet',
@@ -56,6 +56,7 @@ module.exports = {
       resolve: `gatsby-plugin-typography`,
       options: {
         pathToConfigModule: `src/utils/typography`,
+        omitGoogleFont: true,
       },
     },
     'gatsby-plugin-offline',
@@ -64,4 +65,4 @@ module.exports = {
     `gatsby-transformer-yaml`,
     'gatsby-transformer-sharp',
   ],
-}
+};

@@ -1,6 +1,9 @@
 import Typography from 'typography';
 import theme from 'typography-theme-noriega';
 
+import '@fontsource/lato/400.css';
+import '@fontsource/lato/700.css';
+
 theme.scaleRatio = 2.4;
 
 theme.headerColor = 'hsl(220, 50%, 20%)';
