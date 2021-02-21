@@ -4,11 +4,11 @@ import { Link } from 'gatsby';
 
 const Wrapper = styled.nav`
   display: flex;
-  flex: auto;
-  flex-wrap: wrap-reverse;
-  align-items: flex-start;
-  font-weight: 600;
+  flex-wrap: wrap;
+  align-items: center;
+  font-weight: 700;
   font-size: 0.85rem;
+  gap: 0.5rem;
 `;
 
 const NavBarLink = styled(Link)`
@@ -21,10 +21,6 @@ const NavBarLink = styled(Link)`
 
   &.active {
     text-decoration: underline;
-  }
-
-  :not(&:last-child) {
-    margin-right: 1ch;
   }
 `;
 
