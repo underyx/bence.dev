@@ -1,18 +1,18 @@
-import lodash from 'lodash'
-import PropTypes from 'prop-types'
-import React from 'react'
-import { StaticQuery, graphql } from 'gatsby'
-import stripHtml from 'string-strip-html'
-import styled from 'styled-components'
+import lodash from 'lodash';
+import PropTypes from 'prop-types';
+import React from 'react';
+import { StaticQuery, graphql } from 'gatsby';
+import stripHtml from 'string-strip-html';
+import styled from 'styled-components';
 
-import Divider from '../components/divider'
-import Layout from '../components/layout'
-import ArticleCard from '../components/articles/articlecard'
+import Divider from '../components/divider';
+import Layout from '../components/layout';
+import ArticleCard from '../components/articles/articlecard';
 
 const StyledArticleList = styled.section`
   margin-left: 0;
   list-style: none;
-`
+`;
 
 const ArticleList = ({ articles }) => (
   <StyledArticleList>
@@ -23,11 +23,11 @@ const ArticleList = ({ articles }) => (
       </>
     ))}
   </StyledArticleList>
-)
+);
 
 ArticleList.propTypes = {
   articles: PropTypes.array.isRequired,
-}
+};
 
 const ArticlesPage = () => (
   <StaticQuery
@@ -60,11 +60,11 @@ const ArticlesPage = () => (
         }
       }
     `}
-    render={data => {
-      const externalPosts = data.allFeedMedium.nodes.map(post => {
+    render={(data) => {
+      const externalPosts = data.allFeedMedium.nodes.map((post) => {
         const plainTextContent = stripHtml(post.content.encoded, {
           stripTogetherWithTheirContents: ['figure', 'h3'],
-        })
+        });
 
         return {
           excerpt: lodash.truncate(plainTextContent, {
@@ -79,19 +79,19 @@ const ArticlesPage = () => (
             publish_date: post.isoDate,
             publication: 'code.kiwi.com',
           },
-        }
-      })
-      const mergedArticles = externalPosts.concat(data.allMarkdownRemark.nodes)
+        };
+      });
+      const mergedArticles = externalPosts.concat(data.allMarkdownRemark.nodes);
       const sortedArticles = lodash
-        .sortBy(mergedArticles, post => post.frontmatter.sortDate)
-        .reverse()
+        .sortBy(mergedArticles, (post) => post.frontmatter.sortDate)
+        .reverse();
       return (
-        <Layout title='articles'>
+        <Layout title="articles">
           <ArticleList articles={sortedArticles} />
         </Layout>
-      )
+      );
     }}
   />
-)
+);
 
-export default ArticlesPage
+export default ArticlesPage;

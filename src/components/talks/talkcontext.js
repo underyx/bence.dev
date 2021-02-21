@@ -1,10 +1,10 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import styled from 'styled-components'
+import React from 'react';
+import PropTypes from 'prop-types';
+import styled from 'styled-components';
 
-import 'react-tippy/dist/tippy.css'
-import { Tooltip } from 'react-tippy'
-import EventList from './eventlist'
+import 'react-tippy/dist/tippy.css';
+import { Tooltip } from 'react-tippy';
+import EventList from './eventlist';
 
 const WhereButton = styled.button`
   margin-left: 4px;
@@ -24,19 +24,19 @@ const WhereButton = styled.button`
     background: rgba(200, 200, 200, 0.3);
     box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.2);
   }
-`
+`;
 const StyledTalkContext = styled.div`
   margin-bottom: 0.5rem;
   font-style: italic;
-`
+`;
 
 const TalkContext = ({ talk }) => {
-  let content = `Held on ${talk.date}`
+  let content = `Held on ${talk.date}`;
 
   if (talk.events && talk.events.length > 1) {
     const timesText =
-      talk.events.length === 2 ? 'twice' : `${talk.events.length} times`
-    content += ` most recently; ${timesText} in total`
+      talk.events.length === 2 ? 'twice' : `${talk.events.length} times`;
+    content += ` most recently; ${timesText} in total`;
   }
 
   return (
@@ -50,11 +50,11 @@ const TalkContext = ({ talk }) => {
         <WhereButton>Where?</WhereButton>
       </Tooltip>
     </StyledTalkContext>
-  )
-}
+  );
+};
 
 TalkContext.propTypes = {
   talk: PropTypes.object.isRequired,
-}
+};
 
-export default TalkContext
+export default TalkContext;

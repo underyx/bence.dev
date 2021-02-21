@@ -1,6 +1,6 @@
-import React from 'react'
-import styled from 'styled-components'
-import { Link } from 'gatsby'
+import React from 'react';
+import styled from 'styled-components';
+import { Link } from 'gatsby';
 
 const StyledNavBar = styled.nav`
   display: flex;
@@ -10,7 +10,7 @@ const StyledNavBar = styled.nav`
   font-weight: 600;
   margin-top: 1rem;
   max-width: 400px;
-`
+`;
 
 const NavBarLink = styled(Link)`
   margin-right: 0.5ch;
@@ -28,11 +28,11 @@ const NavBarLink = styled(Link)`
   &:last-child {
     margin-right: 0;
   }
-`
+`;
 
 NavBarLink.defaultProps = {
   activeClassName: 'active',
-}
+};
 
 const NavBar = () => (
   <StyledNavBar>
@@ -44,6 +44,6 @@ const NavBar = () => (
     <NavBarLink to="/projects">projects</NavBarLink>
     <NavBarLink to="/music">music</NavBarLink>
   </StyledNavBar>
-)
+);
 
-export default NavBar
+export default NavBar;

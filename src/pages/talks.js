@@ -1,9 +1,9 @@
-import { graphql, StaticQuery } from 'gatsby'
-import React from 'react'
+import { graphql, StaticQuery } from 'gatsby';
+import React from 'react';
 
-import Divider from '../components/divider'
-import Layout from '../components/layout'
-import TalkCard from '../components/talks/talkcard'
+import Divider from '../components/divider';
+import Layout from '../components/layout';
+import TalkCard from '../components/talks/talkcard';
 
 const TalksPage = () => (
   <StaticQuery
@@ -33,15 +33,15 @@ const TalksPage = () => (
         }
       }
     `}
-    render={data => (
-      <Layout title='talks'>
+    render={(data) => (
+      <Layout title="talks">
         <h2>Talks</h2>
         <p>
           Oh neat, so you wanna see me talking! Well, you&rsquo;re in luck.
           I&rsquo;ve put together {data.allTalksYaml.nodes.length} talks so far,{' '}
-          {data.allTalksYaml.nodes.filter(talk => talk.slides_url).length} of
+          {data.allTalksYaml.nodes.filter((talk) => talk.slides_url).length} of
           them have slides uploaded, and{' '}
-          {data.allTalksYaml.nodes.filter(talk => talk.video_url).length} even
+          {data.allTalksYaml.nodes.filter((talk) => talk.video_url).length} even
           have video recordings online.
         </p>
         <section>
@@ -57,6 +57,6 @@ const TalksPage = () => (
       </Layout>
     )}
   />
-)
+);
 
-export default TalksPage
+export default TalksPage;

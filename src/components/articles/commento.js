@@ -1,8 +1,8 @@
-import React from 'react'
-import styled from 'styled-components'
-import Helmet from 'react-helmet'
+import React from 'react';
+import styled from 'styled-components';
+import Helmet from 'react-helmet';
 
-import typography from '../../utils/typography'
+import typography from '../../utils/typography';
 
 const StyledCommento = styled.div`
   &.commento-root img {
@@ -41,13 +41,13 @@ const StyledCommento = styled.div`
   &.commento-root .commento-footer {
     border-top: none;
   }
-`
+`;
 const Commento = () => (
   <StyledCommento id="commento">
     <Helmet>
       <script defer src="https://commento.underyx.me/js/commento.js" />
     </Helmet>
   </StyledCommento>
-)
+);
 
-export default Commento
+export default Commento;

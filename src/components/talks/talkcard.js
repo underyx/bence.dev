@@ -1,24 +1,24 @@
-import PropTypes from 'prop-types'
-import React from 'react'
-import styled from 'styled-components'
+import PropTypes from 'prop-types';
+import React from 'react';
+import styled from 'styled-components';
 
-import { OutboundLink } from 'gatsby-plugin-google-analytics'
-import TalkContext from './talkcontext'
+import { OutboundLink } from 'gatsby-plugin-google-analytics';
+import TalkContext from './talkcontext';
 
 const TalkLink = styled(OutboundLink)`
   text-decoration: none;
-`
+`;
 
 const StyledTalkCard = styled.section`
-  opacity: ${props => (props.isPrivate ? 0.7 : 1.0)};
-`
+  opacity: ${(props) => (props.isPrivate ? 0.7 : 1.0)};
+`;
 
 const SubTitle = styled.span`
   display: block;
   font-size: 1.2rem;
   font-weight: 400;
   line-height: 1.4;
-`
+`;
 
 const TalkCard = ({ talk }) => (
   <StyledTalkCard isPrivate={talk.is_private}>
@@ -56,8 +56,8 @@ const TalkCard = ({ talk }) => (
       </p>
     )}
   </StyledTalkCard>
-)
+);
 
-TalkCard.propTypes = { talk: PropTypes.object.isRequired }
+TalkCard.propTypes = { talk: PropTypes.object.isRequired };
 
-export default TalkCard
+export default TalkCard;

@@ -1,18 +1,18 @@
-import React from 'react'
-import styled from 'styled-components'
-import { OutboundLink } from 'gatsby-plugin-google-analytics'
+import React from 'react';
+import styled from 'styled-components';
+import { OutboundLink } from 'gatsby-plugin-google-analytics';
 
 const StyledFooter = styled.footer`
   display: flex;
   flex-direction: row;
-`
+`;
 
 const FooterContent = styled.div`
   flex: auto;
   display: inline-block;
   font-size: 0.8rem;
-  text-align: ${props => props.side};
-`
+  text-align: ${(props) => props.side};
+`;
 
 const Footer = () => (
   <>
@@ -48,6 +48,6 @@ const Footer = () => (
       </FooterContent>
     </StyledFooter>
   </>
-)
+);
 
-export default Footer
+export default Footer;

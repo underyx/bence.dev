@@ -1,5 +1,5 @@
-import React from 'react'
-import { Link, StaticQuery, graphql } from 'gatsby'
+import React from 'react';
+import { Link, StaticQuery, graphql } from 'gatsby';
 
 const TalksWidget = () => (
   <StaticQuery
@@ -17,14 +17,14 @@ const TalksWidget = () => (
         }
       }
     `}
-    render={data => (
+    render={(data) => (
       <>
         <h3>Talks</h3>
         <p>
           I&rsquo;m a fairly prolific speaker: so far, I&rsquo;ve written{' '}
           {data.allTalksYaml.totalCount} presentations that I&rsquo;ve held at{' '}
           {data.allTalksYaml.nodes
-            .map(node => node.events.length)
+            .map((node) => node.events.length)
             .reduce((sum, a) => sum + a, 0)}{' '}
           events in total. Check them out on my <Link to="/talks">Talks</Link>{' '}
           page.
@@ -32,5 +32,5 @@ const TalksWidget = () => (
       </>
     )}
   />
-)
-export default TalksWidget
+);
+export default TalksWidget;

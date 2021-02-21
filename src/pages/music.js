@@ -1,10 +1,10 @@
-import React from 'react'
+import React from 'react';
 
-import { OutboundLink } from 'gatsby-plugin-google-analytics'
-import Layout from '../components/layout'
+import { OutboundLink } from 'gatsby-plugin-google-analytics';
+import Layout from '../components/layout';
 
 const MusicPage = () => (
-  <Layout title='music'>
+  <Layout title="music">
     <h2>Music</h2>
     <p>
       Just you wait, I&rsquo;ll make some super fancy page to show off my
@@ -23,6 +23,6 @@ const MusicPage = () => (
       disappoint you. Not there yet.
     </p>
   </Layout>
-)
+);
 
-export default MusicPage
+export default MusicPage;

@@ -1,19 +1,19 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import Helmet from 'react-helmet'
-import { StaticQuery, graphql } from 'gatsby'
-import styled from 'styled-components'
+import React from 'react';
+import PropTypes from 'prop-types';
+import Helmet from 'react-helmet';
+import { StaticQuery, graphql } from 'gatsby';
+import styled from 'styled-components';
 
-import Divider from './divider'
-import Footer from './footer'
-import Header from './header'
-import './body.css'
+import Divider from './divider';
+import Footer from './footer';
+import Header from './header';
+import './body.css';
 
 const Main = styled.main`
   margin: 0 auto;
   padding: 0 0.5rem 0.5rem;
   max-width: 610px;
-`
+`;
 
 const Layout = ({ children, title }) => (
   <StaticQuery
@@ -26,7 +26,7 @@ const Layout = ({ children, title }) => (
         }
       }
     `}
-    render={data => (
+    render={(data) => (
       <Main>
         <Helmet
           title={`${title} of ${data.site.siteMetadata.title}`}
@@ -46,10 +46,11 @@ const Layout = ({ children, title }) => (
       </Main>
     )}
   />
-)
+);
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
-}
+  title: PropTypes.string.isRequired,
+};
 
-export default Layout
+export default Layout;

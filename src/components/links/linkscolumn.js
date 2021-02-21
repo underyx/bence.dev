@@ -1,20 +1,20 @@
-import PropTypes from 'prop-types'
-import React from 'react'
-import styled from 'styled-components'
-import { OutboundLink } from 'gatsby-plugin-google-analytics'
+import PropTypes from 'prop-types';
+import React from 'react';
+import styled from 'styled-components';
+import { OutboundLink } from 'gatsby-plugin-google-analytics';
 
 const LinksList = styled.ul`
   list-style: none;
   margin-left: 0;
-`
+`;
 
 const Link = styled(OutboundLink)`
   text-decoration: none;
-`
+`;
 
 const LinkNote = styled.div`
   font-size: 0.7rem;
-`
+`;
 
 const StyledColumn = styled.section`
   flex: 1 1 0;
@@ -22,13 +22,13 @@ const StyledColumn = styled.section`
   &:last-child {
     margin-right: 0;
   }
-`
+`;
 
 const LinksColumn = ({ column }) => (
   <StyledColumn>
     <h3>{column.category}</h3>
     <LinksList>
-      {column.links.map(link => (
+      {column.links.map((link) => (
         <li>
           <Link href={link.url}>{link.name}</Link>
           <LinkNote>{link.note}</LinkNote>
@@ -36,10 +36,10 @@ const LinksColumn = ({ column }) => (
       ))}
     </LinksList>
   </StyledColumn>
-)
+);
 
 LinksColumn.propTypes = {
   column: PropTypes.object.isRequired,
-}
+};
 
-export default LinksColumn
+export default LinksColumn;

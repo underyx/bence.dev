@@ -1,5 +1,5 @@
-import React from 'react'
-import { Link, StaticQuery, graphql } from 'gatsby'
+import React from 'react';
+import { Link, StaticQuery, graphql } from 'gatsby';
 
 const ArticlesWidget = () => (
   <StaticQuery
@@ -13,7 +13,7 @@ const ArticlesWidget = () => (
         }
       }
     `}
-    render={data => (
+    render={(data) => (
       <>
         <h3>Articles</h3>
         <p>
@@ -27,5 +27,5 @@ const ArticlesWidget = () => (
       </>
     )}
   />
-)
-export default ArticlesWidget
+);
+export default ArticlesWidget;

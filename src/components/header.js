@@ -1,8 +1,8 @@
-import React from 'react'
-import styled from 'styled-components'
-import { Link } from 'gatsby'
+import React from 'react';
+import styled from 'styled-components';
+import { Link } from 'gatsby';
 
-import NavBar from './navbar'
+import NavBar from './navbar';
 
 const StyledHeader = styled.header`
   display: flex;
@@ -12,7 +12,7 @@ const StyledHeader = styled.header`
   @media print {
     display: none;
   }
-`
+`;
 
 const HeaderText = styled.h1`
   flex: 0 1 auto;
@@ -26,7 +26,7 @@ const HeaderText = styled.h1`
     font-size: 1rem;
     display: block;
   }
-`
+`;
 
 const HeaderLink = styled(Link)`
   color: inherit;
@@ -35,7 +35,7 @@ const HeaderLink = styled(Link)`
   &:visited {
     color: inherit;
   }
-`
+`;
 
 const Header = () => (
   <StyledHeader>
@@ -44,6 +44,6 @@ const Header = () => (
     </HeaderText>
     <NavBar />
   </StyledHeader>
-)
+);
 
-export default Header
+export default Header;

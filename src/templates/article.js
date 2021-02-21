@@ -1,14 +1,14 @@
-import PropTypes from 'prop-types'
-import React from 'react'
-import { graphql } from 'gatsby'
+import PropTypes from 'prop-types';
+import React from 'react';
+import { graphql } from 'gatsby';
 
-import Commento from '../components/articles/commento'
-import PublishInfo from '../components/articles/publishinfo'
-import Divider from '../components/divider'
-import Layout from '../components/layout'
+import Commento from '../components/articles/commento';
+import PublishInfo from '../components/articles/publishinfo';
+import Divider from '../components/divider';
+import Layout from '../components/layout';
 
 const ArticleTemplate = ({ data }) => {
-  const { frontmatter, html } = data.markdownRemark
+  const { frontmatter, html } = data.markdownRemark;
 
   return (
     <Layout title={frontmatter.title}>
@@ -22,14 +22,14 @@ const ArticleTemplate = ({ data }) => {
       <h2>Discussion</h2>
       <Commento />
     </Layout>
-  )
-}
+  );
+};
 
 ArticleTemplate.propTypes = {
   data: PropTypes.object.isRequired,
-}
+};
 
-export default ArticleTemplate
+export default ArticleTemplate;
 
 export const pageQuery = graphql`
   query ArticleByPath($path: String!) {
@@ -49,4 +49,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`
+`;

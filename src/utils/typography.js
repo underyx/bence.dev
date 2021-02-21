@@ -1,10 +1,10 @@
-import Typography from 'typography'
-import theme from 'typography-theme-noriega'
+import Typography from 'typography';
+import theme from 'typography-theme-noriega';
 
-theme.scaleRatio = 2.4
+theme.scaleRatio = 2.4;
 
-theme.headerColor = 'hsl(220, 50%, 20%)'
-theme.bodyColor = 'hsl(220, 50%, 10%)'
+theme.headerColor = 'hsl(220, 50%, 20%)';
+theme.bodyColor = 'hsl(220, 50%, 10%)';
 
 theme.overrideThemeStyles = () => ({
   a: {
@@ -21,8 +21,8 @@ theme.overrideThemeStyles = () => ({
     'border-left': '3px solid',
     'padding-left': '1rem',
   },
-})
+});
 
-const typography = new Typography(theme)
+const typography = new Typography(theme);
 
-export default typography
+export default typography;

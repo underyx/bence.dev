@@ -1,17 +1,17 @@
-import { Link } from 'gatsby'
-import { OutboundLink } from 'gatsby-plugin-google-analytics'
-import PropTypes from 'prop-types'
-import React from 'react'
-import styled from 'styled-components'
-import PublishInfo from './publishinfo'
+import { Link } from 'gatsby';
+import { OutboundLink } from 'gatsby-plugin-google-analytics';
+import PropTypes from 'prop-types';
+import React from 'react';
+import styled from 'styled-components';
+import PublishInfo from './publishinfo';
 
 const InternalTitleLink = styled(Link)`
   text-decoration: none;
-`
+`;
 
 const ExternalTitleLink = styled(OutboundLink)`
   text-decoration: none;
-`
+`;
 
 const ArticleCard = ({ article }) => (
   <section>
@@ -44,8 +44,8 @@ const ArticleCard = ({ article }) => (
       )}
     </p>
   </section>
-)
+);
 
-ArticleCard.propTypes = { article: PropTypes.object.isRequired }
+ArticleCard.propTypes = { article: PropTypes.object.isRequired };
 
-export default ArticleCard
+export default ArticleCard;

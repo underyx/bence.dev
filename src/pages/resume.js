@@ -1,12 +1,12 @@
-import React from 'react'
-import { OutboundLink } from 'gatsby-plugin-google-analytics'
-import styled from 'styled-components'
+import React from 'react';
+import { OutboundLink } from 'gatsby-plugin-google-analytics';
+import styled from 'styled-components';
 
-import Labels from '../components/resume/labels'
-import ProfilePic from '../components/resume/profilepic'
-import TalksWidget from '../components/resume/talkswidget'
-import ArticlesWidget from '../components/resume/articleswidget'
-import Layout from '../components/layout'
+import Labels from '../components/resume/labels';
+import ProfilePic from '../components/resume/profilepic';
+import TalksWidget from '../components/resume/talkswidget';
+import ArticlesWidget from '../components/resume/articleswidget';
+import Layout from '../components/layout';
 
 const ResumeLayout = styled(Layout)`
   @media print {
@@ -30,13 +30,13 @@ const ResumeLayout = styled(Layout)`
       font-size: 16px;
     }
   }
-`
+`;
 
 const ResumeHeader = styled.section`
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-`
+`;
 
 const ResumeTitle = styled.div`
   margin-right: 20px;
@@ -50,17 +50,17 @@ const ResumeTitle = styled.div`
       content: '(See original at underyx.me/resume)';
     }
   }
-`
+`;
 
 const ProfilePicFrame = styled.div`
   margin: 0 auto 20px;
   flex-grow: 1;
   min-width: 110px;
   max-width: 250px;
-`
+`;
 
 const ResumePage = () => (
-  <ResumeLayout title='résumé'>
+  <ResumeLayout title="résumé">
     <ResumeHeader>
       <ResumeTitle>
         <h2>Bence Nagy&rsquo;s Résumé</h2>
@@ -78,27 +78,31 @@ const ResumePage = () => (
     <h3>Work at Under (2020-)</h3>
     <p>
       Founded a software agency. See all the details on{' '}
-      <OutboundLink href="https://under.ee">the agency&rsquo;s website</OutboundLink>!
+      <OutboundLink href="https://under.ee">
+        the agency&rsquo;s website
+      </OutboundLink>
+      !
     </p>
     <h4>Role</h4>
     <p>Founder &amp; CEO (2020-)</p>
 
     <h3>Work at Astroscreen (2019)</h3>
     <p>
-      Led the software efforts of an information warfare startup
-      with unicorn-y ambitions for 5 months.
+      Led the software efforts of an information warfare startup with unicorn-y
+      ambitions for 5 months.
     </p>
     <h4>Role</h4>
     <p>Software Lead (2019)</p>
     <h4>Successes</h4>
     <ul>
       <li>
-        Developed a distributed data processing platform auto-scaling to more spot instances
-        according to shifting memory requirements.
+        Developed a distributed data processing platform auto-scaling to more
+        spot instances according to shifting memory requirements.
         <Labels primary={['Dask', 'AWS', 'Kubernetes', 'NumPy']} />
       </li>
       <li>
-        Unfortunately, most details of our work are too sensitive to just blurt our right here.
+        Unfortunately, most details of our work are too sensitive to just blurt
+        our right here.
       </li>
     </ul>
 
@@ -384,6 +388,6 @@ const ResumePage = () => (
       </li>
     </ul>
   </ResumeLayout>
-)
+);
 
-export default ResumePage
+export default ResumePage;

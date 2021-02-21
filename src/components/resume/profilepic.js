@@ -1,6 +1,6 @@
-import React from 'react'
-import { StaticQuery, graphql } from 'gatsby'
-import Img from 'gatsby-image'
+import React from 'react';
+import { StaticQuery, graphql } from 'gatsby';
+import Img from 'gatsby-image';
 
 const ProfilePic = () => (
   <StaticQuery
@@ -15,7 +15,9 @@ const ProfilePic = () => (
         }
       }
     `}
-    render={data => <Img fluid={data.placeholderImage.childImageSharp.fluid} />}
+    render={(data) => (
+      <Img fluid={data.placeholderImage.childImageSharp.fluid} />
+    )}
   />
-)
-export default ProfilePic
+);
+export default ProfilePic;
