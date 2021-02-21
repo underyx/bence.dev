@@ -28,15 +28,12 @@ const Layout = ({ children, title }) => (
     `}
     render={(data) => (
       <Main>
-        <Helmet
-          title={`${title} of ${data.site.siteMetadata.title}`}
-          meta={[
-            { name: 'description', content: "underyx's personal website" },
-            { name: 'keywords', content: 'bence nagy, underyx' },
-          ]}
-        >
+        <Helmet>
           <html lang="en" />
           <meta charSet="utf-8" />
+          <title>{`${title} of ${data.site.siteMetadata.title}`}</title>
+          <meta name="description" content="underyx's personal website" />
+          <meta name="keywords" content="bence nagy, underyx" />
         </Helmet>
         <Header />
         <Divider />
