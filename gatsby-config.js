@@ -36,19 +36,6 @@ module.exports = {
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-styled-components',
     {
-      resolve: 'gatsby-plugin-manifest',
-      options: {
-        name: 'underyx.me',
-        short_name: 'underyx',
-        start_url: '/',
-        background_color: '#CFFCFC',
-        theme_color: '#0D1526',
-        display: 'standalone',
-        icon: 'content/images/favicon.png',
-        crossOrigin: `use-credentials`,
-      },
-    },
-    {
       resolve: `gatsby-plugin-fullstory`,
       options: {
         fs_org: '112R81',
@@ -65,7 +52,7 @@ module.exports = {
         omitGoogleFont: true,
       },
     },
-    'gatsby-plugin-offline',
+    'gatsby-plugin-remove-serviceworker',
     'gatsby-plugin-sitemap',
     `gatsby-plugin-preload-fonts`,
     'gatsby-transformer-remark',
