@@ -67,6 +67,7 @@ module.exports = {
     },
     'gatsby-plugin-offline',
     'gatsby-plugin-sitemap',
+    `gatsby-plugin-preload-fonts`,
     'gatsby-transformer-remark',
     `gatsby-transformer-yaml`,
     'gatsby-transformer-sharp',
