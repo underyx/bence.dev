@@ -30,9 +30,6 @@
     - name: reddit
       url: https://www.reddit.com/user/underyx
       note: thousands of comments written here; alarming, really
-    - name: Facebook
-      url: https://www.facebook.com/underyx
-      note: obligatory
     - name: Instagram
       url: https://www.instagram.com/underyx
       note: pretty colors and shapes
