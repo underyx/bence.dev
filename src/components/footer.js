@@ -43,8 +43,9 @@ const Footer = () => (
           </OutboundLink>
         </div>
         <div>
-          underyx on{' '}
-          <OutboundLink href="ircs://irc.freenode.net">Freenode</OutboundLink>
+          <OutboundLink href="https://matrix.to/#/@underyx:matrix.org">
+            @underyx:matrix.org
+          </OutboundLink>
         </div>
       </FooterContent>
     </StyledFooter>
