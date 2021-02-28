@@ -62,12 +62,12 @@ const ArticlesPage = () => (
     `}
     render={(data) => {
       const externalPosts = data.allFeedMedium.nodes.map((post) => {
-        const plainTextContent = stripHtml(post.content.encoded, {
+        const { result } = stripHtml(post.content.encoded, {
           stripTogetherWithTheirContents: ['figure', 'h3'],
         });
 
         return {
-          excerpt: lodash.truncate(plainTextContent, {
+          excerpt: lodash.truncate(result, {
             length: 280,
             separator: ' ',
             omission: '…',
