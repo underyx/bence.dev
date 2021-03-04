@@ -67,7 +67,7 @@ const ResumePage = () => (
         <p>
           Versatile engineering at tech startups.
           <br />
-          Focus on Python, DevOps, and cultivating culture.
+          Python, DevOps, cultivating culture.
         </p>
       </ResumeTitle>
       <ProfilePicFrame>
