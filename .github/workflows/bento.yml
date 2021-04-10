@@ -3,7 +3,7 @@ jobs:
     name: Bento checks
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v1
+    - uses: actions/checkout@v2.3.4
     - id: bento
       name: Bento checks
       uses: returntocorp/bento-action@v1
