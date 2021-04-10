@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
-    - uses: returntocorp/semgrep-action/tests/local-image-action@bence/gha-token-errors
+    - uses: returntocorp/semgrep-action@v1
       with:
         auditOn: push
         publishToken: ${{ secrets.SEMGREP_APP_TOKEN }}
