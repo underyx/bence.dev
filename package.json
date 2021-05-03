@@ -28,7 +28,7 @@
     "gatsby-source-rss-feed": "^1.2.2",
     "gatsby-transformer-remark": "^4.0.0",
     "gatsby-transformer-sharp": "^3.4.0",
-    "gatsby-transformer-yaml": "^3.3.0",
+    "gatsby-transformer-yaml": "^3.4.0",
     "lodash": "^4.17.21",
     "postcss": "^8.2.13",
     "preact": "^10.5.13",
