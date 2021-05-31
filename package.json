@@ -43,7 +43,7 @@
     "remark-react": "^8.0.0",
     "string-strip-html": "^8.2.13",
     "styled-components": "^5.2.3",
-    "typography": "^0.16.19",
+    "typography": "^0.16.21",
     "typography-theme-noriega": "^0.16.19"
   },
   "license": "MIT",
