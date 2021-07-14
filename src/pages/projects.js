@@ -17,6 +17,11 @@ const ProjectsPage = () => (
       <OutboundLink href="https://gitlab.com/underyx">my GitLab</OutboundLink>{' '}
       profiles.
     </p>
+    <p>
+      Most recently, I made{' '}
+      <OutboundLink href="https://visawhen.com">VisaWhen to estimate US visa wait times</OutboundLink>{' '},
+      while waiting for my own CR-1.
+    </p>
   </Layout>
 );
 
