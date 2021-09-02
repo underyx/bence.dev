@@ -10,11 +10,10 @@ const IndexPage = () => (
       in :D
     </p>
     <p>
-      I&rsquo;m Bence Nagy. I usually go by &lsquo;underyx&rsquo; online. I
-      currently travel the world as a digital nomad, as the CEO of{' '}
-      <OutboundLink href="https://under.ee">Under</OutboundLink>. I&rsquo;m
-      available as a Developer Experience &amp; Culture Coach for your business
-      &mdash; to help your engineers create <em>better software, faster</em>.
+      I&rsquo;m Bence Nagy. I usually go by &lsquo;underyx&rsquo; online.
+      Currently working on
+      <OutboundLink href="https://under.ee">Semgrep</OutboundLink>. Trust me,
+      it&rsquo;s about to be a big deal.
     </p>
     <p>
       I keep getting lost in trying new things. But a couple interests that have
