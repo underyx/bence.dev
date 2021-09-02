@@ -21,12 +21,12 @@ const Footer = () => (
       <FooterContent side="left">
         <div>Bence Nagy (underyx)</div>
         <div>
-          Founder &amp; CEO @{' '}
-          <OutboundLink href="https://under.ee/">Under</OutboundLink>
+          Senior SWE @{' '}
+          <OutboundLink href="https://r2c.dev/">r2c</OutboundLink>
         </div>
         <div>
           <OutboundLink href="https://nomadlist.com/@underyx">
-            Nomad, Worldwide
+            San Francisco, CA
           </OutboundLink>
         </div>
       </FooterContent>
@@ -39,7 +39,7 @@ const Footer = () => (
         </div>
         <div>
           <OutboundLink href="tel:+44-7426-418674">
-            +44&nbsp;7426&nbsp;418674
+            +1&nbsp;(312)&nbsp;324-4236
           </OutboundLink>
         </div>
         <div>
