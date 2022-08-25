@@ -11,9 +11,8 @@ const IndexPage = () => (
     </p>
     <p>
       I&rsquo;m Bence Nagy. I usually go by &lsquo;underyx&rsquo; online.
-      Currently working on
-      <OutboundLink href="https://under.ee">Semgrep</OutboundLink>. Trust me,
-      it&rsquo;s about to be a big deal.
+      Currently working on{" "}
+      <OutboundLink href="https://semgrep.dev">Semgrep</OutboundLink>.
     </p>
     <p>
       I keep getting lost in trying new things. But a couple interests that have
