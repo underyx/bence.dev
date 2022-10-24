@@ -55,7 +55,7 @@
     "test": "prettier --check \"src/**/*.js\" && eslint src"
   },
   "devDependencies": {
-    "eslint": "^8.22.0",
+    "eslint": "^8.26.0",
     "eslint-plugin-react": "^7.30.1",
     "prettier": "^2.7.1"
   },
