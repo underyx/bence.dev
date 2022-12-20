@@ -26,7 +26,7 @@ const Footer = () => (
         </div>
         <div>
           <OutboundLink href="https://nomadlist.com/@underyx">
-            San Francisco, CA
+            New York City
           </OutboundLink>
         </div>
       </FooterContent>
@@ -38,13 +38,13 @@ const Footer = () => (
           </OutboundLink>
         </div>
         <div>
-          <OutboundLink href="tel:+44-7426-418674">
+          <OutboundLink href="tel:+1-312-3244236">
             +1&nbsp;(312)&nbsp;324-4236
           </OutboundLink>
         </div>
         <div>
-          <OutboundLink href="https://matrix.to/#/@underyx:matrix.org">
-            @underyx:matrix.org
+          <OutboundLink rel="me" href="https://mastodon.social/@underyx">
+            @underyx@mastodon.social
           </OutboundLink>
         </div>
       </FooterContent>
