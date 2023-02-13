@@ -75,16 +75,16 @@ const ResumePage = () => (
       </ProfilePicFrame>
     </ResumeHeader>
 
-    <h3>Work at Under (2020-)</h3>
+    <h3>Work at Semgrep (2020-)</h3>
     <p>
-      Founded a software agency. See all the details on{' '}
-      <OutboundLink href="https://under.ee">
-        the agency&rsquo;s website
+      Engineering on {' '}
+      <OutboundLink href="https://semgrep.dev">
+        Semgrep
       </OutboundLink>
       !
     </p>
     <h4>Role</h4>
-    <p>Founder &amp; CEO (2020-)</p>
+    <p>Senior Software Engineer (2020-)</p>
 
     <h3>Work at Astroscreen (2019)</h3>
     <p>
