@@ -153,3 +153,4 @@ node_modules
 
 # astro I think
 .cache/
+dist/
