@@ -1,0 +1,29 @@
+---
+import Layout from "../layouts/Layout.astro";
+import TalkCard from "../components/talks/TalkCard.astro";
+import talksData from "../assets/data/talks.json";
+---
+
+<Layout title="talks">
+  <h2>Talks</h2>
+  <p>
+    Oh neat, so you wanna see me talk! Well, you&rsquo;re in luck. I&rsquo;ve
+    put together {talksData.length} talks so far,{" "}
+    {talksData.filter((talk) => talk.slides_url).length} of them have slides
+    uploaded, and{" "}
+    {talksData.filter((talk) => talk.video_url).length} even have video
+    recordings online.
+  </p>
+  <section>
+    {
+      talksData.map((talk, index) => (
+        <>
+          <TalkCard talk={talk} />
+          {index !== talksData.length - 1 ? (
+            <hr style={{ borderColor: "rgb(var(--accent-light))" }} />
+          ) : null}
+        </>
+      ))
+    }
+  </section>
+</Layout>

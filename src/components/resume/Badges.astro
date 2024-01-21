@@ -1,0 +1,33 @@
+---
+interface Props {
+  primary?: string[];
+  secondary?: string[];
+}
+const { primary = [], secondary = [] } = Astro.props;
+---
+
+<div>
+  {primary.map((text) => <span>{text}</span>)}
+  {secondary.map((text) => <span class="secondary">{text}</span>)}
+</div>
+<style>
+  span {
+    font-size: 14px;
+    font-weight: 600;
+    display: inline-block;
+    border: 1px solid rgb(var(--accent-light));
+    border-radius: 4px;
+    padding: 0 4px;
+    margin-top: 4px;
+    margin-right: 4px;
+    white-space: nowrap;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  .secondary {
+    opacity: 0.7;
+  }
+</style>

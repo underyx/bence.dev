@@ -1,0 +1,41 @@
+---
+interface Props {
+  post: any;
+}
+const { post } = Astro.props;
+const isExternal = post.url.startsWith("https://");
+---
+<li>
+  <p>Published {post.publishDate.toLocaleDateString()}</p>
+  <a href={post.url}>
+    <h2 class={isExternal ? "is-external" : undefined}>
+      {post.title}
+    </h2>
+  </a>
+  <p>{post.blurb} <a class={isExternal ? "is-external" : undefined} href={post.url}>go read the rest of this thing ›</a></p>
+</li>
+<style>
+  a {
+    text-decoration: none;
+  }
+
+  p {
+    margin: 0;
+  }
+
+  h2 {
+    line-height: 1.4;
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+
+    .is-external:after {
+      content: "↗";
+      vertical-align: super;
+      font-size: 1rem;
+    }
+  }
+
+  li {
+    margin: 2rem 0;
+  }
+</style>

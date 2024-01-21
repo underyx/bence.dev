@@ -151,9 +151,5 @@ node_modules
 # secrets
 .env
 
-# Gatsby output
+# astro I think
 .cache/
-public/
-
-# SonarQube
-.sonarlint/
