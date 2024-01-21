@@ -14,8 +14,8 @@ Ideally, installing a specific commit of a package would be a simple matter, but
 
 what that really means is
 
-1.  Download `https://pypi.python.org/packages/source/F/Flask/Flask-0.10.1.tar.gz` and install it
-2.  Download `https://pypi.python.org/packages/source/r/redis/redis-2.10.5.tar.gz` and install it
+1. Download `https://pypi.python.org/packages/source/F/Flask/Flask-0.10.1.tar.gz` and install it
+2. Download `https://pypi.python.org/packages/source/r/redis/redis-2.10.5.tar.gz` and install it
 
 but a setup.py dependency list of
 
@@ -26,8 +26,8 @@ but a setup.py dependency list of
 
 would only mean
 
-1.  Check if we have something installed that calls itself `Flask 0.10.1`. If not, download it from somewhere and install it.
-2.  Check if we have something installed that calls itself `redis 2.10.5`. If not, download it from somewhere and install it.
+1. Check if we have something installed that calls itself `Flask 0.10.1`. If not, download it from somewhere and install it.
+2. Check if we have something installed that calls itself `redis 2.10.5`. If not, download it from somewhere and install it.
 
 and it just so happens that this (most of the time) will also find the above URLs first as download links.
 
