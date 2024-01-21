@@ -2,6 +2,7 @@
 import Layout from "../layouts/Layout.astro";
 import Badges from "../components/resume/Badges.astro";
 import TalksWidget from "../components/resume/TalksWidget.astro";
+import PostsWidget from "../components/resume/PostsWidget.astro";
 import { Image } from "astro:assets";
 import avatarImage from "../assets/avatar-2020.jpg";
 ---
@@ -273,24 +274,18 @@ import avatarImage from "../assets/avatar-2020.jpg";
     <li>
       Finally, I like to keep things open source even if they are meant only for
       my own personal use. See for instance{" "}
-      <a href="https://github.com/underyx/underyx.me/">
-        <strong>underyx.me</strong>
-      </a>{" "}
+      <a href="https://github.com/underyx/underyx.me/"><strong>bence.dev</strong></a>{" "}
        (this website!),{" "}
-      <a href="https://gitlab.com/underyx/ops/">
-        <strong>ops</strong>
-      </a>, which has the Kubernetes manifests and Ansible playbooks for my
+      <a href="https://gitlab.com/underyx/ops/"><strong>ops</strong></a>, which has the Kubernetes manifests and Ansible playbooks for my
       personal server (which hosted this website, amongst many other things!),
       or even{" "}
-      <a href="https://github.com/underyx/conference-notes/">
-        <strong>conference-notes</strong>
-      </a>, which is just personal notes from conferences I attended.
+      <a href="https://github.com/underyx/conference-notes/"><strong>conference-notes</strong></a>, which is just personal notes from conferences I attended.
     </li>
   </ul>
   <h3>Education</h3>
   <p>Entirely self-taught since 2012.</p>
   <TalksWidget />
-  <!-- <ArticlesWidget /> -->
+  <PostsWidget />
   <h3>Languages</h3>
   <ul>
     <li>English: fluent</li>

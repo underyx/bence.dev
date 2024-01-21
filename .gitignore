@@ -152,5 +152,6 @@ node_modules
 .env
 
 # astro I think
+.astro/
 .cache/
 dist/
