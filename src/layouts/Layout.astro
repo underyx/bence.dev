@@ -8,8 +8,8 @@ interface Props {
 
 const title = `bence’s ${Astro.props.title}`;
 
-const hue = Math.max(import.meta.env.OURA_SLEEP_SCORE ?? 50 - 30, 0) * 2;
-const backgroundColor = `hsl(${hue}, 80%, 10%)`
+const hue = Math.max(parseInt(import.meta.env.OURA_SLEEP_SCORE ?? "50") - 30, 0);
+const backgroundColor = `hsl(${hue}, 40%, 80%)`
 ---
 
 <!doctype html>
@@ -33,12 +33,6 @@ const backgroundColor = `hsl(${hue}, 80%, 10%)`
       --accent: 136, 58, 234;
       --accent-light: 224, 204, 250;
       --accent-dark: 49, 10, 101;
-      --accent-gradient: linear-gradient(
-        45deg,
-        rgb(var(--accent)),
-        rgb(var(--accent-light)) 30%,
-        white 60%
-      );
     }
     html {
       font-family: system-ui, sans-serif;
@@ -49,13 +43,14 @@ const backgroundColor = `hsl(${hue}, 80%, 10%)`
       padding: 1rem;
       width: 800px;
       max-width: calc(100% - 2rem);
-      color: #ddd;
+      color: #222;
       font-size: 20px;
       line-height: 1.6;
     }
     a {
-      color: rgb(var(--accent-light));
+      color: rgb(var(--accent-dark));
     }
+
     code {
       font-family:
         Menlo,
