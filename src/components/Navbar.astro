@@ -1,0 +1,33 @@
+<nav>
+  <a href="/">home</a>
+  <a href="/resume">résumé</a>
+  <a href="/links">links</a>
+  <a href="/blog">blog</a>
+  <a href="/talks">talks</a>
+  <a href="/projects">projects</a>
+  <a href="/music">music</a>
+</nav>
+<style>
+  nav {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    font-weight: 700;
+    line-height: 1.2;
+
+    gap: 0.5rem;
+  }
+
+  a {
+    text-decoration: none;
+    color: inherit;
+
+    &:visited {
+      color: inherit;
+    }
+
+    &.active {
+      text-decoration: underline;
+    }
+  }
+</style>

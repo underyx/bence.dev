@@ -1,0 +1,23 @@
+---
+import type { MarkdownLayoutProps } from 'astro';
+import Layout from "./Layout.astro";
+
+type Props = MarkdownLayoutProps<{
+  title: string;
+  publishDate: Date;
+  revisionDate: Date | null;
+}>;
+
+const { frontmatter } = Astro.props;
+---
+
+<Layout title={"post: " + frontmatter.title}>
+  <p>Published {frontmatter.publishDate.toLocaleDateString()}{frontmatter.revisionDate && `, then revised ${frontmatter.revisionDate.toLocaleDateString()}`}</p>
+  <h1>{frontmatter.title}</h1>
+  <slot />
+</Layout>
+<style>
+  h1 {
+    line-height: 1.4;
+  }
+</style>

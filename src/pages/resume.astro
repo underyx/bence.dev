@@ -1,0 +1,368 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Badges from "../components/resume/Badges.astro";
+import TalksWidget from "../components/resume/TalksWidget.astro";
+import PostsWidget from "../components/resume/PostsWidget.astro";
+import { Image } from "astro:assets";
+import avatarImage from "../assets/avatar-2020.jpg";
+---
+
+<Layout title="résumé">
+  <section class="header">
+    <div class="title">
+      <h2>Bence Nagy&rsquo;s Résumé</h2>
+      <p>
+        Versatile engineering at tech startups.
+        <br />
+         Python, DevOps, cultivating culture.
+      </p>
+    </div>
+    <div class="photo">
+      <Image src={avatarImage} alt="profile picture of a handsome Bence" />
+    </div>
+  </section>
+
+  <h3>Work at Semgrep (2020-)</h3>
+  <p>
+    Engineering on {" "}
+    <a href="https://semgrep.dev">Semgrep</a>!
+  </p>
+  <h4>Role</h4>
+  <ul>
+    <li>Staff Software Engineer (2023-)</li>
+    <li>Senior Software Engineer (2020-2023)</li>
+  </ul>
+
+  <h3>Work at Astroscreen (2019)</h3>
+  <p>
+    Led the software efforts of an information warfare startup with unicorn-y
+    ambitions for 5 months.
+  </p>
+  <h4>Role</h4>
+  <p>Software Lead (2019)</p>
+  <h4>Successes</h4>
+  <ul>
+    <li>
+      Developed a distributed data processing platform auto-scaling to more spot
+      instances according to shifting memory requirements.
+      <Badges primary={["Dask", "AWS", "Kubernetes", "NumPy"]} />
+    </li>
+    <li>
+      Unfortunately, most details of our work are too sensitive to just blurt
+      our right here.
+    </li>
+  </ul>
+
+  <h3>Work at Kiwi.com (2015-2019)</h3>
+  <p>
+    One of the first 5% of engineers at Kiwi.com, scaled our team and tech as
+    monthly turnover grew by 12x and we had{" "}
+    <a
+      href="https://www.generalatlantic.com/media-article/general-atlantic-announces-strategic-partnership-with-travel-platform-kiwi-com/"
+    >
+      a successful exit
+    </a>
+     .
+  </p>
+  <h4>Roles</h4>
+  <ul>
+    <li>Software Platform Lead (2018-2019)</li>
+    <li>Senior Software Engineer (2015-2018)</li>
+  </ul>
+  <h4>Successes</h4>
+  <ul>
+    <li>
+      Designed and developed our deployment automation tool,{" "}
+      <a href="https://github.com/kiwicom/crane">Crane</a>
+       , used for tens of thousands of releases.
+      <Badges
+        primary={["Python", "Rancher"]}
+        secondary={["click", "Docker", "GitLab CI"]}
+      />
+    </li>
+    <li>
+      Developed the foundations of our data analysis platform, and the first
+      dozen data pipelines, still serving 40+ members of BI and Analytics. In
+      the process{" "}
+      <a href="https://github.com/apache/airflow/commits?author=underyx">
+        I had to implement some features in Apache Airflow
+      </a>{" "}
+       itself.
+      <Badges
+        primary={["Python", "PostgreSQL", "Apache Airflow"]}
+        secondary={["Tableau", "Metabase"]}
+      />
+    </li>
+    <li>
+      Rearchitected the largest monolith for better reliability and development
+      velocity. Average unique daily contributors went from 3 to 10.
+      <Badges
+        primary={[
+          "Python",
+          "Bottle",
+          "AWS",
+          "Docker",
+          "Rancher",
+          "connexion",
+          "Celery",
+        ]}
+        secondary={["SQLAlchemy", "GitLab CI", "pytest", "coala", "OpenAPI"]}
+      />
+    </li>
+    <li>
+      Switched the same monolith to use asynchronous Python. In one day from
+      idea to staging, memory usage dropped by 80%, server load by 55%, and 99th
+      percentile request times by 60%.
+      <Badges primary={["Python", "Bottle", "Gevent"]} />
+    </li>
+    <li>
+      Led without authority to adopt engineering best practices company-wide.
+      This includes static analysis, test automation, a public by default
+      culture, CI/CD, containers, microservices, innersourcing, asynchronous
+      Python, and many more.
+      <Badges
+        primary={["pytest", "Docker", "Kubernetes", "asyncio"]}
+        secondary={["aiohttp", "Slack", "sphinx"]}
+      />
+    </li>
+    <li>
+      Created Kiwi.com&rsquo;s location autocompletion API, end-to-end from
+      loading data, to API design, and even deployment automation. It&rsquo;s
+      now happily handling 100+ req/s.
+      <Badges
+        primary={["Python", "aiohttp", "PostgreSQL", "Elasticsearch"]}
+        secondary={["CircleCI", "Elastic Beanstalk"]}
+      />
+    </li>
+    <li>
+      Wrote our first reference templates for new Python apps, libraries, Docker
+      images, GitLab CI pipelines.
+      <Badges
+        primary={["Python", "cookiecutter", "Docker", "GitLab CI"]}
+        secondary={["aiohttp", "Slack", "sphinx"]}
+      />
+    </li>
+    <li>
+      Led development of our microservice directory,{" "}
+      <a href="https://github.com/kiwicom/the-zoo"> The Zoo</a>
+       .
+      <Badges primary={["Python", "Django"]} secondary={["PostgreSQL"]} />
+    </li>
+    <li>
+      Kept the search engine running as one of the two people in the on-call
+      rotation.
+      <Badges
+        primary={["Python", "PostgreSQL", "AWS", "Redis", "Elasticsearch"]}
+        secondary={["Bottle"]}
+      />
+    </li>
+    <li>
+      Implemented product features on search &amp; booking engines directly
+      increasing sales.
+      <Badges primary={["Python", "PostgreSQL"]} secondary={["Bottle"]} />
+    </li>
+    <li>
+      Laid the groundwork of an internal HR and ticketing application, used for
+      3+ years and counting
+      <Badges primary={["Python", "Django"]} secondary={["PostgreSQL"]} />
+    </li>
+    <li>
+      Picked up experience with various other short-term projects, see tags
+      below
+      <Badges
+        primary={[
+          "GCP",
+          "Terraform",
+          "Kubernetes",
+          "serverless",
+          "React",
+          "Gatsby",
+          "Ansible",
+        ]}
+        secondary={["Twine"]}
+      />
+    </li>
+  </ul>
+  <h4>Failures</h4>
+  <ul>
+    <li>
+      Implemented an internal data pipeline execution framework.
+      <br />
+      <strong>I shut it down</strong> as it was inferior to Apache Airflow in
+      every way.
+    </li>
+    <li>
+      Wrote a tool to gather news announced by other departments in random
+      places, and aggregate them in Slack channels.
+      <br />
+      <strong>I shut it down</strong> as all the scraping and automated data
+      cleaning wasn&rsquo;t sustainable, and it didn&rsquo;t entice people to
+      manually correct its posts.
+    </li>
+    <li>
+      Many more that were valuable lessons but aren&rsquo;t grand enough to make
+      this list.
+    </li>
+  </ul>
+  <h4>Proudest Moment</h4>
+  <p>
+    My proudest moment was when, after 3 years I spent at Kiwi.com, we polled
+    engineers on what their values are, and &ldquo;Transparency&rdquo; came up
+    as the number one response, much unlike when I joined. After spending years
+    preaching, fighting for an open company culture, I feel like this is
+    somewhat of a personal accomplishment of sorts, even if I obviously
+    can&rsquo;t just outright take credit for it.
+  </p>
+  <h3>Work at Allmyles (2014-2015)</h3>
+  <p>
+    Built the company&rsquo;s technical foundations, at times as the only
+    employee.
+  </p>
+  <h4>Role</h4>
+  <p>Software Engineer (2014-2015)</p>
+  <h4>Successes</h4>
+  <ul>
+    <li>
+      Migrated the whole infrastructure from the sunsetting HP Cloud to AWS.
+      <Badges primary={["AWS"]} secondary={["Unix"]} />
+    </li>
+    <li>
+      Implemented the main API product of the company from the ground up.
+      <Badges primary={["Python", "PostreSQL", "Redis"]} />
+    </li>
+    <li>
+      As another blank slate, started a user facing dashboard web app.
+      <Badges primary={["Python", "Django"]} secondary={["PostgreSQL"]} />
+    </li>
+    <li>
+      Defined the whole infrastructure as code, maintained numerous services
+      <Badges
+        primary={["Ansible"]}
+        secondary={["Elasticsearch", "Logstash", "Kibana", "go.cd", "icinga2"]}
+      />
+    </li>
+    <li>
+      Implemented and published an open source PHP client library for our API
+      <Badges primary={["PHP"]} />
+    </li>
+  </ul>
+  <h3>Open Source Projects</h3>
+  <p>…cause sometimes I just need to work on something out of passion.</p>
+  <ul>
+    <li>
+      <a href="https://github.com/underyx/flask-redis/">
+        <strong>Flask-Redis</strong>
+      </a>{" "}
+       is my most popular one, with over a thousand GitHub repos using it.
+      It&rsquo;s a simple tool, sure, but I&rsquo;m proud of how neat and tidy
+      it is.
+    </li>
+    <li>
+      I&rsquo;m a now-inactive maintainer of{" "}
+      <a href="https://github.com/coala/coala/">
+        <strong>coala</strong>
+      </a>, the largest project I&rsquo;ve been involved with. This involved
+      much more community-related work, such as leading development sprints at
+      PyCon.
+    </li>
+    <li>
+      I have more cool little little utility libraries, such as{" "}
+      <a href="https://github.com/underyx/aiohttp-sentry/">
+        <strong>aiohttp-sentry</strong>
+      </a>,{" "}
+      <a href="https://github.com/underyx/structlog-pretty/">
+        <strong>structlog-pretty</strong>
+      </a>, and several others.
+    </li>
+    <li>
+      Finally, I like to keep things open source even if they are meant only for
+      my own personal use. See for instance{" "}
+      <a href="https://github.com/underyx/underyx.me/"><strong>bence.dev</strong></a>{" "}
+       (this website!),{" "}
+      <a href="https://gitlab.com/underyx/ops/"><strong>ops</strong></a>, which has the Kubernetes manifests and Ansible playbooks for my
+      personal server (which hosted this website, amongst many other things!),
+      or even{" "}
+      <a href="https://github.com/underyx/conference-notes/"><strong>conference-notes</strong></a>, which is just personal notes from conferences I attended.
+    </li>
+  </ul>
+  <h3>Education</h3>
+  <p>Entirely self-taught since 2012.</p>
+  <TalksWidget />
+  <PostsWidget />
+  <h3>Languages</h3>
+  <ul>
+    <li>English: fluent</li>
+    <li>Hungarian: native</li>
+    <li>Japanese: reading-only, novice</li>
+  </ul>
+  <h3>Random Facts</h3>
+  <ul>
+    <li>
+      I have an entry in the Common Vulnerabilities and Exposures database:{" "}
+      <a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-18645">
+        <code style={{ whiteSpace: "nowrap" }}>CVE-2018-18645</code>
+      </a>
+    </li>
+    <li>I use the Colemak keyboard layout, on an ErgoDox keyboard I built.</li>
+    <li>I challenge anyone reading this to try beating me at Tetris.</li>
+    <li>
+      Many parts of this CV are dynamic. For instance, the part about how I have
+      &ldquo;N articles&rdquo;, that number is directly the count from
+      Medium.com&rsquo;s API plus the number of Markdown files for this site.
+    </li>
+  </ul>
+</Layout>
+<style>
+  @media print {
+    li {
+      page-break-inside: avoid;
+    }
+
+    h2 {
+      font-size: 24px;
+    }
+
+    h3 {
+      font-size: 20px;
+    }
+
+    h4 {
+      font-size: 18px;
+    }
+
+    p {
+      font-size: 16px;
+    }
+  }
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
+
+  .title {
+    flex-grow: 1;
+    @media print {
+      & h2::after {
+        display: block;
+        font-size: 18px;
+        line-height: 1.8;
+        font-weight: 400;
+        content: "(See original at bence.dev/resume)";
+      }
+    }
+  }
+
+  .photo {
+    margin: 0 auto;
+    flex-shrink: 0;
+    max-width: 16rem;
+  }
+
+  .photo img {
+    max-width: 100%;
+    height: auto;
+  }
+</style>

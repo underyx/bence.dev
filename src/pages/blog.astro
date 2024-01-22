@@ -1,0 +1,62 @@
+---
+import { getCollection } from "astro:content";
+import postUrlsData from "../assets/data/postUrls.json";
+import PostPreviewCard from "../components/blog/PostPreviewCard.astro";
+import Layout from "../layouts/Layout.astro";
+const allPosts = await getCollection("posts");
+
+interface PostPreview {
+  title: string;
+  blurb: string;
+  url: string;
+  publishDate: Date;
+  revisionDate: Date | null;
+}
+
+function truncateBody(body: string, length: number) {
+  const truncated = body.split(" ").reduce((acc, word) => {
+    if ((acc + word).length <= length) {
+      return acc + " " + word;
+    } else {
+      return acc;
+    }
+  }, "").trim();
+
+  return body.length > truncated.length ? truncated + "…" : truncated;
+}
+const posts: PostPreview[] = [...allPosts.map((post) => ({
+  title: post.data.title,
+  blurb: truncateBody(post.body, 200),
+  url: `/blog/${post.slug}`,
+  publishDate: new Date(post.data.publishDate),
+  revisionDate: post.data.revisionDate ? new Date(post.data.revisionDate) : null,
+})), ...postUrlsData.map((post) => ({
+  title: post.title,
+  blurb: post.blurb,
+  url: post.url,
+  publishDate: new Date(post.publishDate),
+  revisionDate: null,
+}))].sort((a, b) => b.publishDate.getTime() - a.publishDate.getTime());
+---
+<Layout title="blog">
+  <h2>Blog</h2>
+  <ul>
+    {
+      posts.map((post, index) => (
+        <>
+          <PostPreviewCard post={post} />
+          {index !== posts.length - 1 ? (
+            <hr style={{ borderColor: "rgb(var(--accent-light))" }} />
+          ) : null}
+        </>
+      ))
+    }
+  </ul>
+</Layout>
+<style>
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+
+</style>

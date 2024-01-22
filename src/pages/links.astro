@@ -1,0 +1,47 @@
+---
+import Layout from "../layouts/Layout.astro";
+import linksData from "../assets/data/links.json";
+---
+
+<Layout title="links">
+  <h2>Links</h2>
+  <p>
+    I live a rather public and interlinked life online. This wall of links
+    should help you learn pretty much anything about me. (But don&rsquo;t ask me
+    why you would care to.)
+  </p>
+  <article>
+    {
+      linksData.map((column) => (
+        <div>
+            <h3>{column.category}</h3>
+            {column.links.map((link) => (
+              <div >
+                <a href={link.url}>{link.name}</Link>
+                <div style={{fontSize: "0.7rem"}}>{link.note}</div>
+              </div>
+            ))}
+        </div>
+      ))
+    }
+  </article>
+</Layout>
+<style>
+  article {
+    display: grid;
+    grid-gap: 1rem;
+    margin-bottom: 2rem;
+
+    @media (min-width: 600px) {
+      grid-auto-flow: column;
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+  }
+
+  h3 {
+    margin: 0;
+    @media (min-width: 600px) {
+      grid-column: ${({ index }) => `${index + 1} / ${index + 2}`};
+    }
+  }
+</style>

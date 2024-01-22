@@ -1,0 +1,44 @@
+[
+  {
+    "title": "A pre-talk checklist for the stressed presenter’s peace of mind",
+    "url": "https://code.kiwi.com/a-pre-talk-checklist-for-the-stressed-presenters-peace-of-mind",
+    "publishDate": "2019-03-14",
+    "blurb": "Here is a quick little checklist I thought I should share. I use it to make sure everything goes smoothly during my presentations. The only caveat is that you might need to copy and adapt the list for your own hardware and software setup…"
+  },
+  {
+    "title": "20 Things To Do After Returning From PyCon 2018",
+    "url": "https://code.kiwi.com/20-things-to-do-after-returning-from-pycon-2018",
+    "publishDate": "2018-05-24",
+    "blurb": "As always, this year’s PyCon was full of interesting technologies and ideas. I took notes diligently and thought hey, why not just share them with all of you? Here’s a no-bullshit, no-filler list of all the actionable items that I noted down on my trip; in chronological order…"
+  },
+  {
+    "title": "Announcing Crane — a GitLab CI-ready image to upgrade services in Rancher",
+    "url": "https://code.kiwi.com/announcing-crane",
+    "publishDate": "2018-02-26",
+    "blurb": "We’re happy to finally write about our latest larger-scale open source project: Crane. We use Rancher for container orchestration extensively at Kiwi.com, and saw a need to streamline our release process. Even though Rancher’s sweet web UI makes the manual upgrade procedure…"
+  },
+  {
+    "title": "Our Comprehensive Guide to Python Dependencies",
+    "url": "https://code.kiwi.com/our-comprehensive-guide-to-python-dependencies-8a5a4366a563?source=rss-8fc62e27fb3d------2",
+    "publishDate": "2018-02-15",
+    "blurb": "The following article is from Kiwi.com’s internal engineering handbook. We thought it could come in handy for others as well, so we decided to share it with the world here, like we’ve done before. What are requirements? They are usually stored in requirements.txt as a list of…"
+  },
+  {
+    "title": "Code Design Principles for Public APIs of Modules",
+    "url": "https://code.kiwi.com/code-design-principles-for-public-apis-of-modules",
+    "publishDate": "2017-10-13",
+    "blurb": "The following article is from Kiwi.com’s internal engineering handbook. We thought it could come in handy for others as well, so we decided to share it with the world here. This document should leave you with some idea on how to approach problems where you have to create a new…"
+  },
+  {
+    "title": "Lesser Known Tools We Love at Kiwi.com, Part 2 of 3: Mac and Web",
+    "url": "https://code.kiwi.com/lesser-known-tools-we-love-at-kiwi-com-part-2-of-3-mac-and-web",
+    "publishDate": "2017-01-27",
+    "blurb": "As promised last November in an article about our favorite CLI tools, we’re continuing the list with our favorite macOS and web apps, as developers. Since the whole point of this is to become more efficient, let’s not waste time on more filler. Here comes the list! Numi (macOS)…"
+  },
+  {
+    "title": "Lesser Known Tools We Love at Kiwi.com, Part 2 of 3: Mac and Web",
+    "url": "https://code.kiwi.com/lesser-known-tools-we-love-at-kiwi-com-part-2-of-3-mac-and-web",
+    "publishDate": "2016-11-24",
+    "blurb": "We’re all trying to save the time we spend on repetitive tasks, but as xkcd illustrates, often it’s just not worth wasting your time seeking out new tools and ways to be more productive. We developers at Kiwi.com thought it would be nice to share an easily digestible…"
+  }
+]

@@ -1,0 +1,12 @@
+---
+import { getCollection } from "astro:content";
+
+import postUrlsData from "../../assets/data/postUrls.json";
+const allPosts = await getCollection("posts");
+
+---
+<h3>Writing</h3>
+<p>
+  There&rsquo;s also a bunch of blog posts I&rsquo;ve written.
+  To be specific, there&rsquo;s {allPosts.length + postUrlsData.length} &ndash; {postUrlsData.length} of which were published by code.kiwi.com as well. Check those out on my <a href="/blog">Blog</a> page.
+</p>

@@ -1,0 +1,13 @@
+---
+import talksData from "../../assets/data/talks.json";
+---
+<h3>Talks</h3>
+<p>
+  I&rsquo;m a fairly prolific speaker: so far, I&rsquo;ve written{' '}
+  {talksData.length} presentations that I&rsquo;ve held at{' '}
+  {talksData
+    .map((talk) => talk.events.length)
+    .reduce((sum, a) => sum + a, 0)}{' '}
+  events in total. Check them out on my <a href="/talks">Talks</a>{' '}
+  page.
+</p>

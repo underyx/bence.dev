@@ -1,0 +1,57 @@
+---
+import TalkContext from "./TalkContext.tsx";
+
+interface Props {
+  talk: any;
+}
+const { talk } = Astro.props;
+---
+
+<section style={{ opacity: talk.is_private ? 0.7 : undefined }}>
+  <a href={talk.video_url}>
+    <h2>
+      {talk.title}
+      {talk.subtitle && <div class="subtitle">{talk.subtitle}</div>}
+    </h2>
+  </a>
+  <TalkContext client:idle talk={talk} />
+  <p>{talk.description}</p>
+  {
+    talk.is_private && (
+      <p>
+        This talk was only ever held privately. Contact me if you would like me
+        to publish the slides after a quick review for sensitive contents.
+      </p>
+    )
+  }
+  {
+    talk.video_url && (
+      <p>
+        <a href={talk.video_url}>Watch the recording ➜</a>
+      </p>
+    )
+  }
+  {
+    talk.slides_url && (
+      <p>
+        <a href={talk.slides_url}>Check the slides ➜</a>
+      </p>
+    )
+  }
+</section>
+<style>
+  a {
+    text-decoration: none;
+  }
+
+  h2 {
+    margin-bottom: 0.4rem;
+  }
+
+  .subtitle {
+    display: block;
+    font-size: 1.2rem;
+    font-weight: 400;
+    line-height: 1.4;
+  }
+</style>
