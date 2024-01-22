@@ -7,6 +7,9 @@ interface Props {
 }
 
 const title = `bence’s ${Astro.props.title}`;
+
+const hue = Math.max(import.meta.env.OURA_SLEEP_SCORE ?? 50 - 30, 0) * 2;
+const backgroundColor = `hsl(${hue}, 80%, 10%)`
 ---
 
 <!doctype html>
@@ -25,7 +28,7 @@ const title = `bence’s ${Astro.props.title}`;
     <Footer />
   </body>
 
-  <style is:global>
+  <style is:global define:vars={{ backgroundColor }}>
     :root {
       --accent: 136, 58, 234;
       --accent-light: 224, 204, 250;
@@ -39,8 +42,7 @@ const title = `bence’s ${Astro.props.title}`;
     }
     html {
       font-family: system-ui, sans-serif;
-      background: #13151a;
-      background-size: 224px;
+      background: var(--backgroundColor);
     }
     body {
       margin: auto;
