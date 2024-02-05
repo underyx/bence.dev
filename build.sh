@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 
+export TZ=America/Los_Angeles
 TODAY=$(date +"%Y-%m-%d")
 YESTERDAY=$(date -v-1d +"%Y-%m-%d" 2>/dev/null || date -d "yesterday 13:00" +"%Y-%m-%d")
 
