@@ -1,0 +1,99 @@
+---
+import { act } from "react-dom/test-utils";
+import Square from "./Square.astro";
+import type { ActivityRating, ColorRating, SleepRating } from "./getColor";
+interface Props {
+  activeColorRating: ColorRating;
+}
+const { activeColorRating } = Astro.props;
+const sleepRatings: SleepRating[] = [
+  "great",
+  "good",
+  "okay",
+  "poor",
+  "terrible",
+];
+const activityRatings: ActivityRating[] = ["high", "medium", "low"];
+---
+
+<section>
+  <h3>bence.dev&rsquo;s color scheme</h3>
+  <p>
+    The colors on this site change every morning based on my biometric data. A
+    better night&rsquo;s sleep makes the colors happier, and more activity the
+    previous day makes the colors livelier. Here&rsquo;s what the background
+    color means (today&rsquo;s color is highlighted):
+  </p>
+  <table>
+    <thead>
+      <tr>
+        <th style="text-align: right;"
+          >Activity&nbsp;<span
+            style="transform: translate(2px, 0px); display: inline-block; "
+            >›</span
+          ><br />Sleep&nbsp;<span
+            style="transform: rotate(90deg) translate(3px, -4px); display: inline-block;"
+            >›</span
+          ></th
+        >
+        <th>High</th>
+        <th>Medium</th>
+        <th>Low</th>
+      </tr>
+    </thead>
+    <tbody>
+      {
+        sleepRatings.map((sleepRating) => (
+          <tr>
+            <th>
+              {sleepRating.charAt(0).toUpperCase() + sleepRating.slice(1)}
+            </th>
+            {activityRatings.map((activityRating) => {
+              const colorRating: ColorRating = `${sleepRating}-${activityRating}`;
+              return (
+                <td>
+                  <Square
+                    colorRating={colorRating}
+                    isActive={colorRating === activeColorRating}
+                  />
+                </td>
+              );
+            })}
+          </tr>
+        ))
+      }
+    </tbody>
+  </table>
+</section>
+<style>
+  h3 {
+    margin: 0;
+  }
+  section {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 1rem;
+    border: solid 3px #000;
+    border-radius: 8px;
+  }
+  table {
+    width: 100%;
+    max-width: 400px;
+    border-collapse: collapse;
+    margin: auto;
+  }
+  th,
+  td {
+    padding: 0.3rem 0.5rem;
+  }
+  thead th {
+    vertical-align: top;
+  }
+  tbody th {
+    width: 7ch;
+    text-align: right;
+    vertical-align: baseline;
+  }
+  tbody td {
+    text-align: center;
+  }
+</style>

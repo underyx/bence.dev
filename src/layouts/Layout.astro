@@ -1,6 +1,14 @@
 ---
+import { root } from "postcss";
 import Footer from "../components/Footer.astro";
 import Header from "../components/Header.astro";
+import Legend from "../components/colors/Legend.astro";
+import {
+  getActivityRating,
+  getColor,
+  getSleepRating,
+  type ColorRating,
+} from "../components/colors/getColor";
 
 interface Props {
   title: string;
@@ -8,8 +16,10 @@ interface Props {
 
 const title = `bence’s ${Astro.props.title}`;
 
-const hue = Math.max(parseInt(import.meta.env.OURA_SLEEP_SCORE ?? "50") - 30, 0);
-const backgroundColor = `hsl(${hue}, 40%, 80%)`
+const sleepScore = parseInt(import.meta.env.OURA_SLEEP_SCORE ?? "0");
+const activityCal = parseInt(import.meta.env.OURA_ACTIVITY_CAL ?? "0");
+const colorRating: ColorRating = `${getSleepRating(sleepScore)}-${getActivityRating(activityCal)}`;
+const backgroundColor = getColor(colorRating);
 ---
 
 <!doctype html>
@@ -25,6 +35,7 @@ const backgroundColor = `hsl(${hue}, 40%, 80%)`
   <body>
     <Header />
     <slot />
+    <Legend activeColorRating={colorRating} />
     <Footer />
   </body>
 
