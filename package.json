@@ -12,9 +12,9 @@
   "dependencies": {
     "@astrojs/check": "^0.4.1",
     "@astrojs/react": "^3.0.9",
-    "@types/react": "^18.2.48",
+    "@types/react": "^18.2.53",
     "@types/react-dom": "^18.2.18",
-    "astro": "^4.2.1",
+    "astro": "^4.3.2",
     "dayjs": "^1.11.10",
     "postcss": "^8.4.33",
     "postcss-simple-vars": "^7.0.1",
@@ -24,7 +24,7 @@
     "typescript": "^5.3.3"
   },
   "devDependencies": {
-    "prettier": "^3.2.4",
+    "prettier": "^3.2.5",
     "prettier-plugin-astro": "^0.13.0"
   }
 }
