@@ -1,5 +1,23 @@
 [
   {
+    "title": "Does your LLM thing work? (& how we use promptfoo)",
+    "url": "https://semgrep.dev/blog/2024/does-your-llm-thing-work-how-we-use-promptfoo/",
+    "publishDate": "2024-09-06",
+    "blurb": "client.chat.completions.create: the most effective and least reliable four words I've written in my career in software. I've used these four words a lot this past year; today, Semgrep Assistant's various AI features are powered by 14 separate prompt chains. The sheer variance of behaviors in production gave us quite a lot to figure out…"
+  },
+  {
+    "title": "AI & Cybersecurity: Learnings from three months of Semgrep Assistant",
+    "url": "https://semgrep.dev/blog/2023/assistant-public-beta/",
+    "publishDate": "2023-07-18",
+    "blurb": "Semgrep Assistant helps application security teams by using AI to identify potential false positives and suggest code updates to fix bugs. We reviewed the data from our private beta, such as 95% positive feedback on Assistant's suggestions, and decided to graduate it to public beta today. In this blog post, we discuss this data and also share our learnings from the past three months about building with GPT-4."
+  },
+  {
+    "title": "A pre-talk checklist for the stressed presenter’s peace of mind",
+    "url": "https://semgrep.dev/blog/2023/gpt4-and-semgrep-detailed/",
+    "publishDate": "2023-04-04",
+    "blurb": "Semgrep is a code search tool many use for security scanning (SAST). We added GPT-4 to our cloud service to ask which Semgrep findings matter before we notify developers, and on our internal projects, it seemed to reason well about this task. We also tried to have it automatically fix these findings, and its output is often correct."
+  },
+  {
     "title": "A pre-talk checklist for the stressed presenter’s peace of mind",
     "url": "https://code.kiwi.com/articles/a-pre-talk-checklist-for-the-stressed-presenters-peace-of-mind",
     "publishDate": "2019-03-14",
@@ -36,8 +54,8 @@
     "blurb": "As promised last November in an article about our favorite CLI tools, we’re continuing the list with our favorite macOS and web apps, as developers. Since the whole point of this is to become more efficient, let’s not waste time on more filler. Here comes the list! Numi (macOS)…"
   },
   {
-    "title": "Lesser Known Tools We Love at Kiwi.com, Part 2 of 3: Mac and Web",
-    "url": "https://code.kiwi.com/articles/lesser-known-tools-we-love-at-kiwi-com-part-2-of-3-mac-and-web",
+    "title": "Lesser Known Tools We Love at Kiwi.com, Part 1 of 3: CLI",
+    "url": "https://code.kiwi.com/articles/lesser-known-tools-we-love-at-kiwi-com-part-1-of-3-cli/",
     "publishDate": "2016-11-24",
     "blurb": "We’re all trying to save the time we spend on repetitive tasks, but as xkcd illustrates, often it’s just not worth wasting your time seeking out new tools and ways to be more productive. We developers at Kiwi.com thought it would be nice to share an easily digestible…"
   }
