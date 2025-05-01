@@ -1,0 +1,12 @@
+[
+  {"category": "Travel", "description": "Visited Asia", "achieved_on": "2024-10-26"},
+  {"category": "Music", "description": "Bought a DJ controller", "achieved_on": "2024-10-06"},
+  {"category": "Music", "description": "Played a little bit in Dolores Park", "achieved_on": "2024-10-26"},
+  {"category": "Technology", "description": "Got an RTX 50 series GPU", "achieved_on": "2025-04-03"},
+  {"category": "Technology", "description": "Pre-ordered a Nintendo Switch 2", "achieved_on": "2025-04-23"},
+  {"category": "Politics", "description": "Made a Public Comment at SF City Hall", "achieved_on": "2025-04-10"},
+  {"category": "Politics", "description": "Mentioned in the Washington Post", "achieved_on": "2025-04-11", "url": "https://www.washingtonpost.com/nation/2025/04/11/authoritarian-countries-dictators-trump-administration/"},
+  {"category": "Games", "description": "Trackmania: Bonk Cup Server 6 Finalist", "achieved_on": "2025-05-01"},
+  {"category": "Technology", "description": "Case study published on Anthropic blog", "achieved_on": "2025-04-18", "url": "https://www.anthropic.com/customers/semgrep"},
+  {"category": "Predictions", "description": "Manifold Markets: Promoted to Masters League", "achieved_on": "2025-05-01", "url": "https://manifold.markets/leagues/24/diamond/ultra-cranes"}
+]
