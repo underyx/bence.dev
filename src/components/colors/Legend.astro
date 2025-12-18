@@ -1,11 +1,11 @@
 ---
-import { act } from "react-dom/test-utils";
 import Square from "./Square.astro";
 import type { ActivityRating, ColorRating, SleepRating } from "./getColor";
 interface Props {
   activeColorRating: ColorRating;
+  isMissingData?: boolean;
 }
-const { activeColorRating } = Astro.props;
+const { activeColorRating, isMissingData = false } = Astro.props;
 const sleepRatings: SleepRating[] = [
   "great",
   "good",
@@ -22,8 +22,14 @@ const activityRatings: ActivityRating[] = ["high", "medium", "low"];
     The colors on this site change every morning based on my biometric data. A
     better night&rsquo;s sleep makes the colors happier, and more activity the
     previous day makes the colors livelier. Here&rsquo;s what the background
-    color means (today&rsquo;s color is highlighted):
+    color means{!isMissingData && " (today's color is highlighted)"}:
   </p>
+  {isMissingData && (
+    <p class="missing-note">
+      My Oura ring is currently broken, so the site is stuck on a boring gray until a replacement arrives.
+      I likely do still sleep.
+    </p>
+  )}
   <table>
     <thead>
       <tr>
@@ -54,7 +60,7 @@ const activityRatings: ActivityRating[] = ["high", "medium", "low"];
                 <td>
                   <Square
                     colorRating={colorRating}
-                    isActive={colorRating === activeColorRating}
+                    isActive={!isMissingData && colorRating === activeColorRating}
                   />
                 </td>
               );
@@ -68,6 +74,10 @@ const activityRatings: ActivityRating[] = ["high", "medium", "low"];
 <style>
   h3 {
     margin: 0;
+  }
+  .missing-note {
+    font-style: italic;
+    color: #666;
   }
   section {
     background-color: rgba(255, 255, 255, 0.8);
