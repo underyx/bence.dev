@@ -16,9 +16,13 @@ interface Props {
 
 const title = `bence’s ${Astro.props.title}`;
 
-const sleepScore = parseInt(import.meta.env.OURA_SLEEP_SCORE ?? "0");
-const activityCal = parseInt(import.meta.env.OURA_ACTIVITY_CAL ?? "0");
-const colorRating: ColorRating = `${getSleepRating(sleepScore)}-${getActivityRating(activityCal)}`;
+const sleepRaw = import.meta.env.OURA_SLEEP_SCORE ?? "0";
+const activityRaw = import.meta.env.OURA_ACTIVITY_CAL ?? "0";
+const isMissingData = sleepRaw === "missing" || activityRaw === "missing";
+
+const colorRating: ColorRating = isMissingData
+  ? "missing"
+  : `${getSleepRating(parseInt(sleepRaw))}-${getActivityRating(parseInt(activityRaw))}`;
 const backgroundColor = getColor(colorRating);
 ---
 
@@ -35,7 +39,7 @@ const backgroundColor = getColor(colorRating);
   <body>
     <Header />
     <slot />
-    <Legend activeColorRating={colorRating} />
+    <Legend activeColorRating={colorRating} isMissingData={isMissingData} />
     <Footer />
   </body>
 

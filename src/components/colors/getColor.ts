@@ -1,6 +1,8 @@
 export type SleepRating = "great" | "good" | "okay" | "poor" | "terrible";
 export type ActivityRating = "high" | "medium" | "low";
-export type ColorRating = `${SleepRating}-${ActivityRating}`;
+export type ColorRating = `${SleepRating}-${ActivityRating}` | "missing";
+
+export const MISSING_COLOR = "hsl(0, 0%, 85%)";
 
 const hueMapping: Record<SleepRating, number> = {
   "great": 280,
@@ -34,6 +36,7 @@ const getHue = (rating: SleepRating): number => hueMapping[rating];
 const getSaturation = (rating: ActivityRating): number => saturationMapping[rating];
 
 export const getColor = (rating: ColorRating): string => {
+  if (rating === "missing") return MISSING_COLOR;
   const [sleepRating, activityRating] = rating.split("-") as [SleepRating, ActivityRating];
   return `hsl(${getHue(sleepRating)}, ${getSaturation(activityRating)}%, 80%)`;
 };
