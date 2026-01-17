@@ -38,7 +38,7 @@ const posts: PostPreview[] = [...allPosts.map((post) => ({
   revisionDate: null,
 }))].sort((a, b) => b.publishDate.getTime() - a.publishDate.getTime());
 ---
-<Layout title="blog">
+<Layout title="blog" description="Technical blog by Bence Nagy (underyx) - Articles about Python, DevOps, software engineering, and tech industry insights.">
   <h2>Blog</h2>
   <ul>
     {

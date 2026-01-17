@@ -4,6 +4,7 @@ import Layout from "./Layout.astro";
 
 type Props = MarkdownLayoutProps<{
   title: string;
+  description?: string;
   publishDate: Date;
   revisionDate: Date | null;
 }>;
@@ -11,7 +12,13 @@ type Props = MarkdownLayoutProps<{
 const { frontmatter } = Astro.props;
 ---
 
-<Layout title={"post: " + frontmatter.title}>
+<Layout
+  title={"post: " + frontmatter.title}
+  description={frontmatter.description}
+  ogType="article"
+  publishDate={frontmatter.publishDate}
+  modifiedDate={frontmatter.revisionDate ?? undefined}
+>
   <p>Published {frontmatter.publishDate.toLocaleDateString()}{frontmatter.revisionDate && `, then revised ${frontmatter.revisionDate.toLocaleDateString()}`}</p>
   <h1>{frontmatter.title}</h1>
   <slot />
