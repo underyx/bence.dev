@@ -12,9 +12,25 @@ import {
 
 interface Props {
   title: string;
+  description?: string;
+  ogImage?: string;
+  ogType?: "website" | "article";
+  publishDate?: Date;
+  modifiedDate?: Date;
 }
 
-const title = `bence’s ${Astro.props.title}`;
+const {
+  title: pageTitle,
+  description = "Default Astro description. If the site's owner has not changed this that's really embarrassing for them.",
+  ogImage = "/favicon.png",
+  ogType = "website",
+  publishDate,
+  modifiedDate,
+} = Astro.props;
+
+const title = `bence's ${pageTitle}`;
+const canonicalURL = new URL(Astro.url.pathname, Astro.site ?? "https://bence.dev");
+const ogImageURL = new URL(ogImage, Astro.site ?? "https://bence.dev");
 
 const sleepRaw = import.meta.env.OURA_SLEEP_SCORE ?? "0";
 const activityRaw = import.meta.env.OURA_ACTIVITY_CAL ?? "0";
@@ -24,17 +40,69 @@ const colorRating: ColorRating = isMissingData
   ? "missing"
   : `${getSleepRating(parseInt(sleepRaw))}-${getActivityRating(parseInt(activityRaw))}`;
 const backgroundColor = getColor(colorRating);
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": ogType === "article" ? "BlogPosting" : "WebPage",
+  "name": title,
+  "description": description,
+  "url": canonicalURL.href,
+  ...(ogType === "article" && publishDate && {
+    "datePublished": publishDate.toISOString(),
+    "dateModified": (modifiedDate ?? publishDate).toISOString(),
+    "author": {
+      "@type": "Person",
+      "name": "Bence Nagy",
+      "url": "https://bence.dev"
+    }
+  }),
+  ...(ogType === "website" && {
+    "author": {
+      "@type": "Person",
+      "name": "Bence Nagy",
+      "url": "https://bence.dev",
+      "sameAs": [
+        "https://github.com/underyx",
+        "https://linkedin.com/in/underyx",
+        "https://twitter.com/underyx"
+      ]
+    }
+  })
+};
 ---
 
 <!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="description" content="Default Astro description. If the site's owner has not changed this that's really embarrassing for them." />
+    <meta name="description" content={description} />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" href="/favicon.png" />
+    <link rel="canonical" href={canonicalURL.href} />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content={ogType} />
+    <meta property="og:url" content={canonicalURL.href} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={ogImageURL.href} />
+    <meta property="og:site_name" content="bence.dev" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@underyx" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImageURL.href} />
+
+    <!-- Article-specific meta tags -->
+    {publishDate && <meta property="article:published_time" content={publishDate.toISOString()} />}
+    {modifiedDate && <meta property="article:modified_time" content={modifiedDate.toISOString()} />}
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
   </head>
   <body>
     <Header />
