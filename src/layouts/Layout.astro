@@ -17,6 +17,8 @@ interface Props {
   ogType?: "website" | "article";
   publishDate?: Date;
   modifiedDate?: Date;
+  /** Keep the page out of search engines; pair with the sitemap filter in astro.config.mjs. */
+  noindex?: boolean;
 }
 
 const {
@@ -26,6 +28,7 @@ const {
   ogType = "website",
   publishDate,
   modifiedDate,
+  noindex = false,
 } = Astro.props;
 
 const title = `bence's ${pageTitle}`;
@@ -80,6 +83,7 @@ const jsonLd = {
     <link rel="icon" href="/favicon.png" />
     <link rel="canonical" href={canonicalURL.href} />
     <meta name="generator" content={Astro.generator} />
+    {noindex && <meta name="robots" content="noindex" />}
     <title>{title}</title>
 
     <!-- Open Graph / Facebook -->
