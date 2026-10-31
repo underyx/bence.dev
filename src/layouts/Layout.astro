@@ -17,7 +17,7 @@ interface Props {
   ogType?: "website" | "article";
   publishDate?: Date;
   modifiedDate?: Date;
-  /** Keep the page out of search engines; pair with the sitemap filter in astro.config.mjs. */
+  /** Keep the page out of search engines; also filter it from the sitemap in astro.config.mjs. */
   noindex?: boolean;
 }
 
